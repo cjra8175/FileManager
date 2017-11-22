@@ -1,5 +1,5 @@
 local list = {
-	ver = "06271440",
+	ver = "06271449",
 	stage = {
 		{path="", name="game.zip", md5="d8bec09c874d6b3d1da53398ee768d1f", act="load"},
 	},
