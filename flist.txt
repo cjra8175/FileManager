@@ -4,6 +4,7 @@ local list = {
 		{path="", name="game.zip", md5="618846be49b1cc3a8e1f6b42489feae9", act="load"},
 	},
 	remove={
-	}
+	},
+	force_update = 1,
 }
 return list
