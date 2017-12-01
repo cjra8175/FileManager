@@ -1,7 +1,7 @@
 local list = {
 	ver = "12010957",
 	stage = {
-		{path="pic/baccarat/hnd/", name="pairbet.png", md5="c4ff59c1987b1db885dbe1fdd28b2493", act=""}
+		{path="baccarat/hnd/", name="pairbet.png", md5="c4ff59c1987b1db885dbe1fdd28b2493", act=""}
 	},
 	remove={
 	}
