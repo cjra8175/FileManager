@@ -1,8 +1,8 @@
 local list = {
-	ver = "12010957",
+	ver = "12011254",
 	stage = {
 		{path="baccarat/hnd/", name="pairbet.png", md5="c4ff59c1987b1db885dbe1fdd28b2493", act=""},
-		{path="", name="game.zip", md5="87d286b28c204f86728d0d9e13b7d129", act="load"},
+		{path="", name="game.zip", md5="178a9265457aefde0bbe16e780a669f4", act="load"},
 		{path="", name="pairbet.png", md5="c4ff59c1987b1db885dbe1fdd28b2493", act=""}
 	},
 	remove={
