@@ -1,5 +1,5 @@
 local list = {
-	ver = "120107",
+	ver = "12010957",
 	stage = {
 		{path="baccarat/hnd/", name="pairbet.png", md5="c4ff59c1987b1db885dbe1fdd28b2493", act=""},
 		{path="", name="game.zip", md5="c2e131169b4823bcfba56f284b9fc84c", act="load"},
