@@ -1,5 +1,5 @@
 local list = {
-	ver = "01311227",
+	ver = "01311256",
 	stage = {
 		{path="bj/", name="ak_flag.png", md5="26cfd21d60d81d232db586ca513b974a", act=""},
 		{path="bj/anim/", name="arrow.plist", md5="6a3ba9c993862faa621d159c5c54337f", act=""},
@@ -65,7 +65,7 @@ local list = {
 		{path="bj/", name="point_gray_bg.png", md5="66abf8fb71850628c36378067607c22a", act=""},
 		{path="bj/", name="point_red_bg.png", md5="f20bd0553eb314fddfd522e830dfc972", act=""},
 		{path="", name="erweima.png", md5="69e226d45715f3300e69547d2a29ac85", act=""},
-		{path="", name="game.zip", md5="5ab08f3463d8062ddd1476cb22e40250", act="load"},
+		{path="", name="game.zip", md5="f840e258bcbc54f0db92bd13d5687b6e", act="load"},
 		{path="hall/room_table/", name="bj_cell_bg.png", md5="d3b441786bd0b0c063b4d5330e95ae7d", act=""},
 		{path="hall/room_table/", name="bj_cell_line.png", md5="4248d4832768de9ed473d701755e41b5", act=""},
 		{path="hall/switch/", name="tab1_icon_6_off.png", md5="7221f869ee11b3f9fc2f06174be57423", act=""},
