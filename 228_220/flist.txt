@@ -228,7 +228,7 @@ local list = {
 		{path="bj/", name="point_gray_bg.png", md5="66abf8fb71850628c36378067607c22a", act=""},
 		{path="bj/", name="point_red_bg.png", md5="f20bd0553eb314fddfd522e830dfc972", act=""},
 		{path="", name="erweima.png", md5="f9252337989c7620ac371e2e4f3fb539", act=""},
-		{path="", name="game.zip", md5="291ba4936407586fbf19695ea30cc22c", act="load"},
+		{path="", name="game.zip", md5="2a45897a43f226a73066e4b502d1b153", act="load"},
 		{path="hall/bank/bank_icon/", name="ABC@2x.png", md5="9b1d2c2e392a99e39d951bf985aa2f81", act=""},
 		{path="hall/bank/bank_icon/", name="BJBANK@2x.png", md5="ad4c1cb0ac6e4bc216ff8e6578f918ec", act=""},
 		{path="hall/bank/bank_icon/", name="BOC@2x.png", md5="466eb5bc8d1e9517440e19c2cae34f12", act=""},
