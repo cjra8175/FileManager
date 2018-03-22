@@ -1,5 +1,5 @@
 local list = {
-	ver = "03221156",
+	ver = "03221041",
 	stage = {
 		{path="baccarat/dialog/rank/", name="1.png", md5="1d00b099e25ee0feafa2fe2f16ba91eb", act=""},
 		{path="baccarat/dialog/rank/", name="2.png", md5="a2898996090eba1c1ce8f6a6bdf4592e", act=""},
