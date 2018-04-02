@@ -418,7 +418,7 @@ local list = {
 		{path="dialog/", name="dialog_bg.png", md5="77c3d44642c11d33fbdc74d487617f49", act=""},
 		{path="", name="edit_bg.png", md5="936da3a26498d05f83736ad2084c6c1e", act=""},
 		{path="", name="erweima.png", md5="f9252337989c7620ac371e2e4f3fb539", act=""},
-		{path="", name="game.zip", md5="4df4b3b446dea346ddd4fdca67de9b01", act="load"},
+		{path="", name="game.zip", md5="2b75db3e03a5611f36cd328801b1820e", act="load"},
 		{path="hall/anim/home_logo_light/", name="home_logo_light.plist", md5="fa05c59245a2943ec3bce9e9d9ab3e63", act=""},
 		{path="hall/anim/home_logo_light/", name="home_logo_light.png", md5="c80f804c5c93eb987fa65b807910522f", act=""},
 		{path="hall/anim/home_logo_light/", name="home_logo_light.sam", md5="5be1c9b31b6b4b91f5a622aa478a647d", act=""},
