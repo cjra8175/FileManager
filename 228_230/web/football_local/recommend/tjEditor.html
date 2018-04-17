@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>编辑推荐</title>
+	<link href="../css/recommend.css" type="text/css" rel="stylesheet">
+	<style>.custom-input,.edit-input,.edit-textarea{line-height:18px}.custom-input{text-align:center;text-indent:0}</style>
+</head>
+<body>
+	<header class="sq_header" id="inHead">
+		<div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+		<span class="sq_headerText">编辑推荐</span>
+	</header>
+	<section class="recommend-main">
+		
+		<div class="edit-dc hide">
+			<div class="dc-con">
+				<div class="dc-box">
+					<img src="" class="dc-flag">
+					<div class="dc-team"></div>
+					<div class="dc-rank"></div>
+				</div>
+				<div class="dc-box">
+					<div class="dc-style"></div>
+					<div class="dc-date"></div>
+				</div>
+				<div class="dc-box">
+					<img src="" class="dc-flag">
+					<div class="dc-team"></div>
+					<div class="dc-rank"></div>
+				</div>
+				
+				
+					
+					
+					
+				
+				
+					
+					
+				
+				
+					
+					
+					
+				
+
+			</div>
+		</div>
+		
+
+		
+		<div class="edit-same hide">
+			<ul class="same-list">
+				
+					
+					
+						
+					
+					
+						
+					
+					
+				
+
+				
+					
+					
+						
+					
+						
+					
+				
+			</ul>
+		</div>
+		
+		<div class="edit-box">
+			<div class="edit-play">
+				<div class="edit-title">玩法类型</div>
+				<div class="edit-xuan paly_type">
+					<ul>
+						<li>欧赔</li>
+						<li>亚盘</li>
+						<li>大小球</li>
+					</ul>
+				</div>
+
+				<div class="recomoption">
+					<div class="edit-title">推荐选项<span class="tj-cai">竞彩</span></div>
+					<div class="edit-xuan">
+						<ul>
+							<li>胜 26.00</li>
+							<li>平 21.00</li>
+							<li>负 1.01</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="edit-title recom-title hide">推荐标题</div>
+			<div class="edit-shu recom-shu hide"><input type="text" class="edit-input" placeholder="请输入您的推荐标题"></div>
+			<div class="edit-title">推荐理由</div>
+			<div class="edit-shu"><textarea class="edit-textarea" placeholder="填写推荐理由让您的推荐更有说服力"></textarea></div>
+			<div class="edit-title">推荐价格<span class="title-sum">不选择时默认免费</span></div>
+			<div class="edit-shu edit-price">
+				<div class="price-tab">
+					<ul>
+						<li>10钻石</li>
+						<li class="lock">30钻石</li>
+						<li class="lock">50钻石</li>
+						<li class="lock">100钻石</li>
+					</ul>
+				</div>
+				<div class="price-custom">
+					<input type="tel" class="custom-input" placeholder="输入其他金额">
+					<span class="custom-tip">＊自定义价格必须为整数</span>
+				</div>
+			</div>
+			<div class="edit-btn">发起推荐</div>
+		</div>
+	</section>
+
+	<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".recommend-main").css({"margin-top":"88px"})):($(".sq_header").css({"padding-top":"16px"}),$(".recommend-main").css({"margin-top":"64px"})));var sType=T.Util.getPara("sType"),priceData="",oddsChange=function(t){var e,a=t.odds,i=$(".recomoption[play_type='"+t.play_type+"'] ul").find("li");switch(t.play_type){case 1:case 2:e=0==sType?"胜,平,负":"胜,-,负",0==sType&&i.eq(1).html(e.split(",")[1]+" "+parseFloat(a.split(",")[1]).toFixed(2)).attr("odd",a.split(",")[1]),i.eq(2).html(e.split(",")[2]+" "+parseFloat(a.split(",")[2]).toFixed(2)).attr("odd",a.split(",")[2]);break;case 3:e="主,客",i.eq(2).html(e.split(",")[1]+" "+parseFloat(a.split(",")[2]).toFixed(2)).attr("odd",a.split(",")[2]);break;case 4:e="大,小",i.eq(2).html(e.split(",")[1]+" "+parseFloat(a.split(",")[2]).toFixed(2)).attr("odd",a.split(",")[2])}i.eq(0).html(e.split(",")[0]+" "+parseFloat(a.split(",")[0]).toFixed(2)).attr("odd",a.split(",")[0]),$(".recomoption[play_type='"+t.play_type+"']").attr("odds",a)},cgOddsChange=function(t){var e=$(".same-list li[m_id='"+t.m_id+"']"),a={0:2,3:0,1:1},i=t.odds.split(",")[a[e.attr("codes")]];e.attr("odds",t.odds),e.find("span[odd]").attr("odd",i),e.find("span[odd]").find("span").eq(1).html("@"+parseFloat(i).toFixed(2))},recommend=function(){var t=function(){priceData="";var t=T.Storage.get("choise");console.log(t),"1"!=T.Storage.get("is_media")?($(".edit-box .recom-title").addClass("hide"),$(".edit-box .recom-shu").addClass("hide")):($(".edit-box .recom-title").removeClass("hide"),$(".edit-box .recom-shu").removeClass("hide")),1==t.length?($(".edit-dc").removeClass("hide"),$(".edit-same").addClass("hide")):($(".edit-dc").addClass("hide"),$(".edit-same").removeClass("hide"),$(".edit-play").addClass("hide"),o());for(var e=0;e<t.length;e++)a(t[e].m_id);l()},e=function(t){for(var e=t.content,a=-1,i=-1,o=0;o<e.length;o++)1==e[o].play_type&&(a=o),2==e[o].play_type&&(i=o);-1!=i&&-1!=a&&(e=e.splice(i,1));for(var l=[],n=0;n<e.length;n++){var s=e[n],d="",r="";1==s.play_type&&(0==sType?(d="竞彩",r="胜,平,负"):(d="胜负",r="胜,-,负")),2==s.play_type&&(0==sType?(d="欧赔",r="胜,平,负"):(d="胜负",r="胜,-,负")),3==s.play_type&&(0==sType?(d="亚盘",r="主,"+s.handicap+",客"):(d="让分胜负",r="主,"+s.handicap+",客")),4==s.play_type&&(0==sType?(d="大小球",r="大,"+s.handicap+",小"):(d="大小分",r="大,"+s.handicap+",小")),s.play_name=d,s.oddsName=r,l.push(s)}for(var o=0;o<l.length;o++)for(var n=o;n<l.length;n++){if(l[o].play_type==l[n].play_type&&l[o].let_ball){var p=l[o];l[o]=l[n],l[n]=p}if(l[o].play_type>l[n].play_type){var p=l[o];l[o]=l[n],l[n]=p}}return t.content=l,t},a=function(t){var o="/app-web/api/recom/get_recom_match?access_token="+T.Storage.get("access_token")+"&m_id="+t+"&sport_type="+T.Util.getPara("sType");T.Util.xmlHttpRequest({type:"get",reqUrl:o,version:"2.0.0",callback:function(o){if("0"==o.msg_code){if(0==o.get_recom_match.is_token_valid&&T.Storage.set("access_token",""),!T.Util.isEmpty(o.get_recom_match.content)){var l=e(o.get_recom_match);i(t,l)}}else a()},errorCallback:function(){}})},i=function(t,e){if($(".edit-dc").hasClass("hide")){var a=$('.same-list [m_id="'+t+'"]'),i=($(a).find(".same-dui").attr("odd"),$(a).attr("handicap"));i||(i=""),$(a).find(".same-m").html(e.match.l_name),$(a).find(".same-team").html(e.match.h_name+" VS "+e.match.g_name),$(a).find(".same-date").html(e.match.m_time.substring(5,16));for(var o="",s=0;s<e.content.length;s++)if($(a).attr("play_type")==e.content[s].play_type){if(o=e.content[s],!T.Util.isEmpty($(a).attr("handicap"))&&$(a).attr("handicap")==e.content[s].handicap){o=e.content[s];break}if($(a).attr("let_ball")==e.content[s].let_ball){o=e.content[s];break}}if(""!=o){var d="",r="",p=o.odds.split(","),c=$(a).attr("odds").split(",");3==$(a).attr("codes")?(r=p[0],d=c[0]):0==$(a).attr("codes")?(r=p[2],d=c[2]):1==$(a).attr("codes")&&(r=p[1],d=c[1]),$(a).attr("handicap")!=o.handicap&&(console.log("handicap改变"),$(a).attr("handicap",o.handicap),o.handicap?$(a).find(".same-dui em").html(o.handicap):$(a).find(".same-dui em").html("")),$(a).attr("let_ball")!=o.let_ball&&(console.log("let_ball改变"),$(a).attr("let_ball",o.let_ball),$(a).find(".same-lei").html(o.play_name+o.let_ball)),d!=r&&(console.log("赔率改变"),$(a).attr("odds",o.odds),$(a).find(".same-dui span").eq(1).html("@"+r))}else console.log("未找到对应play_type")}else{$(".edit-dc .dc-box").eq(0).find("img").attr("src",e.match.h_logo),$(".edit-dc .dc-box").eq(2).find("img").attr("src",e.match.g_logo),$(".edit-dc .dc-box").eq(0).find(".dc-team").html(e.match.h_name),$(".edit-dc .dc-box").eq(2).find(".dc-team").html(e.match.g_name),$(".edit-dc .dc-box").eq(0).find(".dc-rank").html(e.match.h_rank),$(".edit-dc .dc-box").eq(2).find(".dc-rank").html(e.match.g_rank),$(".edit-dc .dc-box").eq(1).find(".dc-style").html(e.match.l_name),$(".edit-dc .dc-box").eq(1).find(".dc-date").html(e.match.m_time.substring(5,16));var m=[],h=[],_=[];m.push("<ul>");for(var s=0;s<e.content.length;s++){var f="",y=e.content[s].play_type,u=e.content[s].company_name;-1==_.indexOf(y)&&(_.push(y),m.push('<li play_type="'+y+'">'+e.content[s].play_name+"</li>"),f="推荐选项"),h.push('<div class="recomoption">\t\t\t\t\t\t\t\t<div class="edit-title">'+f+'<span class="tj-cai">'+u+'</span></div>\t\t\t\t\t\t\t\t<div class="edit-xuan">\t\t\t\t\t\t\t\t<ul>\t\t\t\t\t\t\t\t<li></li>\t\t\t\t\t\t\t\t<li></li>\t\t\t\t\t\t\t\t<li></li>\t\t\t\t\t\t\t\t</ul>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t</div>')}m.push("</ul>"),$(".edit-play .edit-xuan").eq(0).html(m.join("")),$(".edit-play .recomoption").remove(),$(".edit-play").append(h.join(""));for(var s=0;s<e.content.length;s++){var g=e.content[s].oddsName.split(","),p=e.content[s].odds.split(","),v=e.content[s].let_ball,u=e.content[s].company_name,q=e.content[s].min_odds,p=e.content[s].odds.split(","),y=e.content[s].play_type,i=e.content[s].handicap,x=e.content[s].company_name;$(".recomoption").eq(s).attr("play_type",y),$(".recomoption").eq(s).attr("handicap",i),v?($(".recomoption").eq(s).attr("let_ball",v),$(".recomoption").eq(s).find(".edit-title .tj-cai").html(x+v)):$(".recomoption").eq(s).find(".edit-title .tj-cai").html(x);for(var b=0;b<3;b++)$(".recomoption").eq(s).find("li").eq(b).attr("index",b),$(".recomoption").eq(s).find("li").eq(b).attr("min_odds",q),"null"==p[b]?($(".recomoption").eq(s).find("li").eq(b).attr("odd",""),$(".recomoption").eq(s).find("li").eq(b).html(g[b])):($(".recomoption").eq(s).find("li").eq(b).attr("odd",p[b]),$(".recomoption").eq(s).find("li").eq(b).html(g[b]+" "+parseFloat(p[b]).toFixed(2)));$(".recomoption").eq(s).attr("odds",e.content[s].odds.replace("null",1)),i&&($(".recomoption").eq(s).find("li").eq(1).html(i),$(".recomoption").eq(s).find("li").eq(1).removeAttr("odd"),$(".recomoption").eq(s).find("li").eq(1).removeAttr("min_odds"))}""==priceData&&n()}if(e.price_conf){if(""==priceData){priceData={price_conf:e.price_conf,max_price:e.max_price,max_count:e.max_count,min_count:e.min_count,max_title:e.max_title,min_title:e.min_title};for(var C=[],D=0;D<priceData.price_conf.length;D++){var k=priceData.price_conf[D];priceData.max_price<k?C.push('<li price="'+k+'" class="lock">'+k+"钻石</li>"):C.push('<li price="'+k+'">'+k+"钻石</li>")}$(".price-tab ul").html(C.join(""))}}else $(".edit-price").addClass("hide"),$(".title-sum").parents(".edit-title").hide();$(".same-team .h_name").css({width:($(document).width()-220)/2}),$(".same-team .g_name").css({width:($(document).width()-220)/2}),l()},o=function(){for(var t=[],e=T.Storage.get("choise"),a=0;a<e.length;a++)t.push('<li>\t\t\t\t\t\t<i class="same-del"></i>\t\t\t\t\t\t<div class="same-t1"><span class="same-lei"></span><span class="same-dui"><span></span><span></span><em></em></span></div>\t\t\t\t\t\t<div class="same-t2"><span class="same-m"></span><span class="same-team"><span class="h_name"></span><em>VS</em><span class="g_name"></span></span></div>\t\t\t\t\t\t<span class="same-date"></span>\t\t\t\t\t\t</li>');$(".same-list").html(t.join(""));for(var a=0;a<e.length;a++){$(".same-list li").eq(a).attr("m_id",e[a].m_id),$(".same-list li").eq(a).attr("codes",e[a].codes),$(".same-list li").eq(a).attr("odds",e[a].odds),$(".same-list li").eq(a).attr("play_type",e[a].play_type);var i="";1==e[a].play_type||2==e[a].play_type?3==e[a].codes?i="胜":1==e[a].codes?i="平":0==e[a].codes&&(i="负"):3==e[a].play_type?3==e[a].codes?i=e[a].h_name:0==e[a].codes&&(i=e[a].g_name):4==e[a].play_type&&(3==e[a].codes?i="大":0==e[a].codes&&(i="小")),$(".same-list li").eq(a).attr("select",i),e[a].handicap&&$(".same-list li").eq(a).attr("handicap",e[a].handicap),e[a].let_ball?($(".same-list li").eq(a).attr("let_ball",e[a].let_ball),$(".same-list li").eq(a).find(".same-lei").html(e[a].play_name+e[a].let_ball)):$(".same-list li").eq(a).find(".same-lei").html(e[a].play_name),$(".same-list li").eq(a).find(".same-dui").attr("odd",e[a].odd),$(".same-list li").eq(a).find(".same-dui span").eq(0).html(i),$(".same-list li").eq(a).find(".same-dui span").eq(1).html("@"+e[a].odd),e[a].handicap&&$(".same-list li").eq(a).find(".same-dui em").html(" ("+e[a].handicap+")")}},l=function(){$(".edit-play .paly_type li").off().Touch(function(t){if(!$(this).hasClass("on")){$(t).addClass("on"),$(t).siblings().removeClass("on");var e=$(".recomoption");e.find("li.on").removeClass("on");for(var a=0;a<e.length;a++)e.eq(a).attr("play_type")==$(t).attr("play_type")?e.eq(a).removeClass("hide"):e.eq(a).addClass("hide")}}),$(".recomoption .edit-xuan li").off().Touch(function(t){if($(t).attr("odd")){if(parseFloat($(t).attr("min_odds"))-.001>parseFloat($(t).attr("odd")))return void tip("赔率低于"+$(t).attr("min_odds")+",不可选");$(".recomoption li").removeClass("on"),$(t).addClass("on")}}),$(".same-del").off().Touch(function(t){if(0==$(t).parents("li").siblings().length)return void tip("最少选中一场");$(t).parents("li").remove()}),$(".edit-btn").off().Touch(function(){if(""==T.Storage.get("access_token"))return void T.Util.login();var t="100";if(T.Util.isEmpty(priceData.min_title)||"0"==priceData.max_title||(t=priceData.max_title),$(".edit-input").val().replace(/[^\x00-\xff]/g,"aa").length>t)return void tip("推荐标题最多"+parseInt(t/2)+"汉字");if(!T.Util.isEmpty(priceData.min_count)&&"0"!=priceData.min_count){var e=priceData.min_count;if($(".edit-textarea").val().replace(/[^\x00-\xff]/g,"aa").length<e)return void tip("推荐理由最少"+parseInt(e/2)+"汉字")}if(!T.Util.isEmpty(priceData.max_count)&&"0"!=priceData.max_count){var i=priceData.max_count;if($(".edit-textarea").val().replace(/[^\x00-\xff]/g,"aa").length>i)return void tip("推荐理由最多"+parseInt(i/2)+"汉字")}var o=$(".price-tab .on").attr("price");if(!o&&(o=$(".custom-input").val())&&!/^[0-9]+$/.test(o))return void tip("只能输入整数!");if(o||(o=0),o>priceData.max_price)return void tip("钻石最多不能超过"+priceData.max_price);var l={access_token:T.Storage.get("access_token"),price:o,reason:$(".edit-textarea").val(),recom_title:$(".edit-input").val(),sport_type:T.Util.getPara("sType")},n=T.Storage.get("choise");if(1==n.length){var s={};s.m_id=n[0].m_id;var d=$(".paly_type .on").attr("play_type");if(s.recom_type=1==d||2==d?"1":d-1,s.odds=$(".recomoption .on").parents(".recomoption").attr("odds"),T.Util.isEmpty(s.odds))return tip("请选择推荐选项"),"";var r=$(".recomoption .on").attr("index");s.codes=0==r?3:1==r?1:0;var p=$(".recomoption .on").parents(".recomoption").attr("handicap"),c=$(".recomoption .on").parents(".recomoption").attr("let_ball");T.Util.isEmpty(p)||(s.handicap=p),T.Util.isEmpty(c)||(s.let_ball=c),l.recom_type=s.recom_type,l.content=[s]}else{for(var m=[],h=$(".edit-same li"),_=0;_<h.length;_++){var s={};s.m_id=h.eq(_).attr("m_id"),s.codes=h.eq(_).attr("codes"),s.odds=h.eq(_).attr("odds"),h.eq(_).attr("handicap")&&(s.handicap=h.eq(_).attr("handicap")),h.eq(_).attr("let_ball")&&(s.let_ball=h.eq(_).attr("let_ball")),1==h.eq(_).attr("play_type")||2==h.eq(_).attr("play_type")?s.recom_type="1":s.recom_type=h.eq(_).attr("play_type")-1,m.push(s)}l.content=m,1==h.length?l.recom_type=m[0].recom_type:l.recom_type="4"}T.Util.xmlHttpRequest({type:"post",reqUrl:"/app-web/api/recom/add_recom",reqData:{add_recom:l},version:"3.0.5",callback:function(t){if(0!=t.msg_code||t.add_recom.result_code)if(t.add_recom.result_code&&"1505"==t.add_recom.result_code){tip("赔率已变更");var e=t.add_recom.data;1==T.Storage.get("choise").length?oddsChange(e[0]):$.each(e,function(t,e){cgOddsChange(e)})}else for(var i=T.Storage.get("choise"),o=0;o<i.length;o++)a(i[o].m_id);else tip("发起推荐成功"),T.Storage.set("recomSuccess","1"),setTimeout(function(){T.Util.back()},300)},errorCallback:function(t){}})}),$(".price-tab li").off().Touch(function(t){$(".edit-input").blur(),$(".edit-textarea").blur(),$(".custom-input").blur(),$(t).hasClass("lock")||($(".custom-input").val(""),$(t).toggleClass("on"),$(t).siblings().removeClass("on"))}),$(".custom-input").focus(function(){$(".edit-input").blur(),$(".edit-textarea").blur(),$(".price-tab li").removeClass("on")}),$(".dc-con").off().Touch(function(){(T.isNative&&Global.isAndroid&&lib.nativeApi.compareVersion("2.4.1")||Global.isiOS&&lib.nativeApi.compareVersion("2.3.1"))&&(1==sType?T.isNative&&lib.nativeApi.compareJSSDKVersion("1.0.1")&&api.openPlayGame({m_id:T.Storage.get("choise")[0].m_id,sType:"BB"},function(){}):api.openPlayGame({m_id:T.Storage.get("choise")[0].m_id},function(){}))}),$(".edit-textarea").off().keyup(function(){var t="200";if(T.Util.isEmpty(priceData.min_count)||"0"==priceData.max_count||(t=priceData.max_count),$(".edit-textarea").val().replace(/[^\x00-\xff]/g,"aa").length>t)return void tip("推荐理由最多"+parseInt(t/2)+"汉字");this.scrollHeight<=64?$(this).css({height:"auto","overflow-y":"hidden"}).height(64):this.scrollHeight>200?$(this).css({height:"200px","overflow-y":"auto"}):$(this).css({height:"auto","overflow-y":"hidden"}).height(this.scrollHeight)}),$(".edit-input").off().keyup(function(){var t="100";T.Util.isEmpty(priceData.min_title)||"0"==priceData.max_title||(t=priceData.max_title),$(".edit-input").val().replace(/[^\x00-\xff]/g,"aa").length>t&&(tip("推荐标题最多"+parseInt(t/2)+"汉字"),$(this).focus())})},n=function(){var t=T.Storage.get("choise"),e=t[0],a=$(".edit-play .recomoption");$('.edit-play .edit-xuan [play_type="'+e.play_type+'"]').addClass("on").siblings().removeClass("on");for(var i=0;i<a.length;i++)if(a.eq(i).attr("play_type")==e.play_type){if(a.eq(i).attr("let_ball")==e.let_ball){var o=1;"3"==e.codes&&(o=0),"0"==e.codes&&(o=2),-1!=o&&a.eq(i).find(".edit-xuan li").eq(o).addClass("on")}a.eq(i).removeClass("hide")}else a.eq(i).addClass("hide");if($(".edit-play .hide").length==a.length){$(".paly_type li").eq(0).addClass("on"),a.eq(0).removeClass("hide");for(var i=1;i<a.length;i++)a.eq(i).attr("play_type")==a.eq(0).attr("play_type")?a.eq(i).removeClass("hide"):a.eq(i).addClass("hide")}};return{init:t,getData:a,dohtml:i,addListent:l}}(),appFirstInfo=!0;$(function(){function t(){Global.iosAudit&&($(".edit-price").addClass("hide"),$(".edit-price").prev().addClass("hide")),appFirstInfo&&(appFirstInfo=!1,recommend.init())}sType=T.Util.getPara("sType"),T.isNative?T.appToH5.init(t):t()})</script>
+</body>
+</html>

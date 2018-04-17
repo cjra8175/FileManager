@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>资料库</title>
+		<link href="../css/zlk.css" type="text/css" rel="stylesheet">
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<style>.date-list{position:fixed;top:0;left:50%;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;max-width:480px;transform:translateX(-50%);-webkit-transform:translateX(-50%)}.date-list ul{height:318px;position:relative;top:54%;left:0;text-align:center;font-size:14px;color:#fff;-webkit-transform:translateY(-50%);overflow:auto}.date-list li{width:140px;height:34px;line-height:34px;margin:0 auto;margin-top:10px;position:relative}.date-list li .select{display:inline-block;height:20px;width:20px;position:absolute;right:-34px;top:8px}.date-list li.on{background:#fff;border-radius:20px;color:#333}.cancel{height:35px;width:100%;position:absolute;top:50%;margin-top:191px;text-align:center}.cancel img{height:35px;width:35px}</style>
+	</head>
+	<body>
+	 <header class="zlk-header">
+			<span class="h-return"></span>
+			<div class="h-title"></div>
+			<span class="h-style"></span>
+		</header>
+		<nav class="column-nav">
+			<ul>
+				<li data-href="#page=zlk_jfCupMatchList.html" data-type="total" class="on"><span>积分榜</span></li>
+				<li data-href="#page=zlk_scCupMatch.html"><span class="sc">赛程</span></li>
+				<li data-href="#page=zlk_jfLianSaiMatchList.html" data-type="total_plate"><span>让球</span></li>
+				<li data-href="#page=zlk_jfLianSaiMatchList.html" data-type="total_bs"><span>大小球</span></li>
+
+			</ul>
+		</nav>
+		<section class="zlk-main">
+
+		</section>
+
+	 <div class="date-list hide">
+		 <ul id="matchTimeBox" class="clearfix">
+		 </ul>
+		 <div class="cancel"><img src="images/cancel.png"></div>
+	 </div>
+		<script>function matchIndexBusiness(){T.Storage.remove("navSelectClickType"),hashUrl.getMatchSeasonLeague(),hashUrl.addListerItem()}/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)?812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".zlk-header").css({"padding-top":"40px"}),$(".column-nav").css({top:"88px"}),$(".zlk-main").css({top:"128px"})):($(".zlk-header").css({"padding-top":"16px"}),$(".column-nav").css({top:"64px"}),$(".zlk-main").css({top:"105px"})):$(".zlk-main").css("top","89px");var firstLoginPageUrl="",seasonLeagueId="",page_index=1,firstLoginPageFlag=!0,clickFlag=!1,clickType="",page_size=999,headerTitle="",hashUrl=function(){var a=$(".zlk-main"),e=function(e){function t(e){a.html(e)}$(".zlk-main").html(),$.ajax({type:"get",dataType:"text",cache:!1,url:e,success:function(a){t(a)}})},t=function(){var a=decodeURIComponent(T.Util.getParaHash("page"));return e(a),!1};return{init:function(a){"onhashchange"in window&&(window.addEventListener?window.addEventListener("hashchange",t,!1):window.attachEvent("onhashchange",t)),""==window.location.hash?window.location.href=firstLoginPageUrl:t()},addListerItem:function(){$(".h-return").off().Touch(function(){T.Util.back()}),$(".h-style").off().Touch(function(a){$(".date-list").removeClass("hide")}),$(".date-list").off().Touch(function(a){$(".date-list").addClass("hide")}),$(".cancel img").off().Touch(function(a){$(".date-list").addClass("hide")}),$("li[data-href]").off().Touch(function(a){if($(a).hasClass("on"))return!1;$(a).addClass("on").siblings().removeClass("on"),window.location.href=$(a).attr("data-href"),clickFlag=!0}),$("li[data-type]").off().Touch(function(a){if($(a).hasClass("on"))return!1;$(a).addClass("on").siblings().removeClass("on"),!clickFlag||"total"!=$(a).attr("data-type")&&"total_plate"!=$(a).attr("data-type")&&"total_bs"!=$(a).attr("data-type")?(clickType=$(a).attr("data-type"),T.Storage.set("navSelectClickType",clickType),footBallDataInt.getFirstData($(a).attr("data-type"))):(clickType=$(a).attr("data-type"),T.Storage.set("navSelectClickType",clickType),window.location.href=$(a).attr("data-href"),clickFlag=!1)})},judeLeagueCup:function(){T.Util.isEmpty(T.Storage.get("footBallLeagueCup"))||1!=T.Storage.get("footBallLeagueCup")?T.Util.isEmpty(T.Storage.get("footBallLeagueCup"))||2!=T.Storage.get("footBallLeagueCup")||($(".column-nav ul li").each(function(a,e){"total_plate"!=$(e).attr("data-type")&&"total_bs"!=$(e).attr("data-type")||$(e).remove()}),firstLoginPageUrl=$(".column-nav ul li.on").attr("data-href")):$(".column-nav ul li").each(function(a,e){0==a||2==a||3==a?$(e).attr("data-href","#page=zlk_jfLianSaiMatchList.html"):1==a&&$(e).attr("data-href","#page=zlk_scLianSaiMatchList.html"),T.Storage.set("navSelectClickType",$(".column-nav ul li.on").attr("data-type")),firstLoginPageUrl=$(".column-nav ul li.on").attr("data-href")}),hashUrl.init()},getMatchSeasonLeague:function(){var a={};a=T.Util.isEmpty(T.Storage.get("footBallSeasonLeagueId"))?{league_id:T.Storage.get("footBallLeagueId"),PAGE_SIZE:page_size,PAGE_INDEX:page_index}:{league_id:T.Storage.get("footBallLeagueId"),season_id:T.Storage.get("footBallSeasonLeagueId"),PAGE_SIZE:page_size,PAGE_INDEX:page_index},T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_season_by_league",reqData:a,callback:function(a){try{if($.isArray(a.qry_season_by_league.data)&&a.qry_season_by_league.data.length){var e=[];if(firstLoginPageFlag){for(var t=0;t<a.qry_season_by_league.data.length;t++)1==a.qry_season_by_league.data[t].current_type&&(headerTitle=a.qry_season_by_league.data[t].season_name,seasonLeagueId=a.qry_season_by_league.data[t].season_id,T.Storage.set("footBallSeasonLeagueId",seasonLeagueId),$(".h-title").html(headerTitle)),e.push('<li class="'+(1==a.qry_season_by_league.data[t].current_type?"on":"")+'" season-id="'+a.qry_season_by_league.data[t].season_id+'">'+a.qry_season_by_league.data[t].season_id+"</li>");$("#matchTimeBox").html(e.join("")),$("#matchTimeBox li").each(function(a,e){$(e).hasClass("on")&&$(e).append('<img src="images/select.png" class="select"/>')})}else for(var t=0;t<a.qry_season_by_league.data.length;t++)headerTitle=a.qry_season_by_league.data[t].season_name,seasonLeagueId=a.qry_season_by_league.data[t].season_id,T.Storage.set("footBallSeasonLeagueId",seasonLeagueId),$(".h-title").html(headerTitle),e.push('<li class="'+(1==a.qry_season_by_league.data[t].current_type?"on":"")+'" season-id="'+a.qry_season_by_league.data[t].season_id+'">'+a.qry_season_by_league.data[t].season_id+"</li>")}else $(".no-content").css("display","block"),$(".h-title").html("");hashUrl.judeLeagueCup(),$("#matchTimeBox li").off().Touch(function(a){clickType=T.Storage.get("navSelectClickType"),$(a).hasClass("on")||($("#matchTimeBox li .select").each(function(a,e){$(e).remove()}),$(a).addClass("on").siblings().removeClass("on"),$(a).append('<img src="images/select.png" class="select"/>'),$(".date-list").addClass("hide"),T.Storage.set("footBallSeasonLeagueId",$(a).attr("season-id")),firstLoginPageFlag=!1,hashUrl.getMatchSeasonLeague())})}catch(a){console.log(a)}},errorCallback:function(){$(".no-content").css("display","block")}})}}}(),appFirstInfo=!0;$(document).ready(function(){function a(){appFirstInfo&&(appFirstInfo=!1,matchIndexBusiness())}T.isNative?T.appToH5.init(a):a()})</script>
+	</body>
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>草根英雄推荐</title>
+	<link href="../css/recommend.css" type="text/css" rel="stylesheet">
+	<style>.ck-btn,.free-btn,.tj-lose,.tj-lose-ban,.tj-other,.tj-other-price,.tj-price,.tj-win,.tj-win-ban,.tj-zou,.ydy-btn{top:50px}.ls-list{position:relative;top:0;bottom:0}</style>
+</head>
+<body>
+<div id="loading-new">
+	<div id="loading-new-center">
+		<div id="loading-new-center-absolute">
+			<div class="object" id="loading"></div>
+		</div>
+	</div>
+</div>
+	<header class="sq_header" id="inHead">
+		<div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+		<span class="sq_headerText">草根英雄推荐</span>
+	</header>
+	<div class="tj-action">
+		<ul>
+			<li class="lx-act"><em>全部类型</em><i class="down-icon"></i></li>
+			<li class="zj-act"><em>全部专家</em><i class="down-icon"></i></li>
+			<li class="sx-act">筛选<i class="down-icon"></i></li>
+		</ul>
+	</div>
+	<div class="tj-bg hide"></div>
+	
+	<div class="lx-weebox" id="lx">
+		<ul>
+
+			<li class="on" index="0">全部类型</li>
+			<li index="1">竞彩单关</li>
+			<li index="2">亚盘</li>
+			<li index="3">大小球</li>
+
+		</ul>
+
+
+	</div>
+	
+	
+	
+	<div class="lx-weebox" id="zj">
+		<ul>
+			<li class="on" index="0">全部专家</li>
+			<li index="1">初级专家</li>
+			<li index="2">中级专家</li>
+			<li index="3">高级专家</li>
+			<li index="4">资深专家</li>
+		</ul>
+	</div>
+	
+
+	
+	<div class="sx-weebox" id="sx">
+		<div class="sf-choice">
+			<div class="sf-title">收费选择</div>
+			<div class="sf-nav">
+				<ul>
+					<li class="on">免费</li>
+					<li class="on">收费</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="ls-choice">
+			<div class="sf-title">联赛选择</div>
+			<div class="ls-nav">
+				<ul>
+					<li index="0" class="on">竞彩</li>
+					<li index="1">全选</li>
+					<li index="2">反选</li>
+				</ul>
+			</div>
+			<div class="ls-list">
+				<ul>
+					<li class="on" jc="0"><span>白俄超</span></li>
+					<li jc="1"><span>白俄超</span></li>
+					<li jc="1"><span>白俄超</span></li>
+					<li jc="0"><span>白俄超</span></li>
+					<li jc="1"><span>白俄超</span></li>
+					<li jc="1"><span>白俄超</span></li>
+				</ul>
+			</div>
+			<div class="ls-ok">确定</div>
+		</div>
+	</div>
+	
+	<section class="mlist-main">
+
+		<div class="tjlist-box">
+			<div class="no-content hide">
+				<div class="none-icon"></div>
+				<div class="none-txt">空空荡荡...</div>
+			</div>
+			<ul>
+				
+					
+						
+							
+							
+							
+							
+						
+
+						
+							
+							
+							
+							
+							
+							
+						
+					
+					
+				
+			</ul>
+			
+		</div>
+	</section>
+	
+	<div class="ceng-bg hide"></div>
+	
+	<div class="tj-weebox hide" id="ye-no">
+		<div class="weebox-intro clearfix">用户名:<em class="userName">天天</em><span class="intro-z"><i class="zhuan-icon"></i>钻石:<em class="userZS">52</em></span></div>
+		<div class="weebox-t1">您的余额不足，请马上充值</div>
+		<div class="weebox-action">
+			<span class="act-1">再看看</span>
+			<span class="act-2">立即充值</span>
+		</div>
+	</div>
+	
+
+	
+	<div class="tj-weebox hide" id="pay-con">
+		<div class="weebox-intro clearfix">用户名:<em class="userName">天天</em><span class="intro-z"><i class="zhuan-icon"></i>钻石:<em class="userZS">52</em></span></div>
+		<div class="pay-list">
+			<ul class="create-ul" id="payType">
+				<li class="select">
+					<span class="pay-name">余额支付</span>
+					<span class="pay-select"></span>
+				</li>
+				<li>
+					<span class="pay-name">使用50钻优惠券支付</span>
+					<span class="pay-quan">(截止2016-12-26)</span>
+					<span class="pay-select"></span>
+				</li>
+				<li>
+					<span class="pay-name">使用100钻优惠券支付</span>
+					<span class="pay-quan">(截止2016-12-26)</span>
+					<span class="pay-select"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="weebox-action">
+			<span class="act-1" id="act-close">再看看</span>
+			<span class="act-2">立即购买</span>
+		</div>
+	</div>
+	
+
+	<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="recommend.js"></script>
+	<script src="buyRecommend.js"></script>
+	<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".tjlist-box").css({"padding-top":"137px"}),$(".tj-action").css({top:"88px"}),$(".lx-weebox,.sx-weebox").css({top:"130px"})):($(".sq_header").css({"padding-top":"16px"}),$(".tjlist-box").css({"padding-top":"113px"}),$(".tj-action").css({top:"64px"}),$(".lx-weebox,.sx-weebox").css({top:"106px"})));var sType,page_index="1",is_free="",league_id="",dropLoadObj=null,canload=!0,refreshEvent=function(){$(".dropload-down,.download-up").remove(),dropLoadObj=$(".tjlist-box").off().dropload({scrollArea:window,loadUpFn:function(t){console.log("下拉刷新"),t.resetload(),t.unlock(),t.noData(!1),page_index="1",tjCgyx.getData(t)},loadDownFn:function(t){canload&&(canload=!1,tjCgyx.getData(t))},threshold:50})},tjCgyx=function(){var t=function(){page_index="1",T.Util.isEmpty(T.Storage.get("userinfo"))||($(".tj-weebox .userName").html(T.Storage.get("userinfo").nick_name),$(".tj-weebox .userZS").html(T.Storage.get("userinfo").diamend)),refreshEvent(),s(),l(),T.Util.isEmpty(T.Storage.get("access_token"))||buy().loadCoupons(),buy().callback(function(){page_index="1",o(dropLoadObj)})},s=function(){Global.isAndroid&&$(".mj-tag span,.tag-3").css("line-height","15px"),$(".lx-act").off().Touch(function(){$("#sx").hasClass("sx-show")||$("#zj").hasClass("lx-show")?($("#zj").hasClass("lx-show")?$("#zj").toggleClass("lx-show"):$("#sx").toggleClass("sx-show"),$(".tj-bg").addClass("hide"),setTimeout(function(){$("#lx").toggleClass("lx-show"),$(".tj-bg").toggleClass("hide")},350)):($("#lx").toggleClass("lx-show"),$(".tj-bg").toggleClass("hide")),$(this).toggleClass("act-on").siblings().removeClass("act-on")}),$("#lx li").off().Touch(function(t){$(t).addClass("on").siblings().removeClass("on"),$(".tj-action li").removeClass("act-on"),$("#lx").removeClass("lx-show"),$(".tj-bg").addClass("hide"),$(".tj-action .lx-act em").html($(t).text()),recom_type=$(t).attr("index"),"0"==recom_type&&(recom_type=""),page_index="1",dropLoadObj.unlock(),dropLoadObj.noData(),dropLoadObj.resetload(),$(".tjlist-box ul").empty(),o(dropLoadObj)}),$(".zj-act").off().Touch(function(t){$("#sx").hasClass("sx-show")||$("#lx").hasClass("lx-show")?($("#lx").hasClass("lx-show")?$("#lx").toggleClass("lx-show"):$("#sx").toggleClass("sx-show"),$(".tj-bg").addClass("hide"),setTimeout(function(){$("#zj").toggleClass("lx-show"),$(".tj-bg").toggleClass("hide")},350)):($("#zj").toggleClass("lx-show"),$(".tj-bg").toggleClass("hide")),$(this).toggleClass("act-on").siblings().removeClass("act-on")}),$("#zj li").off().Touch(function(t){console.log(123123),$(t).addClass("on").siblings().removeClass("on"),$(".tj-action li").removeClass("act-on"),$("#zj").removeClass("lx-show"),$(".tj-bg").addClass("hide"),$(".tj-action .zj-act em").html($(t).text()),obj_type=$(t).attr("index"),page_index="1",dropLoadObj.unlock(),dropLoadObj.noData(),dropLoadObj.resetload(),$(".tjlist-box ul").empty(),o(dropLoadObj)}),$(".sx-act").off().Touch(function(){$("#lx").hasClass("lx-show")||$("#zj").hasClass("lx-show")?($("#lx").hasClass("lx-show")?$("#lx").toggleClass("lx-show"):$("#zj").toggleClass("lx-show"),$(".tj-bg").addClass("hide"),setTimeout(function(){$("#sx").toggleClass("sx-show")},350)):$("#sx").toggleClass("sx-show"),$(this).toggleClass("act-on").siblings().removeClass("act-on"),page_index="1",dropLoadObj.unlock(),dropLoadObj.noData(!1),dropLoadObj.resetload(),$(".tjlist-box ul").empty()}),$(".sf-choice .sf-nav li").off().Touch(function(){$(this).toggleClass("on")}),$(".ls-choice .ls-list li").off().Touch(function(){$(this).toggleClass("on")}),$(".ls-choice .ls-nav li").off().Touch(function(){$(this).addClass("on").siblings().removeClass("on");var t=$(this).attr("index");"0"==t?($(".ls-choice .ls-list li").removeClass("on"),$('[jc="1"]').addClass("on")):"1"==t?$(".ls-choice .ls-list li").addClass("on"):$(".ls-choice .ls-list li").toggleClass("on")}),$(".tj-bg").off().Touch(function(){($("#lx").hasClass("lx-show")||$("#zj").hasClass("lx-show"))&&($(".tj-bg").addClass("hide"),$("#lx,#zj").removeClass("lx-show"),$(".lx-act,.zj-act").removeClass("act-on"))}),$(".ls-ok").off().Touch(function(){$(".sx-weebox").toggleClass("sx-show"),$(".sx-act").removeClass("act-on");var t=$("#sx .sf-nav li");$(t).eq(0).hasClass("on")&&(is_free="1"),$(t).eq(1).hasClass("on")&&(is_free="0"),$(t).eq(1).hasClass("on")&&$(t).eq(0).hasClass("on")&&(is_free=""),$(t).eq(1).hasClass("on")||$(t).eq(0).hasClass("on")||(is_free="");var s=$("#sx .ls-list li"),e=$("#sx .ls-list .on");if(s.length==e.length)league_id="";else for(var o=0;o<e.length;o++)league_id=league_id+$(e[o]).attr("league_id")+",";page_index="1",dropLoadObj.unlock(),dropLoadObj.noData(!1),dropLoadObj.resetload(),$(".tjlist-box ul").empty()}),$(".ceng-bg").off().Touch(function(){$(this).hide(),$("#ye-no").removeClass("tj-show").addClass("tj-hide"),$("#pay-con").removeClass("tj-show").addClass("tj-hide"),setTimeout(function(){$("#ye-no").hide(),$("#pay-con").hide()},300)}),$(".pay-list li").off().Touch(function(t){$(t).addClass("select").siblings().removeClass("select")}),$(".tjlist-box li").off().Touch(function(t,s){$(s.target).hasClass("user-tou")||$(s.target).hasClass("mj-name")||buy().buyRecommend(this)},{noRepeat:1}),$(".user-tou ,.mj-name").off().Touch(function(){var t=$(this).parents("li").attr("user_no"),s=$(this).parents("li").attr("is_combat");T.Util.goExpert(t,1,s)})},e=function(){var t="/app-web/api/recom/qry_expert_recoms?",s=$("#lx .on").attr("index");"0"==s&&(s="");var e=$("#zj .on").attr("index"),o={access_token:T.Storage.get("access_token"),page_index:page_index,page_size:20,recom_type:s,obj_type:e,is_free:is_free,league_id:league_id,is_finish:"0",item_type:"9",sport_type:sType};"1"!=Global.is_majia||"1"!=Global.iosAudit&&"1"!=Global.andAudit||(o.is_finish="1");for(var a in o)""!=o[a]&&(t=t+a+"="+o[a]+"&");return t=t.substr(0,t.length-1)},o=function(t){T.Util.xmlHttpRequest({type:"get",reqUrl:e(),version:"2.0.0",callback:function(s){T.Util.isEmpty(s.qry_expert_recoms)||(a(s.qry_expert_recoms.data),canload=!0,page_index=T.Util.notNullValue(s.qry_expert_recoms.page_index,0),doDropLoadInit(0==page_index,t),recommend().loadingfinish(page_index,".tjlist-box ul li",".no-content",".no-more"),recommend().hideresult(".tjlist-box ul li")),$("#loading-new").hide()},errorCallback:function(){$("#loading-new").hide(),t&&t.resetload(),recommend().loadingfinish(page_index,".tjlist-box ul li",".no-content",".no-more"),canload=!0}})},a=function(t){for(var e=[],o=0;o<t.length;o++){var a=t[o],l="";l=T.Util.isEmpty(a.match.time_desc)?a.match.m_time.substring(5,10):a.match.time_desc;var i=a.match.m_time.substring(11,16),n=T.Util.notNullValue(a.is_self,0),d=scoreResult(a.match),c=isMatchHtm(a.match),r='<span class="'+showPriceHtm(a.match,a,n)+'">'+showPrice(a.match,a,n)+"</span>",h='<li is_mj="'+a.is_mj+'"   recom_status="'+a.status+'"  is_hit="'+a.is_hit+'"  is_combat="'+a.is_combat+'"  is_expert="'+a.is_expert+'" user_no="'+a.user_no+'"  is_self="'+n+'" is_bought="'+a.is_bought+'" price="'+a.price+'" status="'+a.match.status+'" recom_id="'+a.recom_id+'">\t\t\t\t\t<div class="mlist-user clearfix">\t\t\t\t\t\t<div class="user-pic">\t\t\t\t\t\t<img src="'+a.portrait_pic+'" class="user-tou">\t\t\t\t\t\t<div class="ls-style" style="color:#ff5000">'+a.match.l_name+'</div>\t\t\t\t\t\t<div class="ls-date">'+l+'</div>\t\t\t\t\t\t<div class="ls-date">'+i+'</div>\t\t\t\t\t</div>\t\t\t\t\t<div class="user-intro">\t\t\t\t\t\t<div class="mj-sum"><span class="mj-name">'+T.Util.notNullValue(a.nick_name)+"</span>"+expertAlias(a)+'</div>\t\t\t\t\t<div class="mj-good">'+T.Util.notNullValue(a.tip_name)+'<em class="zj-p">'+a.tip+'</em></div>\t\t\t\t\t<div class="mj-tag">'+addBiaoQian(a.new_tags)+'</div>\t\t\t\t\t<div class="mj-team">'+T.Util.notNullValue(a.match.h_name)+'<span class="'+c+'">'+d+"</span>"+T.Util.notNullValue(a.match.g_name)+'</div>\t\t\t\t\t<div class="mj-lei">类型：<span class="mj-s">'+recomType(a)+'</span></div>\t\t\t\t\t<div class="mj-fa">'+T.Util.notNullValue(a.time_desc)+"  发布</div>\t\t\t\t\t</div>\t\t\t\t\t</div>\t\t\t\t\t"+r+"\t\t\t\t\t</li>";e.push(h)}"1"==page_index?$(".tjlist-box ul").html(e.join("")):$(".tjlist-box ul").append(e.join("")),s()},l=function(){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/recom/qry_newrecom_leagues?sprot_type="+sType,callback:function(t){i(T.Util.isEmpty(t.qry_newrecom_leagues.data)?[]:t.qry_newrecom_leagues.data)},errorCallback:function(){}})},i=function(t){for(var e=[],o=0;o<t.length;o++){var a=t[o].league_name,l=t[o].is_jc,i=t[o].league_id,n="";"1"==l&&(n="on"),e.push('<li class="'+n+'" jc="'+l+'" league_id="'+i+'"><span>'+a+"</span></li>")}$("#sx .ls-list ul").html(e.join("")),s()};return{init:t,getData:o}}(),appFirstInfo=!0;$(function(){function t(){appFirstInfo&&(Global.iosAudit&&$(".sx-act").addClass("hide"),appFirstInfo=!1,"1"!=Global.is_majia||"1"!=Global.iosAudit&&"1"!=Global.andAudit||$(".sf-choice").addClass("hide"),tjCgyx.init())}"BB"==T.Util.getPara("sType")?(sType=1,$("#lx li[index='1']").html("胜负"),$("#lx li[index='2']").html("让分胜负"),$("#lx li[index='3']").html("大小分")):(sType=0,$("#lx li[index='1']").html("竞彩单关"),$("#lx li[index='2']").html("亚盘"),$("#lx li[index='3']").html("大小球")),T.isNative?T.appToH5.init(t):t()})</script>
+</body>
+</html>

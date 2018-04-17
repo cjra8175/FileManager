@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>资料库</title>
+		<link href="css/data.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+	<div id="loading-new">
+		<div id="loading-new-center">
+			<div id="loading-new-center-absolute">
+				<div class="object" id="loading"></div>
+			</div>
+		</div>
+	</div>
+		<header class="data-header">
+			<span class="h-return"></span>
+			<div class="h-title"><span class="h-name">亚洲赛事赛事数据</span></div>
+		</header>
+		<section class="data-list">
+			<div class="list-ulbox clearfix">
+				<ul>
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+					
+						
+						
+					
+				</ul>
+			</div>
+			<div class="no-content" style="display:none">
+				<div class="none-icon"></div>
+				<div class="none-txt">空空荡荡...</div>
+			</div>
+		</section>
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script>var countryName=T.Storage.get("basketballCountryName")+"赛事数据";if($(".h-title .h-name").html(countryName),/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&/QAPP/.test(window.navigator.userAgent)){var head=document.getElementsByTagName("head")[0],styleLink=document.createElement("link");styleLink.setAttribute("rel","stylesheet"),styleLink.setAttribute("href","css/iphone.css"),head.appendChild(styleLink)}var page_size=999,page_index=1,defaultImage="images/logo.png",basketBallDataTeam=function(){function t(){$(".h-return").off().Touch(function(){T.Util.back()})}function a(){$(".item-box").off().Touch(function(){var t=$(this).attr("league-id"),a=$(this).attr("league-cup"),e="";T.Util.isEmpty($(this).attr("has-calculate"))||(e="&has_calculate="+$(this).attr("has-calculate"));var l=T.Util.getRootPath()+"/"+Global.webRoot+"/basketBallData/matchInfo.html?league_id="+t+"&league_cup="+a+e;T.Util.openWindow(l)})}function e(){var t=T.Util.getPara("country_id"),a={country_id:t,PAGE_SIZE:page_size,PAGE_INDEX:page_index};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_league_by_country?sport_type=1",reqData:a,callback:function(t){try{if($.isArray(t.qry_league_by_country.data)&&t.qry_league_by_country.data.length){var a=t.qry_league_by_country.data,e=[];if(!a||!a.length)return $(".list-ulbox ul").html(""),$("#loading-new").addClass("hide"),void $(".no-content").css("display","block");$(".list-ulbox ul").html("");for(m in a)e.push("<li>"),e.push('<div class="item-box" has-calculate="'+a[m].have_statistics+'" league-id="'+a[m].league_id+'" league-cup="'+a[m].league_cup+'">\t\t\t\t\t\t\t\t\t\t <img class="list-flag" src="'+a[m].picture_url+'" onerror="this.src=defaultImage"/>\t\t\t\t\t\t\t\t\t\t <span class="flag-name" style="font-size: 14px;margin-left: 8px;">'+a[m].league_name+"</span>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </li>");$(".list-ulbox ul").html(e.join("")),basketBallDataTeam.addListenerBasketBallData()}else $(".no-content").css("display","block"),$("#loading-new").addClass("hide")}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})}function l(){basketBallDataTeam.addListerItem(),basketBallDataTeam.getGameData()}return{init:l,addListerItem:t,getGameData:e,addListenerBasketBallData:a}}(),appFirstInfo=!0;$(document).ready(function(){function t(){appFirstInfo&&(appFirstInfo=!1,basketBallDataTeam.init())}T.isNative?T.appToH5.init(t):t()})</script>
+	</body>
+</html>

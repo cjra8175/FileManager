@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>提现</title>
+		<link href="../css/widthdraw.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+	<div id="loading-new">
+		<div id="loading-new-center">
+			<div id="loading-new-center-absolute">
+				<div class="object" id="loading"></div>
+			</div>
+		</div>
+	</div>
+		<header class="buyin-header">
+			<span class="sq-return"><i class="return-icon"></i><em class="return-txt">返回</em></span>
+			<div class="h-title">提现记录</div>
+		</header>
+		<section class="withdraw-con">
+			<div class="record-list">
+				
+					
+					
+					
+						
+						
+					
+					
+				
+
+				
+					
+					
+					
+						
+						
+						
+					
+					
+				
+
+				
+					
+					
+					
+						
+						
+						
+					
+					
+				
+
+				
+					
+					
+					
+						
+						
+						
+					
+					
+				
+			</div>
+			<footer class="record-tip">感谢您耐心等待，若您交易未成功<br>请联系<span class="typeName">百盈足球</span>工作人员QQ：2111955973</footer>
+		</section>
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script>var page=1;/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".withdraw-con").css({"padding-top":"88px"})):($(".buyin-header").css({"padding-top":"16px"}),$(".withdraw-con").css({"padding-top":"64px"}))),$(".sq-return").off().Touch(function(){T.Util.back()}),$(window).scroll(function(){var t=$(this).scrollTop(),a=$(document).height();if(t+$(this).height()>=a){if(0==page)return;Record.init()}});var Record=function(){function t(){T.Util.xmlHttpRequest({reqUrl:"/forum/api/expert/qry_withdraw?access_token="+T.Storage.get("access_token")+"&page_index="+page+"&page_size=10",type:"get",callback:function(t){$("#loading-new").hide();var a=t.qry_withdraw.data,s=[];page=t.qry_withdraw.page_index,a.length?($.each(a,function(t,a){11==a.alipay_status?s.push('<div class="record-column">\t\t\t\t\t\t\t\t\t\t\t <div class="record-date">'+new Date(a.apply_time).format("YYYY年MM月")+'</div>\t\t\t\t\t\t\t\t\t\t<div class="record-main">\t\t\t\t\t\t\t\t\t\t\t <div class="record-m"><span class="m-txt">金  额</span><span class="m-count">+'+a.money+'</span></div>\t\t\t\t\t\t\t\t\t\t<div class="record-time"><span class="time-txt">交易失败</span><span class="time-con">申请未通过</span></div>\t\t\t\t\t\t\t\t\t\t<div class="record-time"><span class="time-txt">申请时间</span><span class="time-con">'+new Date(a.apply_time).format("MM-dd")+"</span></div>\t\t\t\t\t\t\t\t\t\t</div></div>"):a.settle_status?s.push('<div class="record-column">\t\t\t\t\t\t\t\t\t\t\t <div class="record-date">'+new Date(a.apply_time).format("YYYY年MM月")+'</div>\t\t\t\t\t\t\t\t\t\t<div class="record-main">\t\t\t\t\t\t\t\t\t\t\t <div class="record-m"><span class="m-txt">金  额</span><span class="m-count">+'+a.money+'</span></div>\t\t\t\t\t\t\t\t\t\t<div class="record-time"><span class="time-txt">到账时间</span><span class="time-con">'+new Date(a.audit_time).format("MM-dd")+'</span></div>\t\t\t\t\t\t\t\t\t\t<div class="record-time"><span class="time-txt">申请时间</span><span class="time-con">'+new Date(a.apply_time).format("MM-dd")+"</span></div>\t\t\t\t\t\t\t\t\t\t</div></div>"):s.push('<div class="record-column">\t\t\t\t\t\t\t\t\t\t <div class="record-date">'+new Date(a.apply_time).format("YYYY年MM月")+'</div>\t\t\t\t\t\t\t\t\t<div class="record-main">\t\t\t\t\t\t\t\t\t\t <div class="record-m"><span class="m-txt">金  额</span><span class="m-count">+'+a.money+'</span></div>\t\t\t\t\t\t\t\t\t<div class="record-time"><span class="time-txt">申请时间</span><span class="time-con">'+new Date(a.apply_time).format("MM-dd")+"</span></div>\t\t\t\t\t\t\t\t\t</div></div>")}),$(".record-list").append(s.join("")),footerTop()):$(".record-list").html('<div class="no-content">\t\t\t\t\t\t\t\t\t <div class="none-icon"></div>\t\t\t\t\t\t\t\t\t <div class="none-txt">空空荡荡...</div>\t\t\t\t\t\t\t\t\t </div>')},errorCallback:function(){}})}return{init:t}}(),footerTop=function(){var t=$(window).height()-101;$(".record-list").height()>t&&$(".record-tip").addClass("footer-tip")};$(function(){var t=function(){Global.is_byty?$(".typeName").html("百盈体育"):$(".typeName").html("百盈足球"),Record.init(),footerTop()};T.isNative?T.appToH5.init(t):t()})</script>
+	</body>
+</html>

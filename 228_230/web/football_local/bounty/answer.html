@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>赏金答题</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<header class="sq_header hide" id="inHead">
+    <div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+    <span class="sq_headerText">赏金答题</span>
+</header>
+<style>body{background:#689f38;color:#fff}.bty_icon{background:url(../img/bounty/bountyIcon.png) no-repeat;background-size:200px auto;display:inline-block;vertical-align:middle}#LoginBox{width:100%;height:100%;background:url(../img/bounty/loginBg.png) no-repeat;background-size:100% 100%;position:absolute}#loginLog{width:278px;height:137px;background:url(../img/bounty/loginLogo.png) no-repeat;background-size:278px auto;position:absolute;top:50px;left:50%;margin-left:-139px}#loginDiv{border-radius:4px;margin:0 25px;position:relative;top:186px}#loginDiv p{height:70px;line-height:70px;background:#8bc34a;padding:0 15px}#loginDiv p:first-child{border-bottom:1px solid #fff}#loginDiv p span{font-size:16px;opacity:.7;width:70px;display:inline-block}#loginDiv input{border:none;background:#8bc34a;color:#fff;font-size:16px;width:65%}::-webkit-input-placeholder{color:#b0d58c}#goLogin{background:#ffab00;margin-top:14px;margin-bottom:25px;height:40px;line-height:40px;text-align:center;color:#fff}#goLogin.tapped{background:#c68a06}.uInfo{margin-top:0;height:57px;line-height:57px;width:100%;background:#558b2f;position:relative}.myBox{margin-left:15px}.userImg{width:25px;height:25px;border-radius:50%;border:2px solid #77a259}.gold{width:10px;height:12px;background-position:-40px -38px;margin-right:4px;margin-top:-3px}#myInfo{position:absolute;top:5px;left:55px;color:#fff}#usrName{margin-right:20px}.colorY{color:#ffea3a}.betRecord{width:25px;height:25px;background-position:-120px -11px}#record{float:right;margin-right:15px;color:#d6e0d0}.colorW{color:#fff;opacity:.7}.ft16{font-size:16px;margin:18px}.ruleDiv{background:#8bc34a;height:45px;line-height:45px;border-radius:4px;margin:0 18px;padding:0 13px;font-size:14px;position:relative}.ruleDiv:nth-child(5){margin-top:25px}.ruleDiv i{opacity:.7}.ruleDiv input{margin-left:10%;border:none;background:#8bc34a;height:100%;color:#fff;width:35%;vertical-align:top;font-size:13px}.blurCls{text-align:right;color:#b0d58c}.focusCls{text-align:left}.ruleDiv label{color:#b0d58c;margin-left:10%;height:45px;width:35%;display:inline-block;overflow:hidden;text-overflow:ellipsis;position:absolute}.ruleDiv span{margin-left:5px;font-size:13px}#answerBox{display:-webkit-box;height:96px;margin:0 15px}#answerBox p{-webkit-box-flex:1;border:1px dashed #7cb342;width:0;height:96px;position:relative}#answerBox p:nth-child(2){margin:0 5px}#answerBox p.on{border:1px solid #7cb342;background:#7cb342}#answerBox p.true{border:1px solid #a0a946;background:#a0a946}#answerBox p span{display:inline-block;width:99px;height:85px;position:absolute;right:0;bottom:0;background-size:99px auto}.zq{background:url(../img/bounty/zq.png) no-repeat}.lq{background:url(../img/bounty/lq.png) no-repeat}.pq{background:url(../img/bounty/pq.png) no-repeat}#divBox{background:#8bc34a;border-radius:4px;margin:35px 18px 8px;position:relative;padding-bottom:50px}.answerUserImg{width:54px;height:54px;border-radius:50%;border:5px solid #a2cf6e;position:absolute;left:50%;margin-left:-32px;top:-29px;background:#a2cf6e}.pItem{background:#fff;border-radius:5px;width:10px;height:10px;display:inline-block;margin:0 5px}.sureDiv{background:#ffab00;border-radius:3px;color:#000;border-radius:10px;font-size:16px;margin:0 13px 50px 13px;height:45px;line-height:47px;text-align:center}.sureDiv.tapped{background:#c68a06}.sureDiv.over{background:#3a591f}#fqPeople{text-align:center;width:100%;padding-top:40px;opacity:.5}.popBox{background:#8bc34a;color:#fff;width:90%;left:5%;height:200px;margin-top:-100px}.popBox .confirmcontent{max-height:90px}.popBox .confirmbutton{font-size:16px;text-align:center;display:-webkit-box;position:absolute;width:100%;bottom:0;height:initial;line-height:40px;border-top:none}.popBox .confirmbutton div{background:#ffab00;color:#000;margin:15px;border-radius:20px}.popBox .confirmbutton div.tapped{background:#628934}.popBox .confirmbutton div:nth-child(2){border-left:none;border-radius:20px}.betHelpBox{position:fixed;width:80%;margin-left:10%;background-color:#8bc34a;height:300px;z-index:150;top:130px;border-radius:10px}.ruleT{position:fixed;left:50%;margin-left:-34px;width:68px;height:53px;background-position:-2px -252px;top:113px;z-index:151}.ruleC{position:fixed;right:18px;top:116px;width:35px;height:35px;background-position:-84px -46px;z-index:151}.ruleText{margin:55px 22px 10px 22px;line-height:normal;height:335px;overflow:scroll;opacity:.7}.ruleMask{position:fixed;width:100%;left:0;top:0;background:#000;opacity:.7;height:100%;z-index:111}</style>
+
+<section id="LoginBox" class="hide">
+    <span id="loginLog"></span>
+     <div id="loginDiv">
+         <div>
+             <p><span>用户名:</span><input type="tel" placeholder="请输入手机号码" maxlength="11" id="logintel"></p>
+             <p><span>密码:</span><input type="password" placeholder="请输入密码" id="loginpas"></p>
+         </div>
+         <div id="goLogin"> 登 录 </div>
+         <i>温馨提示：未绑定手机号码的用户，请直接前往百盈足球APP内 猜球 娱乐场答题</i>
+     </div>
+</section>
+
+<section class="AnswerBox hide">
+    <div class="uInfo">
+        <span class="myBox"><img src="" class="userImg"></span>
+        <em id="myInfo">
+            <span id="usrName"></span><i class="icon gold"></i><cite class="colorY" id="userGold"></cite>
+        </em>
+        <span id="record"><span class="bty_icon betRecord"></span>游戏规则</span>
+        <div class="ruleMask hide"></div>
+        <div class="betHelpBox hide">
+            <b class="bty_icon ruleT"></b>
+            <b class="bty_icon ruleC"></b>
+            <div class="ruleText">
+                <span>1、悬赏竞猜游戏中，用户发起题目，设置悬赏金额、指定挑战者、以及设置题目有效期，有效期内挑战者猜中答案则获得该题悬赏的全部金额；
+                 <br>2、发起悬赏竞猜，悬赏金额必须为<em id="minGold">1万</em>金币以上；
+                 <br>3、发起悬赏竞猜，仅金币可参考竞猜，网站赠送的体验金币不能参与竞猜;
+                 <br>4、题目有效期内，如果指定挑战者答题错误那么赏金将会立即退回，若超过有效期挑战者没有答题，题目将关闭，赏金退回给发题用户；
+                 <br>5、本游戏解释权归百盈足球所有。</span>
+            </div>
+        </div>
+    </div>
+    <div id="divBox">
+        <img src="" class="answerUserImg">
+        <p id="fqPeople"></p>
+        <div class="setAnswer">
+            <p class="colorW ft16"><span class="pItem"></span>猜猜我选的是什么？<span id="ballName" style="float:right"></span></p>
+            <div id="answerBox">
+                <p><span class="zq"></span></p>
+                <p><span class="lq"></span></p>
+                <p><span class="pq"></span></p>
+            </div>
+        </div>
+        <div>
+            <p class="colorW ft16"><span class="pItem"></span>悬赏金额：<em id="bountyMoney">--</em><span class="colorY"> 金币</span></p>
+            <p class="colorW ft16"><span class="pItem"></span>答题金额：<em id="bountyMoneyDT">--</em><span class="colorY"> 金币</span></p>
+            <p class="colorW ft16" style=""><span class="pItem"></span>截止时间：<em id="bountyTime">--</em></p>
+        </div>
+    </div>
+    <div class="sureDiv">提　交</div>
+</section>
+
+<section id="findFriend" class="hide">
+    <div class="searchLine"><i class="searchIcon"></i><input type="search" placeholder="| 搜索好友" class="searchName"></div>
+    <div id="friendListBox">
+        <table style="width:100%;border-collapse:collapse" id="friendList">
+        </table>
+    </div>
+</section>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/lib/md5.js"></script>
+<script src="../js/main.js"></script>
+<script>T.isNative&&($(".uInfo").css("margin-top","49px"),Global.isiOS&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?$(".uInfo").css("margin-top","89px"):$(".uInfo").css("margin-top","69px"),T.Util.addStyleLink("../css/iosBar.css")),$("#inHead").show());var pageFrom="",InIt=function(){function e(){var e=T.Storage.get("userinfo");$("#userGold").html(T.Util.parseNumber(e.coin))}var t={tel:function(e){if(""==e)tip("请输入手机号码");else{if(/^1\d{10}$/.test(e))return!0;tip("请输入正确的手机号码")}},pas:function(e){if(""==e)tip("请输入密码！");else{if(!(e.length>16))return!0;tip("请输入6-16位密码！")}}},o=function(){$("#goLogin").Touch(function(){if($("input").blur(),InIt.check.tel($("#logintel").val())&&InIt.check.pas($("#loginpas").val())){var e={user_acct:$("#logintel").val().trim(),password:md5($("#loginpas").val().trim()+"{mobius%key%}")};T.Util.xmlHttpRequest({hostFlag:"auth",reqData:e,reqUrl:"/auth-web/authorize",callback:function(e){console.log("登录成功！！"),InIt.getRecord(e.access_token),T.Storage.set("access_token",e.access_token),T.Util.xmlHttpRequest({type:"get",reqUrl:"/web/services/user/getUser.json?token="+e.access_token,callback:function(e){T.Storage.set("userinfo",e.res_data),console.log("获取用户信息成功！！");var t=T.Storage.get("userinfo");T.Util.isEmpty(t)||($("#usrName").html(t.nick_name),$("#userGold").html(T.Util.parseNumber(t.coin)),$(".userImg").attr("src",t.portrait_pic))},errorCallback:function(e){}})},errorCallback:function(){}})}})},r=function(e){T.Util.xmlHttpRequest({type:"get",reqUrl:"/web/services/offer/recode.json?token="+e+"&type=3",callback:function(e){console.log(e);var t=e.res_data.value;1==t.length?($("#LoginBox").hide(),$(".AnswerBox").show(),InIt.answer(t[0])):window.location.href="record.html?type=3"+pageFrom},errorCallback:function(e){}})},a=function(t){if("10"!=t.o_status)return void tip("该题不在悬赏中！");$("#answerBox p").Touch(function(e){if(!$(e).hasClass("on")){$(e).siblings().removeClass("on"),$(e).addClass("on");var t=$("#ballName");switch($(e).index()){case 1:t.html("篮球").data("type",2);break;case 2:t.html("排球").data("type",3);break;default:t.html("足球").data("type",1)}}}),$(".answerUserImg").attr("src",t.u_pic),$("#bountyMoney").html(T.Util.parseNumber(parseInt(t.o_gratuity))),$("#bountyMoneyDT").html(T.Util.parseNumber(parseInt(t.o_prize))),$("#bountyTime").html(new Date(t.e_time).format("MM/dd hh:mm")),$("#fqPeople").html(t.u_name),$(".sureDiv").off().Touch(function(o){var o=$(o);if(!o.hasClass("over")){var r=$("#ballName").data("type");if(T.Util.isEmpty(r))return void tip("请选择答案！");confirm('<p style="font-size:20px;margin-top:-25px;">温馨提醒</p><p style="margin-top:20px;margin-left:10px;">若答对，您将赢得<em style="color:red;margin: 0 5px;display: inline-block;">'+T.Util.parseNumber(parseInt(t.o_gratuity)-parseInt(t.o_prize))+"</em>金币；<br>若答错，不会扣除金币。<br>请在参与活动前仔细核对对方身份。</p>",function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/web/services/offer/submit.json?token="+T.Storage.get("access_token")+"&o_id="+t.o_id+"&answer="+r,callback:function(r){"1"==r.res_data.value.is_success?t.o_gratuity<t.o_prize?(alert("恭喜你，答题成功！"),o.html("答题成功").addClass("over")):(alert("恭喜你，回答正确</br>获得"+T.Util.parseNumber(parseInt(t.o_gratuity))+"金币！"),o.html("回答正确").addClass("over")):(alert("不好意思，回答错误"),o.html("回答错误").addClass("over")),T.User.getUInfo(T.Storage.get("access_token"),e),console.log(r)},errorCallback:function(){}})},"取消","确认")}})},n=function(){$("#back").off().Touch(function(){T.Util.back()}),$("#record").off().Touch(function(){$(".betHelpBox").show(),$(".ruleMask").show()}),$(".ruleC").off().Touch(function(){$(".betHelpBox").hide(),$(".ruleMask").hide()})};return{init:function(){if(n(),!T.isNative||T.Util.isEmpty(T.Storage.get("access_token")))$("#LoginBox").show(),$(".AnswerBox").hide(),InIt.login();else{var e=T.Storage.get("userinfo");T.Util.isEmpty(e)||($("#usrName").html(e.nick_name),$("#userGold").html(T.Util.parseNumber(e.coin)),$(".userImg").attr("src",e.portrait_pic)),InIt.getRecord(T.Storage.get("access_token"))}},login:o,answer:a,getRecord:r,check:t}}();$(document).ready(function(){function e(){t||(T.Util.isEmpty(T.Util.getParaHash("pageFrom"))||(pageFrom="&pageFrom="+T.Util.getParaHash("pageFrom")),InIt.init(),T.Util.xmlHttpRequest({type:"get",reqUrl:"/web/services/template/OFFER_PRO.json",callback:function(e){$("#minGold").html(e.res_data[0].minGold/1e4+"万")},errorCallback:function(e){console.log(e)}})),t=!0}var t=!1;T.isNative?T.appToH5.init(e):T.Util.isEmpty(T.Storage.get("access_token"))?(T.Storage.remove("access_token"),T.Storage.remove("userinfo"),e()):T.User.getUInfo(T.Storage.get("access_token"),e)})</script>
+
+</body>
+</html>

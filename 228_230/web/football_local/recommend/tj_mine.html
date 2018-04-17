@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>我的收入</title>
+	<link href="../css/recommend.css" type="text/css" rel="stylesheet">
+	<style>.zhye-count div{position:absolute;border:1px solid #fff;border-radius:3px;text-align:center;font-size:12px;color:rgba(255,255,255,.7);width:57px;height:23px;line-height:25px}.withdrawEnd{opacity:.5}#withdraw{right:79px;top:23px}#buyShopping{right:0;top:23px;background:#fff;color:#2479e2}#buyShopping.tapped{background:#dcdcdc;border-color:#dcdcdc;color:#2479e2}.mask{position:fixed;top:0;left:0;background:#000;opacity:.1;width:100%;height:100%;z-index:99}.sq-return{position:absolute;bottom:0;left:0;width:74px;height:48px;font-size:14px;color:#fff}.return-icon{display:inline-block;width:10px;height:10px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);-webkit-transform:rotate(45deg);vertical-align:middle}.return-txt{vertical-align:middle;margin-left:3px}#tj-broadcast{position:relative;width:100%;height:30px;background:#fefcec;color:#f77939;font-size:14px;line-height:30px;overflow:hidden}.minCast{position:absolute;width:40px;height:30px;left:0;top:0;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAIAAAD47T2eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2YjczNjk5Mi0yNTJmLTcxNGYtOTE1NC04NTg1Mzg3OGY0NTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RERGMUZBM0JBM0YxMTFFN0JCM0RCNzlCMjVFMzdBNjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RERGMUZBM0FBM0YxMTFFN0JCM0RCNzlCMjVFMzdBNjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTg4MWU0MWUtZjQzOC0xMzRmLWE0ZjktMzBhMDY0NWRmYTg4IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YTIyNjUzNWMtYTM2Ny0xMWU3LWFkZDQtYTIxMjRmM2Y4NzQwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pDqCoAAABA1JREFUeNq8V3tM01cU/g5tKe9HkRXUqTwMzWYyXXS+QCRu0S3iVtFlRoNz1gdMYmJi9of/bMr+mDjMCCMuw8eSZcxtgBlu85WI0sY5N6eIigKCjuGKCQ8zlGfP7i1U+JW2o/Vx0tz8fvee9rvn3O+c75Zs/a14+uaHZ2Jqr7yp8jAe3secZRypf1owVP4ZzF/Jp6AIpK504VD7G+p+5/Rs35NGRwokRojHIKy3UVksd+NbNPRjIaoO4e2dCNVh/xa3fslGtDaJ3VBIOL/2rnfR0A95OHMAaRt59lKERNrn2KUnq9QwboXegGMF1FjtBQyV5eNcCeau4qWb5XvPQ8/+rPbHut3yqTSPervHBCNzZfkaqet5xXbHFCkcrp+nK1XOSNET8cY23L2Kq2a3MNTXSwP91N1FFUUyV/PW8LL3XW+CGX8cw6GtZC5zXptvhDYMVd+RbUBBAWr7BxdP4q9r6OqAyh/d/6L5TySl4c0ct/khokWZaLqM8lzST+GpLw8vBQTTgkycLERLPSYmDUVDLQ0oysYve1FzHM01aDyPlsuYthiZO1mt8XQSsXHIKpQsL/mQnI7NMEuONZYR0Zw4gPYmrPwISa/I7ItssA3h0ZI5/2ccNZ4WrMbP+TCXYtGa4YWYeOjiUX2K0t5hbZD9bG5aMHkmz0kXLYQjnpOjLnYsGEM263VoAnHhqDytEXlDTAKstbDzzQ7T/wDqAHHyvrVFDovCpBlou4V2q2IhRCfHrk4HDKnAAzJRPlvsVPl1waORpouRY+udJycE/lrYbOjrUUwGhtpT1fvkYDruyTE4VDHZaRfMoPBHZ9MD0SToMSD/vo6AcOjjlNh2mJg4B0zkZLQ2gtk3CGqqkYxKSmFtoBLGiuBxUGkcdTMzXVbswR1kmC1fRYcQVfnCvLFK5ImD9gaTocAWrGu5BkMqgsMcMGmrYG1E9U+oPTXsaDGQKZ8H2eJZtm+clq0v4SXFQvNNdHfixWT28xuCkcGu3UX1GWi+IbuAnwrtd2XfLN5GG/a6i4kEtc58i6N7RGlj8XrnrmoplTWbOMNZPTlxOsTnkWvUBJTtwudZtKlA9nYXZWnDr+VITIFpN2u0iqWGS6g7K1RKqq1nkeb5Rrmp8lzsy6GcL0QTGq2VlFUkUu+MIex4sRznGtmhT55IzMnL8dYOdNzGN7k0WHo2RafgiOjRGFRZglvnsNDEExLHKtKckiGRGszY/wH192FUTM4Y9ZdQkYdxCVhi8u5mI5Bk5Ec+FozHtOTBX3ONUXcRX2ZL3XzvU9b4e32BGkYaZLxDep3ZZf4eA70wFbJ+ko+3ziGkik8g9CI00rVmL9mAV9fy84bHu0MLRojud78NCdPdaHa82zN7Nn88/hNgABwicJ1EPjjoAAAAAElFTkSuQmCC) no-repeat;background-size:18px 18px;background-position:10px 6px}.closeCast{position:absolute;width:40px;height:30px;right:0;top:0;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAIAAABvFaqvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2YjczNjk5Mi0yNTJmLTcxNGYtOTE1NC04NTg1Mzg3OGY0NTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0IzNDREQjBBM0YxMTFFN0JEMjNDN0VCMEYyRDJGM0YiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0IzNDREQUZBM0YxMTFFN0JEMjNDN0VCMEYyRDJGM0YiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTg4MWU0MWUtZjQzOC0xMzRmLWE0ZjktMzBhMDY0NWRmYTg4IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YTIyNjUzNWMtYTM2Ny0xMWU3LWFkZDQtYTIxMjRmM2Y4NzQwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+weta6AAAAT1JREFUeNqs1G1qwkAQBuDZxQqKNn9E0QuI0N6k12iVgHqKHkADwVxLBekFLA3tDz9QUDHOJJGYmOxOqEvAJO77sI6zK84nFx4xZPAh1n/ieMgbxggGI4gePt9g/C62qxwKTh5/YDCw/BWVq1Bvw3IGkz7TomnOAJZTCpaqIeQVitAdQfMFvucc66rMKNIdeU/FqEZexYCexbFiSs+i4G2xmRa9nPTvlRiktUIFv7pTkpDCUis0IbUhEzF6pVQyoZjV6NDzz0KhqKDQsk0icCBn2llKSo3+u9cyfxouB9eCF94o+0tqCoR1MW26dL0qtX8Z1oXTq1KrMPte8ntXbUmmorUkX1Fb/gl5OoAz5CgpljMMzmh/RbsNuF/QeuUoMQsjGNxvoi0iVr9Qfg7OulyHP+zWnlHT7LVc4yLAAGKDDQZ0pG40AAAAAElFTkSuQmCC) no-repeat;background-size:13px 13px;background-position:15px 9px}.textCast{position:absolute;left:40px;right:38px;overflow:hidden}#tj-broadcast b{z-index:5;background-color:#fefcec}@keyframes minphone{0%{margin-left:100%}100%{transform:translate3d(-100%,0,0)}}@-webkit-keyframes minphone{0%{margin-left:100%}100%{-webkit-transform:translate3d(-100%,0,0)}}</style>
+</head>
+<body>
+<div class="typeUser hide" style="z-index:100">
+	<p id="TJ">发布推荐</p>
+
+	<p id="WZ">发布文章</p>
+</div>
+	<header class="sq_header" id="inHead">
+
+		<span class="sq-return" id="back"><i class="return-icon"></i><em class="return-txt">返回</em></span>
+		<span class="sq_headerText">我的收入</span>
+		<i class="tj-expert hide"></i>
+		<i class="tj-editor hide"></i>
+
+	</header>
+	<section class="recommend-main">
+		<div id="tj-broadcast" class="hide">
+			<b class="minCast"></b>
+			<div class="textCast">
+				<nobr style="display:inline-block">
+					<span>10月1日起，推荐收入为代扣20%劳务所得税后金额，次月1日根据当月实际收入情况多退少补。</span>
+				</nobr>
+			</div>
+			<b class="closeCast"></b>
+		</div>
+		<div class="minetj-top" style="height:89px">
+			<div class="zhye-title" style="color:rgba(255,255,255,.9)">账户余额<span class="withdraw" style="opacity:.7">（提现规则）</span></div>
+			<div class="zhye-count" style="position:relative">
+				<span id="userM"></span>
+				<div id="withdraw">提现</div>
+				<div id="buyShopping">购买金币</div>
+			</div>
+		</div>
+		<div class="minetj-box">
+			
+			<div class="sstj-con hide" id="sstj-y">
+				<div class="sstj-title">赛事推荐</div>
+				<div class="sstj-header clearfix">本月收入（<i class="zc-icon"></i>）<span class="sstj-enter">查看收入详情</span></div>
+				<div class="tj-zuan" id="tj-ss"></div>
+			</div>
+			
+
+			
+			<div class="sstj-no hide" id="sstj-n">
+				<div class="sstj-title">赛事推荐</div>
+				<div class="sstj-header clearfix">您还不是专家<span class="sstj-enter">如何成为专家？</span></div>
+				<div class="tj-shuo">成为百盈专家，就可以发布各类赛事推荐</div>
+			</div>
+			
+		</div>
+
+		<div class="minetj-box" id="byty">
+			
+			<div class="sstj-con hide" id="sztz-y">
+				<div class="sstj-title1">实战投注</div>
+				<div class="sstj-header clearfix">本月收入（<i class="zc-icon"></i>）<span class="sstj-enter">查看收入详情</span></div>
+				<div class="tj-zuan" id="tj-sz"></div>
+			</div>
+			
+
+			
+			<div class="sstj-no hide" id="sztz-n">
+				<div class="sstj-title1">实战高手</div>
+				<div class="sstj-header clearfix">您还不是实战高手<span class="sstj-enter">如何成为实战高手？</span></div>
+				<div class="tj-shuo hide">参与投注成为实战高手猜球还能赢钻石</div>
+			</div>
+			
+		</div>
+
+		<div class="minetj-box hide">
+			<div class="sstj-con hide" id="byh-h">
+				<div class="sstj-title1" style="background:red">百盈号</div>
+				<div class="sstj-header clearfix">本月收入（<i class="zc-icon"></i>）<span class="sstj-enter">查看收入详情</span></div>
+				<div class="tj-zuan" id="by-sz"></div>
+			</div>
+
+			
+			<div class="sstj-no" id="byh-n">
+				<div class="sstj-title1">百盈号</div>
+				<div class="sstj-header clearfix">您还不是百盈号用户<span class="sstj-enter">如何成为百盈号用户？</span></div>
+			</div>
+			
+		</div>
+	</section>
+	<div class="mask hide"></div>
+	<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../recommend/recommend.js"></script>
+	<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".recommend-main").css({"margin-top":"88px"}),$(".typeUser").css({top:"88px"})):($(".sq_header").css({"padding-top":"16px"}),$(".recommend-main").css({"margin-top":"64px"}),$(".typeUser").css({top:"64px"})));var is_mj="",typeName="tm",is_expert=-1,is_byh="-1",is_shizhan="-1",is_first=!0,tj_mine=function(){var t=function(t){T.Util.xmlHttpRequest({type:"get",version:"2.0.2",reqUrl:"/app-web/api/expert/get_expert_apply?access_token="+T.Storage.get("access_token"),callback:function(e){is_expert=T.Util.isEmpty(e.get_expert_apply)||!T.Util.isEmpty(e.get_expert_apply)&&T.Util.isEmpty(e.get_expert_apply.status)||!T.Util.isEmpty(e.get_expert_apply)&&-1==e.get_expert_apply.status?-1:0==e.get_expert_apply.status?0:1,t&&t()},errorCallback:function(t){is_expert=-3}})},e=function(){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/recom/qry_my_recoms?access_token="+T.Storage.get("access_token"),callback:function(t){var e=t.qry_my_recoms;T.Util.isEmpty(e)||(0==e.is_expert&&0==e.is_shizhan&&$("#withdraw,.withdraw").addClass("hide"),T.Util.isEmpty(e.is_mj)||1!=e.is_mj||(is_mj=e.is_mj),$("#userM").html(isEmpty(new Number(e.total_money).toFixed(2))),1==e.is_expert?($("#sstj-y").show(),$("#sstj-n").hide(),$("#tj-ss").html(isEmpty(new Number(e.recommend_money).toFixed(2))),$(".tj-expert").show(),$(".tj-editor").show()):($("#sstj-y").hide(),$("#sstj-n").show()),1==e.is_shizhan?(is_shizhan=1,$("#sztz-y").show(),$("#sztz-n").hide(),$("#tj-sz").html(isEmpty(new Number(e.shizhan_money).toFixed(2)))):($("#sztz-y").hide(),$("#sztz-n").show()),e.is_by&&1==e.is_by?($(".tj-expert").show(),$(".tj-editor").show(),$("#byh-n").hide(),$("#byh-h").show(),$("#by-sz").html(isEmpty(new Number(e.by_money).toFixed(2)))):($("#byh-n").show(),$("#byh-h").hide()),1==e.is_expert&&1==e.is_by?$(".tj-editor").addClass("all"):1==e.is_expert?$(".tj-editor").addClass("ZJ"):1==e.is_by&&$(".tj-editor").addClass("BY"))},errorCallback:function(t){}})},o=function(){$(".closeCast").off().Touch(function(){$("#tj-broadcast").hide()}),$(".tj-expert").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/expert.html?user_no="+T.Storage.get("userinfo").user_no)}),$(".tj-editor").off().Touch(function(){$(this).hasClass("all")?($(".mask").toggleClass("hide"),$(".typeUser").toggleClass("hide")):$(this).hasClass("ZJ")?T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/tjMatch.html"):$(this).hasClass("BY")&&T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/buyinEditor.html")}),$("#TJ").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/tjMatch.html"),$(".typeUser").addClass("hide"),$(".mask").addClass("hide")}),$("#WZ").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/buyinEditor.html"),$(".typeUser").addClass("hide"),$(".mask").addClass("hide")}),$(".mask").off().Touch(function(){$(".mask").toggleClass("hide"),$(".typeUser").toggleClass("hide")}),$("#sstj-y").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/sstj.html?from="+typeName+"&user_no="+T.Storage.get("userinfo").user_no+"&is_mj="+is_mj)}),$("#sstj-n").off().Touch(function(){t(function(){0==is_expert?tip("您的专家申请正在审核中,不能重复发起"):1==is_expert?T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/sstj.html?from="+typeName+"&user_no="+T.Storage.get("userinfo").user_no+"&is_mj="+is_mj):1==is_byh||1==is_shizhan?confirm("是否申请专家",function(){var t={apply_baiyin:{access_token:T.Storage.get("access_token"),apply_type:"0"}};T.Util.xmlHttpRequest({type:"post",reqData:t,reqUrl:"/app-web/api/expert/apply_baiyin",callback:function(t){tip("申请成功"),tj_mine.init(),comBat_pop.getdata()},errorCallback:function(t){tip("申请失败")}})},"再看看","去申请",!1):T.isNative&&api.openApplySpecialist({is_experts:"1"},function(){})})}),$("#sztz-y").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/sztz.html?from="+typeName+"&is_self=1")}),$("#byh-h").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/expert.html?user_no="+T.Storage.get("userinfo").user_no+"&page=wz")}),$("#withdraw").off().Touch(function(){if(!$("#withdraw").hasClass("withdrawEnd"))if((new Date).getTime()>=15094656e5){var t=(new Date).getDate();t>=4&&t<=10?T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/index.html"):tip("未到提现时间。每月4-10日方可提现")}else T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/index.html")}),$(".withdraw").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/tx_rules.html")}),$("#byh-n").off().Touch(function(){1==is_expert||1==is_shizhan?confirm("是否开通百盈号",function(){var t={apply_baiyin:{access_token:T.Storage.get("access_token"),apple_type:"2"}};T.Util.xmlHttpRequest({type:"post",reqData:t,reqUrl:"/app-web/api/expert/apply_baiyin",callback:function(t){tip("申请成功"),tj_mine.init(),comBat_pop.getdata()},errorCallback:function(t){tip("申请失败")}})},"再看看","确认开通",!1):T.isNative&&api.openApplySpecialist({is_experts:"3"},function(){})}),$("#buyShopping").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/shoppingMall.html?type=JB")})};return{init:function(){o(),e()}}}(),comBat_pop=recommend().combat_pop("#sztz-n");$(function(){function t(){Global.is_byty&&(typeName="tt",$("#buyShopping").addClass("hide"),$("#withdraw").css("right","0"),$("#byty").addClass("hide")),is_first&&(is_first=!1,tj_mine.init(),comBat_pop.getdata(function(t){t&&t.get_user&&1==t.get_user.is_expert?is_expert=1:t&&t.get_user&&1==t.get_user.is_byh?is_byh=1:t&&t.get_user&&1==t.get_user.is_combat&&(is_shizhan=1)}),T.Util.xmlHttpRequest({reqUrl:"/app-web/api/info/get_top_tips?tip_name=MY_INCOME",type:"get",callback:function(t,e,o){if(t&&t.get_top_tips&&t.get_top_tips.tips.length){$("nobr").empty();var i=t.get_top_tips.tips,s=!1,n=[];for(key in i)i[key]&&(s=!0,n.push("<em note-href='"+i[key].note_id+"'>"+i[key].content+"</em>")),$("nobr").html(n.join(""));s&&($("#tj-broadcast").show(),$(".textCast").textScroll(),$("nobr em").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/detail.html?note_id="+$(this).attr("note-href"))}))}},errorCallback:function(){}}))}$.fn.textScroll=function(){var t=$(this),e=t.children(),o=t.width(),i=e.width(),s=(i+o)/40*1e3;e.css("animation","minphone "+s/1e3+"s linear infinite")},T.isNative?T.appToH5.init(t):t()})</script>
+</body>
+</html>

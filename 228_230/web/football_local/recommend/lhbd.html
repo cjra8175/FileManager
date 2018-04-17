@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>连红榜单</title>
+	<link href="../css/recommend.css" type="text/css" rel="stylesheet">
+	<style>.mj-act em{margin-left:0}.no-content{padding:120px 10px}</style>
+
+</head>
+<body>
+<div id="loading-new">
+	<div id="loading-new-center">
+		<div id="loading-new-center-absolute">
+			<div class="object" id="loading"></div>
+		</div>
+	</div>
+</div>
+	<header class="sq_header" id="inHead">
+		<div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+		<span class="sq_headerText">连红榜单</span>
+	</header>
+	<section class="bang-main">
+		<div class="noPlayMinDataBox" style="display:none"><span class="noPlayMinDataIcon"></span><p class="noPlayMinDataTxt">空空荡荡</p>
+		</div>
+		
+		<div class="mlist-box">
+			<ul>
+			
+			</ul>
+			<div class="no-content hide">
+				<div class="none-icon"></div>
+				<div class="none-txt">空空荡荡...</div>
+			</div>
+			<div class="content"></div>
+		</div>
+	</section>
+
+	<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../recommend/recommend.js"></script>
+	<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)?812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".bang-main").css({"margin-top":"88px"}),$(".recommend-nav").css({top:"88px"})):($(".sq_header").css({"padding-top":"16px"}),$(".bang-main").css({"margin-top":"64px"}),$(".recommend-nav").css({top:"64px"})):$(".mlist-main").css({"margin-top":"0px"});var sType,object_type="RED";T.Util.isEmpty(T.Util.getPara("object_type"))||(object_type=T.Util.getPara("object_type")),"BLACK"==object_type&&$(".sq_headerText").html("明灯榜单");var isPull=!0,page_index=1,isRequest=!1,requestData=function(){return{getData:function(t){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/expert/qry_expert_analysis?page_index="+page_index+"&sport_type="+sType+"&page_size=10&ana_type="+object_type+"&access_token="+T.Storage.get("access_token"),callback:function(e){console.log(e),isRequest=!1,$("#loading-new").hide();var i=[],s=e.qry_expert_analysis;if(T.Util.isEmpty(s)||T.Util.isEmpty(s.data)||s.data.length<=0)return doDropLoadInit(!0,t),T.Util.isEmpty(s.page_index)||(page_index=s.page_index),$(".mlist-box ul").html(i.join("")),void recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more");for(var n=s.data,a="this.src='../img/iconfail.png'",o=0;o<n.length;o++){var l=n[o];if(!T.Util.isEmpty(l)){var r="";1==T.Util.notNullValue(l.has_recom,0)&&(r='<i class="dot"></i>'),"BLACK"==object_type?i.push('<li userNo="'+l.user_no+'">\t\t\t\t\t\t\t\t\t<div class="mlist-user clearfix">\t\t\t\t\t\t\t\t<div class="user-pic">\t\t\t\t\t\t\t\t<img src="'+l.portrait_pic+'" class="user-tou" onerror="'+a+'">\t\t\t\t\t\t\t\t'+r+'\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<div class="user-intro">\t\t\t\t\t\t\t\t<div class="mj-sum"><span class="mj-name">'+isEmpty(l.nick_name)+"</span>"+expertAlias(l)+'</div>\t\t\t\t\t\t\t\t<div class="mj-tag">'+addBiaoQian(l.new_tags)+'</div>\t\t\t\t\t\t\t\t<div class="zj-con">正在连黑:<em class="zj-lose">'+isEmpty(l.new_analysis.black)+'</em></div>\t\t\t\t\t\t\t\t<div class="mj-act">历史最高:<em class="act-8c">'+isEmpty(l.new_analysis.history_black)+'</em></div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<span class="concern-btn'+isFollow(l)+'" isFollow ='+l.is_friend+" userNo="+l.user_no+">"+isGuanZhu(l.is_friend)+"</span>\t\t\t\t\t\t\t\t</li>"):i.push('<li userNo="'+l.user_no+'">\t\t\t\t\t\t\t\t\t<div class="mlist-user clearfix">\t\t\t\t\t\t\t\t<div class="user-pic">\t\t\t\t\t\t\t\t<img src="'+l.portrait_pic+'" class="user-tou"  onerror="'+a+'">\t\t\t\t\t\t\t\t '+r+'\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<div class="user-intro">\t\t\t\t\t\t\t\t<div class="mj-sum"><span class="mj-name">'+isEmpty(l.nick_name)+"</span>"+expertAlias(l)+'</div>\t\t\t\t\t\t\t\t<div class="mj-tag">'+addBiaoQian(l)+'</div>\t\t\t\t\t\t\t\t<div class="zj-con">正在连红:<em class="zj-em">'+isEmpty(l.new_analysis.red)+'</em></div>\t\t\t\t\t\t\t\t<div class="mj-act">历史最高:<em class="act-black">'+isEmpty(l.new_analysis.history_red)+'</em></div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<span class="concern-btn'+isFollow(l)+'" isFollow ='+l.is_friend+" userNo="+l.user_no+">"+isGuanZhu(l.is_friend)+"</span>\t\t\t\t\t\t\t\t</li>")}}isPull||page_index<=1?$(".mlist-box ul").html(i.join("")):$(".mlist-box ul").append(i.join("")),Global.isAndroid&&$(".mj-tag span,.tag-3").css("line-height","15px"),page_index=s.page_index,doDropLoadInit(0==page_index,t),recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more"),initListener().addListener()},errorCallback:function(e){$("#loading-new").hide(),isRequest=!1,t&&t.resetload(),isPull&&1==page_index&&recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more")}})},refrashEvent:function(){$(".dropload-down,.download-up").remove(),$(".bang-main").off().dropload({scrollArea:window,loadUpFn:function(t){console.log("下拉刷新"),t.resetload(),t.unlock(),page_index=1,isRequest=!0,isPull=!0,requestData().getData(t)},loadDownFn:function(t){isRequest||(isPull=!1,isRequest=!0,requestData().getData(t))},threshold:50})}}},initListener=function(){return{addListener:function(){$(".concern-btn").off().Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var t=$(this).attr("isfollow"),e=$(this).attr("userno");T.Util.isEmpty(t)&&T.Util.isEmpty(e)||(1==t?delFriend(e,$(this)):addFriend(e,$(this)))}),$(".mlist-box ul li").off().Touch(function(t,e){if(!$(e.target).hasClass("concern-btn")){var i=$(this).attr("userNo");if(console.log(i),!T.Util.isEmpty(i)){var s=i;"BB"==T.Util.getPara("sType")&&(s=i+"&sType=BB"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/expert.html?user_no="+s)}}})}}},appFirstInfo=!0;$(document).ready(function(){sType="BB"==T.Util.getPara("sType")?1:0,T.isNative?T.appToH5.init(function(){appFirstInfo&&(appFirstInfo=!1,isPull=!0,page_index=1,requestData().refrashEvent(),initListener().addListener())}):(requestData().refrashEvent(),initListener().addListener())})</script>
+</body>
+</html>

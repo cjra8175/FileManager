@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>推荐详情页</title>
+    <link href="../css/recommend.css" type="text/css" rel="stylesheet">
+    <style>.expert-tag{color:rgba(255,255,255,.7)}.tag-1,.tag-2{background:#2479e2;border:1px solid rgba(255,255,255,.7);color:rgba(255,255,255,.7)}.mj-tag{padding-top:7px}.talk-title{text-align:left}.tj_flag_div{width:50px;height:50px;margin:0 auto;position:relative;background-size:100% 100%;text-align:center;line-height:50px}.tj_flag_div1{width:30px;height:30px;margin:0 auto;position:absolute;text-align:center;line-height:28px;left:10px;top:10px}.dc-team{padding-top:0}.hide{display:none}.dc-flag-img{vertical-align:middle}</style>
+</head>
+
+<div class="sign_success_layout">
+    <div class="sign_success_detail">
+        <div class="sign_success_prize">+10金币</div>
+    </div>
+    <div class="sign_iphone"></div>
+    <div class="ad_bg">
+        <p class="ad_chargeDiamond"><span class="sign_success_icon sign_success_icon_diamond"></span><span class="sign_success_icon sign_success_icon_diamond_text"></span></p>
+        <p class="ad_exchange"><span class="sign_success_icon sign_success_icon_exchange"></span><span class="sign_success_icon sign_success_icon_exchange_text"></span></p>
+    </div>
+</div>
+
+<body>
+<header class="sq_header" id="inHead">
+    <div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+    <span class="sq_headerText">推荐详情页</span>
+    <span class="sq-share">...</span>
+</header>
+<section class="recommend-main">
+    <div class="tj-detail">
+        <div class="det-user">
+            <div class="det-intro clearfix">
+                <div class="det-tou"><img class="det-img"></div>
+                <div class="det-right">
+                    <div class="det-t1"><span class="det-name"></span><span class="det-txt"></span>
+                        <div id="tagBox"></div>
+                    </div>
+                    <div class="mj-tag">
+                    </div>
+                </div>
+            </div>
+            <article class="det-article">
+            </article>
+            <span class="gz-btn"><em id="gz-btn-em">+</em>关注</span>
+        </div>
+
+        <div class="det-match">
+            
+        </div>
+
+        <div class="tz-enter hide">去投注</div>
+
+        <div class="mj-talk">
+            <div class="talk-content">
+                <div class="talk-title">本场推荐的详细分析</div>
+                <article class="talk-article"></article>
+                <div class="zan-action">
+                    <div class="zan-box">
+                        <div class="zan-bg"><i class="zan-yes"></i></div>
+                        <div class="zan-txt"><span class="zan-count" id="zan-yes-count">1</span>人</div>
+                    </div>
+                    <div class="zan-box zan-other">
+                        <div class="zan-bg"><i class="zan-no"></i></div>
+                        <div class="zan-txt"><span class="zan-count" id="zan-no-count">3</span>人</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="total-div hide">
+            <span style="margin-left:15px;color:#000">合计:</span><span id="buy-num"> 1人购买,10钻;</span>
+
+            <div class="submit-div">收入<span style="color:red" id="buy-price"></span>钻</div>
+        </div>
+        <div class="user-box hide">
+            <ul>
+                <li>用户名</li>
+                <li>购买钻石</li>
+                <li>购买时间</li>
+            </ul>
+
+            <div id="user-data-box">
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:10px" class="adv-div hide"><img class="adv-img"></div>
+    <footer class="footer-copy">所有言论仅代表发布者个人意见，与本应用无关，<br>
+        本应用不承担任何法律责任。
+    </footer>
+</section>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../recommend/recommend.js"></script>
+<script>function checkImg(e){e.width>e.height?$(e).css("width","30px"):$(e).css("height","30px"),$(e).removeClass("hide")}/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".recommend-main").css({"margin-top":"88px"}),$(".sq-share").css("top","41px")):($(".sq_header").css({"padding-top":"16px"}),$(".recommend-main").css({"margin-top":"63px"}),$(".sq-share").css("top","16px")));var accessToken="",recomDetail,recom_id="",sType=0,page_index=1,isPull=!0,playTypeArr=[];playTypeArr=1==T.Util.getPara("sType")||"BB"==T.Util.getPara("sType")?["胜负","让分胜负","大小分","串关"]:["竞彩单关","亚盘","大小球","串关"];var winCode=3,flatCode=1,loseCode=0,user_no,isFree=!1;T.Util.isEmpty(T.Util.getPara("jinbiCount"))||0==T.Util.getPara("jinbiCount")||setTimeout(showJinBi(T.Util.getPara("jinbiCount")),1e3);var requestData=function(){var e=function(){recom_id=T.Util.getPara("recom_id"),T.Util.isEmpty(T.Storage.get("access_token"))||(accessToken="&access_token="+T.Storage.get("access_token")),T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/recom/get_recom_detail?recom_id="+recom_id+accessToken,callback:function(e){if(console.log(e),recomDetail=e.get_recom_detail,!T.Util.isEmpty(recomDetail)){T.Util.isEmpty(recomDetail.user)||(user_no=recomDetail.user.user_no,$(".det-name").html(recomDetail.user.nick_name),$(".det-img").attr("src",recomDetail.user.portrait_pic),$(".det-txt").html(expertAlias(recomDetail.user)),$(".det-article").html(recomDetail.user.signature),$(".det-img").attr("userNo",user_no),recomDetail.user.is_friend&&0!=recomDetail.user.is_friend&&($(".gz-btn").addClass("gz-ok").html("已关注"),$("#gz-btn-em").hide()),1==recomDetail.is_self&&$(".gz-btn").hide(),$(".mj-tag").html(addBiaoQian(recomDetail.user.new_tags)),Global.isAndroid&&$(".mj-tag span,.tag-3").css("line-height","15px")),$("#zan-no-count").html(recomDetail.step_num),$("#zan-yes-count").html(recomDetail.top_num),1==recomDetail.is_mj&&recomDetail.recom_title&&!T.Util.isEmpty(recomDetail.recom_title)?$(".talk-title").html(recomDetail.recom_title):$(".talk-title").html(""),1==recomDetail.is_mj?$("#jiedu").html("名家解读"):$("#jiedu").html("推荐理由"),$(".talk-article").html(recomDetail.reason);var e=recomDetail.mj_recom;if(!T.Util.isEmpty(e)){var t=!0;if(e.length>0)for(var a=!0,s=[],r=0;r<e.length;r++){var o=e[r].match,l=e[r].content,n=e[r].recom_type;if(T.Util.isEmpty(o)||5==o.status||(a=!1),(l.length<=0||T.Util.isEmpty(l[0].is_hit)||0==l[0].is_hit)&&(t=!1),T.Util.isEmpty(o)||T.Util.isEmpty(l)||l.length<=0)return;var c=l[0].play_type,m=function(e){if(T.Util.isEmpty(l[0].odds))return"";var t=[];if(t=l[0].odds.split(","),1==e){var i=new Number(t[0]).toFixed(2);if(1==c||2==c)return"胜 "+i;if(3==c)return"主 "+i;if(4==c)return"大 "+i}else{if(2==e){var i=new Number(t[1]).toFixed(2);return 1==c||2==c?1==T.Util.getPara("sType")||"BB"==T.Util.getPara("sType")?"-":"平 "+i:l[0].handicap}if(3==e){var i=new Number(t[2]).toFixed(2);if(1==c||2==c)return"负 "+i;if(3==c)return"客 "+i;if(4==c)return"小 "+i}}},d=function(e){if(!T.Util.isEmpty(l)&&!T.Util.isEmpty(l[0].codes)){var t=l[0].codes,i=l[0].result,a=l[0].is_hit;if(T.Util.isEmpty(a)||0==a)return e==t?"on":"";if(c>2&&!T.Util.isEmpty(i)){if(1==a)return e==t?"win on":"";if(e==t){if(-1==a)return"lose on";if(2==a)return"zou on"}else if(3==e||0==e)return 2==a?"":"win"}return c<=2&&!T.Util.isEmpty(i)?1==a?e==t?"win on":e==i?"win":"":e==t?"lose on":e==i?"win":"":void 0}},p="this.src='../img/ic_inplay.png'";s.push('<div class="det-subox">                                <div class="dc-con">                                <div class="dc-box">                                <div class="tj_flag_div" >                                <div class="tj_flag_div1">                                     <img src="'+o.h_logo+'" onload="checkImg(this)"  class="dc-flag-img hide" onerror="'+p+'">                                    </div>                                 </div>                                     <div class="dc-team">'+o.h_name+'</div>                                </div>                                    <div class="dc-box" match_id = '+o.m_id+'>                                    <div class="dc-style">'+o.l_name+'</div>                                    <div class="dc-date">'+function(){return T.Util.isEmpty(o.status)&&T.Util.isEmpty(o.h_score)&&T.Util.isEmpty(o.g_score)?T.Util.isEmpty(o.m_time)?"":o.m_time.substring(5,16):7==o.status?"改期":10==o.status?"暂停":11==o.status?"腰斩":12==o.status?"推迟":0==o.status||1==o.status?1==T.Util.isEmpty(o.m_time)?"":o.m_time:T.Util.isEmpty(o.h_score)||T.Util.isEmpty(o.g_score)?"":o.h_score+" ："+o.g_score}()+'</div>                                </div>                                <div class="dc-box">                                <div class="tj_flag_div" >                                 <div class="tj_flag_div1">                                <img src="'+o.g_logo+'" onload="checkImg(this)" class="dc-flag-img hide" onerror="'+p+'">                                </div>                                </div>                                <div class="dc-team">'+o.g_name+'</div>                                </div>                                </div>                                <div class="det-tj">                                <div class="edit-xuan">                                <span class="det-icon">'+function(){return 1==n?playTypeArr[0]:2==n?playTypeArr[1]:3==n?playTypeArr[2]:playTypeArr[3]}()+'</span>                                <span class="det-company">'+function(){return T.Util.isEmpty(l[0].let_ball)||0==l[0].let_ball?"":"  ("+l[0].let_ball+")"}()+'</span>                                <ul>                                <li class="'+d(winCode)+'" >'+m(1)+'</li>                                <li class="'+d(flatCode)+'" >'+m(2)+'</li>                                <li class="'+d(loseCode)+'" >'+m(3)+"</li>                                </ul>                                </div>                                </div>                                </div>")}if($(".det-match").html(s.join("")),t||$(".tz-enter").removeClass("hide"),initListener().addListener(),(a||0==recomDetail.price)&&(isFree=!0),!T.Util.isEmpty(T.Storage.get("access_token"))&&!T.Util.isEmpty(user_no)){var u=T.Storage.get("userinfo").user_no;T.Util.isEmpty(u)||u!=user_no||T.Util.isEmpty(recomDetail.buy_num)||T.Util.isEmpty(recomDetail.buy_money)||(i(),$(".total-div").show(),$("#buy-num").html(recomDetail.buy_num+"人购买，"+recomDetail.buy_money+"钻;"),$("#buy-price").html(recomDetail.profit+""))}}}},errorCallback:function(e){1507==e.result_code&&T.Util.back()}})},t=function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/advert/qry_adverts?adv_cd=RECOM_DETAIL&client_type=byzq",callback:function(e){if(!T.Util.isEmpty(e.qry_adverts.data)&&e.qry_adverts.data.length>0)for(var e=e.qry_adverts.data,t=0;t<e.length;t++)if("R_DETAIL"==e[t].adv_cd&&!T.Util.isEmpty(e[t].adv_pic))return $(".adv-div").show(),void $(".adv-img").attr("src",e[t].adv_pic)},errorCallback:function(e){}})},i=function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/recom/qry_recom_buylist?recom_id="+recom_id+"&page_size=10&page_index="+page_index+accessToken,callback:function(e){T.Util.isEmpty(e.qry_recom_buylist)||T.Util.isEmpty(e.qry_recom_buylist.data)||(page_index=e.qry_recom_buylist.page_index,a(e.qry_recom_buylist.data))},errorCallback:function(e){}})},a=function(e){if(!(e.length<=0)){$(".user-box").show();for(var t=[],i=0;i<e.length;i++)t.push("<ul>                            <li>"+e[i].nick_name+"</li>                            <li>"+e[i].money+"</li>                            <li>"+(1==T.Util.isEmpty(e[i].crt_time)?"":e[i].crt_time.substring(5,16))+"</li>                              </ul>");isPull?$("#user-data-box").html(t.join("")):$("#user-data-box").append(t.join(""))}};return{getHeadData:e,getUserBuyList:i,getAdvs:t,delFriend:function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/friends/del_friend?access_token="+T.Storage.get("access_token")+"&user_no="+recomDetail.user.user_no,callback:function(e){recomDetail.user.is_friend=0,$(".gz-btn").removeClass("gz-ok").html("关注"),$("#gz-btn-em").show()},errorCallback:function(e){}})},addFriend:function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/friends/add_friend?access_token="+T.Storage.get("access_token")+"&user_no="+recomDetail.user.user_no,callback:function(e){recomDetail.user.is_friend=1,$(".gz-btn").addClass("gz-ok").html("已关注"),$("#gz-btn-em").hide()},errorCallback:function(e){}})},addPraise:function(e){return T.Util.isEmpty(T.Storage.get("access_token"))?void T.Util.login():T.Util.isEmpty(recomDetail)?void 0:($(this).hasClass("zan-dian")||$(this).addClass("zan-dian"),0==e&&1==recomDetail.is_top?void tip("您已经赞过"):1==e&&1==recomDetail.is_step?void tip("您已经踩过"):void T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/comment/add_praise?access_token="+T.Storage.get("access_token")+"&obj_id="+recom_id+"&praise_type="+e+"&obj_type=3",callback:function(t){var i,a=0;0==e&&(a=1==T.Util.isEmpty(recomDetail)?1:recomDetail.top_num+1,i="赞",$("#zan-yes-count").text(a)),1==e&&(a=1==T.Util.isEmpty(recomDetail)?1:recomDetail.step_num+1,i="踩",$("#zan-no-count").text(a)),tip(i+"成功")},errorCallback:function(e){}}))}}},initListener=function(){return{addListener:function(){$(".gz-btn").off().Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();T.Util.isEmpty(recomDetail.user.user_no)&&T.Util.isEmpty(recomDetail.user.is_friend)||(1==recomDetail.user.is_friend?requestData().delFriend():requestData().addFriend())}),$(".zan-yes").off().Touch(function(){requestData().addPraise(0)}),$(".zan-no").off().Touch(function(){requestData().addPraise(1)}),$(".tz-enter").off().Touch(function(){var e=recomDetail.mj_recom;if(T.Util.isEmpty(recomDetail)||T.Util.isEmpty(e)||e.length>1||T.Util.isEmpty(e[0].match)||T.Util.isEmpty(e[0].match.m_id))return void(1==T.Util.getPara("sType")||"BB"==T.Util.getPara("sType")?(sType=1,T.Util.goGame(1)):T.Util.goGame());var t=e[0].match.m_id;T.isNative&&Global.isAndroid&&lib.nativeApi.compareVersion("2.4.1")||Global.isiOS&&lib.nativeApi.compareVersion("2.3.1")?(Global.isFirst=!0,1==T.Util.getPara("sType")||"BB"==T.Util.getPara("sType")?T.isNative&&lib.nativeApi.compareJSSDKVersion("1.0.1")?lib.API.openPlayGame({m_id:t,sType:"BB"},function(){}):T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/basketPlay.html?m_id="+t):lib.API.openPlayGame({m_id:t},function(){})):T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/index.html#page=prePlay.html&m_id="+t)}),$("#back").off().Touch(function(){T.Util.back()}),$(".dc-box").off().Touch(function(){var e=$(this).attr("match_id");console.log(e),T.Util.isEmpty(e)||(T.isNative&&Global.isAndroid&&lib.nativeApi.compareVersion("2.4.1")||Global.isiOS&&lib.nativeApi.compareVersion("2.3.1")?(Global.isFirst=!0,1==T.Util.getPara("sType")||"BB"==T.Util.getPara("sType")?T.isNative&&lib.nativeApi.compareJSSDKVersion("1.0.1")?lib.API.openPlayGame({m_id:e,sType:"BB"},function(){}):T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/basketPlay.html?m_id="+e):lib.API.openPlayGame({m_id:e},function(){})):T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/index.html#page=prePlay.html&m_id="+e))}),$(".sq-share").off().Touch(function(){var e={};e=isFree?{obj_type:"recom",obj_id:recom_id,personalHomepage:0,user_no:$(".det-img").attr("userNo")}:{obj_type:"expert",obj_id:user_no,personalHomepage:0,user_no:$(".det-img").attr("userNo")},T.isNative?api.share(e,function(e){}):tip("请在app内分享")}),$(".det-name ,.det-img").off().Touch(function(){var e=recomDetail.user.user_no;T.Util.isEmpty(e)||T.Util.goExpert(e,1,0)})}}},appFirstInfo=!0;$(document).ready(function(){1!=T.Util.getPara("sType")&&"BB"!=T.Util.getPara("sType")||(sType=1),$(window).scroll(function(){var e=$(this).scrollTop(),t=$(document).height();e+$(this).height()==t&&page_index>1&&(isPull=!1,requestData().getUserBuyList())}),T.isNative?T.appToH5.init(function(){appFirstInfo&&(appFirstInfo=!1,isPull=!0,page_index=1,requestData().getHeadData(),requestData().getAdvs(),initListener().addListener())}):(requestData().getHeadData(),requestData().getAdvs(),initListener().addListener())})</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>更多评论</title>
+    <link rel="stylesheet" href="../css/sq.css">
+    <style>.no-content{margin:20px 0;width:100%;text-align:center;color:#636363;font-size:14px}.fun-btn{position:absolute;right:0;font-size:14px;bottom:0;width:50px}.publish-btn{padding:4px 12px;background:#2479e2;border-radius:5px;color:#fff;font-size:14px;float:right}.contentWrap{position:absolute;top:48px;bottom:56px;overflow-y:scroll;width:100%;overflow-x:hidden}.comment-con{padding-left:15px;margin-top:20px;padding-right:15px}.pl-said{width:78%}#mask{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:9}.sq-header{position:absolute}</style>
+</head>
+<body>
+    <header class="sq-header">
+        <span class="sq-return" id="back"><i class="return-icon"></i><em class="return-txt">返回</em></span>
+        <span class="head-title" id="lounum">楼</span>
+        <span class="fun-btn">删除</span>
+    </header>
+    <section class="contentWrap">
+        <div class="userComment comment-con clearfix" style="padding-bottom:20px;border-bottom:1px solid #e9e9e9">
+            <div class="comment-img"><img src=""></div>
+            <div class="comment-intro">
+                <div class="comment-user"></div>
+                <div class="comment-b"><span class="comment-date"></span></div>
+                <article class="comment-article"></article>
+            </div>
+        </div>
+        <div id="list">
+        </div>
+    </section>
+    <div id="mask" class="hide"></div>
+    
+    <div class="pl-report">
+        <input class="pl-said" id="textarea" maxlength="300" placeholder="评论本条帖子">
+        <span class="publish-btn" id="submit">发表</span>
+    </div>
+    
+</body>
+
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&($(".sq-bg").css("bottom",0),$(".head-title").css("font-weight","bold"),812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq-header").css({"padding-top":"40px"}),$(".contentWrap").css({top:"88px"})):($(".sq-header").css({"padding-top":"16px"}),$(".contentWrap").css({top:"64px"})));var Init=function(){var t={};t.page_index="1",t.hasMore=!0;var e=function(t,e){var n=new Date(t.replace(/-/g,"/")),i=new Date,o=i.getTime()-n.getTime(),a=(Math.floor(o/864e5),o%864e5),r=(Math.floor(a/36e5),a%36e5),c=(Math.floor(r/6e4),r%6e4),s=(Math.round(c/1e3),Math.floor(o/6e4)),l=Math.floor(o/36e5),m=Math.floor(l/24);return s<60?s<=5?"刚刚":s+"分钟前":l>=1&&l<=24?24-l==0?"23小时前":l+"小时前":l>24&&m<=30?30-m==0?"1天前":m+"天前":m>31&&m<365?parseInt(m/30)+"月前":m>=365?parseInt(m/365)+"年前":void 0};return t.getNoteDetail=function(){var t={get_note:{access_token:Global.accessToken,note_id:T.Util.getPara("note_id")}};T.Util.xmlHttpRequest({reqData:t,reqUrl:"/app-web/api/note/get_note",callback:function(t){var n=t.get_note;n.is_self?$(".fun-btn").html("删除"):$(".fun-btn").html("举报"),$("#textarea").attr("placeholder","回复 "+n.nick_name),$(".userComment .comment-img img").attr("src",n.portrait_pic),$(".userComment .comment-user").html(n.nick_name),$(".userComment .comment-date").html("    "+e(n.crt_time)),$(".userComment .comment-article").html(n.note_Content.replace(/\r\n/g,"<br/>").replace(/\n/g,"<br/>").replace(/ /g,"&nbsp;")),Init.getCommentList()},errorCallback:function(){}})},t.getCommentList=function(){var t={qry_comments:{page_index:Init.page_index,page_size:"10",obj_type:"2",obj_id:T.Util.getPara("note_id")}};T.Util.xmlHttpRequest({reqData:t,reqUrl:"/app-web/api/comment/qry_comments",callback:function(t){var n=t.qry_comments.data;if(0==n.length)return void $("#list").html('<div class="no-content"><div class="none-comment-icon"></div><div class="none-txt">沙发空空的</div></div>');var i=t.qry_comments.page_index;"0"!=i?Init.page_index=i:Init.hasMore=!1,$.each(n,function(t,n){$("#list").append('<div class="userComment comment-con clearfix">                              <div class="comment-img"><img src="'+n.portrait_pic+'"/></div>                              <div class="comment-intro">                                 <div class="comment-user">'+n.nickname+'</div>                                 <div class="comment-b"><span class="comment-date">'+e(n.crt_time)+'</span></div>                                 <article class="comment-article">'+n.content+"</article>                              </div>                          </div>")})},errorCallback:function(){}})},t.initListeners=function(){$(window).off().scroll(function(){var t=$(this).scrollTop(),e=$(document).height();t+$(this).height()>=e&&Init.hasMore&&Init.getCommentList()}),$(".fun-btn").off().Touch(function(t){if("删除"==$(t).html()){var e={del_note:{access_token:T.Storage.get("access_token"),note_id:T.Util.getPara("note_id")}};T.Util.xmlHttpRequest({reqData:e,reqUrl:"/app-web/api/note/del_note",callback:function(t){tip("删除成功"),setTimeout(function(){T.Util.back()},300)},errorCallback:function(){}})}else"举报"==$(t).html()&&($(".sq-bg").removeClass("hide"),confirm("是否确定举报？",function(){var t={add_report:{obj_id:T.Util.getPara("note_id"),obj_type:"1",reason:"原因"}};T.Util.xmlHttpRequest({reqData:t,reqUrl:"/app-web/api/report/add_report",callback:function(t){tip("举报成功")},errorCallback:function(){}}),$(".confirmBox").hide(),$(".sq-bg").addClass("hide")},"取消","确认"))},{noStopPropagation:1}),$("#submit").Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var t={add_comment:{access_token:T.Storage.get("access_token"),obj_id:T.Util.getPara("note_id"),obj_type:"2",content:$("#textarea").val().trim()}};T.Util.xmlHttpRequest({reqData:t,reqUrl:"/app-web/api/comment/add_comment",callback:function(t){tip("评论成功！"),$("#list").html(""),$("#textarea").val("").blur(),Init.getCommentList()},errorCallback:function(){}})},{noRepeat:1})},t.init=function(){$("#lounum").html(T.Util.getPara("note_order")+"楼"),Global.iosAudit&&$(".fun-btn").hide(),Init.getNoteDetail(),Init.initListeners()},t}(),isFirstInfo=!0;$(document).ready(function(){function t(){isFirstInfo&&(isFirstInfo=!1,Init.init())}T.isNative?T.appToH5.init(t):t()})</script>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<title>奖品中心</title>
+		<link href="../css/mall.css" type="text/css" rel="stylesheet">
+		<style>.mall-box{position:absolute;top:48px;bottom:0;padding-top:0;overflow:auto;-webkit-overflow-scrolling:touch}</style>
+	</head>
+	<body>
+		<div id="loading-new">
+			<div id="loading-new-center">
+				<div id="loading-new-center-absolute">
+					<div class="object" id="loading"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mall-sunav hide">
+			<ul>
+				<li class="play-rule">玩法规则</li>
+				<li class="reward-record">奖品记录</li>
+				<li class="goods-address">收货地址</li>
+			</ul>
+		</div>
+		
+		<section class="mall-content lp-center">
+			<header class="mall-header">
+				<span class="mall-return"></span>
+				<h2 class="mall-ttile">奖品中心</h2>
+				<span class="dh-icon"></span>
+			</header>
+			<div class="mall-box">
+				<div class="mall-user hide clearfix">
+					<div class="user-left">
+						<img src="" class="user-img">
+						<span class="user-name"></span>
+					</div>
+					<div class="gift-money">
+						<span class="user-jb">
+							<i class="jb"></i>
+							<em class="money-count"></em>
+						</span>
+					</div>
+				</div>
+				<div class="gift-broadcost">
+					<div class="broadcost">
+						<ul>
+
+						</ul>
+					</div>
+				</div>
+				
+				<div class="gift-banner">
+					<img src="../img/mall/gift_banner.png" class="gift-tp">
+				</div>
+				
+				<div class="gift-date">本期截止时间: <span class="end-time">2017年03月31日24:00</span></div>
+				<nav class="gift-nav">
+					<ul>
+						<li class="on">全部</li>
+						<li data-type="0" class="hide">话费类</li>
+						<li data-type="3">卡券类</li>
+						<li data-type="1">生活类</li>
+						<li data-type="2">科技类</li>
+					</ul>
+				</nav>
+				<div class="gift-clumn">
+					<div>
+						<ul class="gift-list">
+							
+								
+									
+									
+									
+									
+								
+							
+							
+								
+									
+									
+									
+									
+								
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="ceng-bg hide"></div>
+			
+			<div class="ceng-weebox play-rule-box hide">
+				<div class="ceng-top">
+					<div class="ceng-title">玩法规则</div>
+					<span class="ceng-close"></span>
+				</div>
+				<article class="rules-box">
+
+				</article>
+			</div>
+			
+			
+			<div class="ceng-weebox pay-success hide">
+				<div class="suc-title">支付成功！</div>
+				<div class="ceng-hd">您已获得128钻石</div>
+				<div class="ceng-action">
+					<span class="ceng-btn2">确定</span>
+				</div>
+			</div>
+			
+
+			
+			<div class="ceng-weebox tip-box hide">
+				<div class="ceng-top">
+					<div class="ceng-title">提示</div>
+					<span class="ceng-close"></span>
+				</div>
+				<div class="ceng-tips">您要使用<span>100钻石</span>开通VIP1服务吗？</div>
+				<div class="ceng-action">
+					<span class="ceng-btn1">再看看</span>
+					<span class="ceng-btn2">马上去</span>
+				</div>
+			</div>
+			
+		</section>
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/lib/fx.js"></script>
+		<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".mall-header").css({"padding-top":"40px"}),$(".mall-box").css({top:"88px"}),$(".mall-sunav").css("top","88px")):($(".mall-header").css({"padding-top":"16px"}),$(".mall-box").css({top:"64px"}),$(".mall-sunav").css("top","64px"))),$.fn.scrollText=function(t){var e={sBox:".box",speed:4e3},t=$.extend(e,t);this.each(function(){var t=$(this).height(),o={scrollUp:function(){$(e.sBox).animate({marginTop:-t+"px"},500,function(){$(e.sBox).css("margin-top",0),$(e.sBox).find("li").eq(0).appendTo($(e.sBox).find("ul"))})}};setInterval(function(){o.scrollUp()},e.speed)})};var Init=function(){var t=function(){e(),n()},e=function(){$(".dh-icon").off().Touch(function(){$(".ceng-bg,.mall-sunav").toggleClass("hide")}),$(".play-rule").off().Touch(function(){$(".mall-sunav").addClass("hide"),$(".play-rule-box").removeClass("hide")}),$(".reward-record").off().Touch(function(){if($(".ceng-bg,.mall-sunav").addClass("hide"),T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/notesDetail.html?type=DH")}),$(".goods-address").off().Touch(function(){if($(".ceng-bg,.mall-sunav").addClass("hide"),T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/address.html?type=DH")}),$(".play-rule-box .ceng-close").off().Touch(function(){$(".play-rule-box,.ceng-bg").addClass("hide")}),$(".gift-nav ul li").off().Touch(function(t){$(t).hasClass("on")||($(".gift-nav ul li").removeClass("on"),$(t).addClass("on"),T.Util.isEmpty($(t).attr("data-type"))?l():l($(t).attr("data-type")))}),$(".gift-banner").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/gift_draw.html")}),$(".mall-return").off().Touch(function(){T.Util.isEmpty(T.Util.getPara("source"))||T.Storage.set("backToIndex",1),Global.isAndroid&&T.Storage.remove("backToIndex"),T.Util.back()}),$(".user-jb").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/app/accounts_jb.html?from=web")}),$(".ceng-bg").off().Touch(function(){$(".ceng-weebox,.ceng-bg,.mall-sunav").addClass("hide")})},o=function(){r(),a(),T.Util.isEmpty($(".gift-nav ul li.on").attr("data-type"))?l():l($(".gift-nav ul li.on").attr("data-type")),$("#loading-new").hide()},n=function(){T.Util.isEmpty(T.Storage.get("exChangeInfo"))?i():(new Date).getTime()-T.Storage.get("exChangeInfo").time>6e5?i():window.location.href="shoppingMall.html"},i=function(){var t="";Global.isAndroid?t="Android":Global.isiOS&&(t="IOS"),T.Util.xmlHttpRequest({async:!1,type:"get",timeout:2e3,errorType:1,reqUrl:"/forum/api/shop/qry_tages?os="+t,callback:function(t){t.qry_tages.conf_val&&-1!=t.qry_tages.conf_val.indexOf("DUIHUANG")?(T.Storage.remove("exChangeInfo"),o()):(T.Storage.set("exChangeInfo",{time:(new Date).getTime(),status:"noExchange"}),window.location.href="shoppingMall.html")},errorCallback:function(){o()},interfaceError:function(){o()}})},a=function(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/forum/api/shop/qry_shop_tips?obj_type=2",callback:function(t){for(var e=[],o=t.qry_shop_tips.data,n=0;n<o.length;n++)e.push("<li>恭喜<span>"+o[n].nick_name+"</span>获得<span>"+o[n].name+"</span></li>");$(".broadcost ul").html(e.join("")),$(".gift-broadcost").scrollText({sBox:".broadcost",speed:3e3})},errorCallback:function(){}})},l=function(t){var e="/forum/api/shop/qry_exchange?obj_type=2";t&&(e+="&award_category="+t),T.Util.xmlHttpRequest({type:"get",reqUrl:e,callback:function(t){var e=t.qry_exchange.data,o=t.qry_exchange;s(e,o)},errorCallback:function(){}})},s=function(t,e){if($(".end-time").html(new Date(e.end_time).format("YYYY年MM月dd日 hh:mm")),$(".rules-box").html(e.obj_desc),$(".gift-list").empty(),t&&t.length){for(var o,n,i=t.length,a="",l=0;l<i;l++)o=!1,n="",a="",0==t[l].num&&(n="<span class='sold-out'></span>",o="robbed"),1==t[l].is_hot&&(a="<span class='hot'></span>"),$(".gift-list").append('<li class="'+o+'" data-name="'+t[l].name+'" data-itemId="'+t[l].item_id+'" data-price="'+t[l].price+'">\t\t\t\t\t\t\t\t\t<div class="gift-j">'+n+'\t\t\t\t\t\t\t\t\t\t<img src="'+t[l].item_pic+'" class="gift-pic">\t\t\t\t\t\t\t\t\t\t<div class="gift-name">'+t[l].name+'</div>\t\t\t\t\t\t\t\t\t\t<div class="gift-intro">参考价: '+t[l].orignal_price+"元<span>剩余: "+t[l].num+'份</span></div>\t\t\t\t\t\t\t\t\t\t<div class="gift-btn">'+T.Util.parseNumber(t[l].price)+"金币</div>\t\t\t\t\t\t\t\t\t</div>"+a+"\t\t\t\t\t\t\t\t</li>");c()}else $(".gift-list").empty().append('<li style="width: 100%;color: #fff;text-align: center;height: 60px;line-height: 60px;"><div>敬请期待</div></li>')},c=function(){$(".gift-list li").off().Touch(function(t){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/goods_detail.html?goods_id="+$(t).attr("data-itemId"))})},r=function(){if(!T.Util.isEmpty(T.Storage.get("access_token"))){var t=T.Storage.get("userinfo");$(".user-name").html(t.nick_name),$(".user-img").attr("src",t.portrait_pic),$(".zs-count").html(T.Util.parseNumber(t.diamend)),$(".money-count").html(T.Util.parseNumber(t.coin)),$(".mall-user").removeClass("hide")}};return{init:t,checkUserInfo:r,tipMsg:function(t,e){$(".ceng-tips").html(t),$(".tip-box .ceng-btn2").off().Touch(function(){e&&e()}),$(".tip-box,.ceng-bg").removeClass("hide")},tipSuccess:function(t,e,o){o&&$(".suc-title").html(o),$(".pay-success .ceng-hd").html(t),$(".pay-success,.ceng-bg").removeClass("hide")}}}();$(function(){T.isNative?T.appToH5.init(Init.init):Init.init()})</script>
+	</body>
+</html>

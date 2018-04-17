@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>资料库</title>
+		<link href="../css/zlk.css" type="text/css" rel="stylesheet">
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+	</head>
+	<body>
+
+	<div id="loading-new">
+		<div id="loading-new-center">
+			<div id="loading-new-center-absolute">
+				<div class="object" id="loading"></div>
+			</div>
+		</div>
+	</div>
+		<header class="zlk-header">
+			<span class="h-return"></span>
+			<div class="h-title">英格兰赛事数据</div>
+		</header>
+		<section class="zlk-lb">
+			<div class="zlk-item lb-item clearfix">
+				<ul>
+					
+						
+							
+							
+						
+					
+					
+						
+							
+							
+						
+					
+					
+						
+							
+							
+						
+					
+					
+						
+							
+							
+						
+					
+					
+						
+							
+							
+						
+					
+				</ul>
+
+				<div class="no-content" style="display:none">
+					<div class="none-icon"></div>
+					<div class="none-txt">空空荡荡...</div>
+				</div>
+			</div>
+		</section>
+		<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".zlk-header").css({"padding-top":"40px"}),$(".zlk-lb").css({"padding-top":"88px"})):($(".zlk-header").css({"padding-top":"16px"}),$(".zlk-lb").css({"padding-top":"64px"})));var dropLoad="",page_size=999,page_index=1,defaultImage="images/ball_icon.png",footBallDataTeam=function(){function t(){$(".h-return").off().Touch(function(){T.Util.back()})}function a(){$(".item-box").off().Touch(function(){var t=$(this).attr("league-id"),a=$(this).attr("league-cup");T.Storage.remove("footBallLeagueId"),T.Storage.remove("footBallLeagueCup"),T.Storage.set("footBallLeagueId",t),T.Storage.set("footBallLeagueCup",a),T.Storage.remove("footBallSeasonLeagueId");var e=T.Util.getRootPath()+"/"+Global.webRoot+"/footBallData/zlk_match_index.html";T.Util.openWindow(e)})}function e(){T.Util.isEmpty(dropLoad)||(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),dropLoad="")}function o(){var t=T.Util.getPara("country_id"),a={country_id:t,PAGE_SIZE:page_size,PAGE_INDEX:page_index};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_league_by_country",reqData:a,callback:function(t){try{if($.isArray(t.qry_league_by_country.data)&&t.qry_league_by_country.data.length){var a=t.qry_league_by_country.data,o=[];if(!a||!a.length)return e(),$(".zlk-lb .zlk-item  ul").html(""),$("#loading-new").addClass("hide"),void $(".no-content").css("display","block");$(".zlk-lb .zlk-item  ul").html("");for(m in a)o.push("<li>"),o.push('<div class="item-box" league-id="'+a[m].league_id+'" league-cup="'+a[m].league_cup+'">\t\t\t\t\t\t\t\t\t\t <img class="item-flag" src="'+a[m].picture_url+'" onerror="this.src=defaultImage"/>\t\t\t\t\t\t\t\t\t\t <span class="item-name" style="font-size: 14px;margin-left: 8px;">'+a[m].league_name+"</span>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </li>");e(),$(".zlk-lb .zlk-item  ul").html(o.join("")),footBallDataTeam.addListenerFootBallData()}else $(".no-content").css("display","block"),e(),$("#loading-new").addClass("hide")}catch(t){e(),$("#loading-new").addClass("hide")}finally{e(),$("#loading-new").addClass("hide")}},errorCallback:function(){e(),$("#loading-new").addClass("hide")}})}function l(){footBallDataTeam.addListerItem(),footBallDataTeam.getGameData()}return{init:l,addListerItem:t,getGameData:o,addListenerFootBallData:a}}(),appFirstInfo=!0;$(function(){function t(){appFirstInfo&&(appFirstInfo=!1,footBallDataTeam.init())}var a=T.Storage.get("footBallCountryName")+"赛事数据";$(".zlk-header .h-title").html(a),T.isNative?T.appToH5.init(t):t()})</script>
+	</body>
+</html>

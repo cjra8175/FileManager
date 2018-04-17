@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>发布动态</title>
+		<link href="../css/sq.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+	<section class="trend-editor">
+		<textarea class="trend-textarea content" placeholder="请输入10-200字内容" maxlength="2000"></textarea>
+		<div class="trend-img">
+			<ul class="img-list">
+				<ul class="img-box hide">
+					
+				</ul>
+				<li class="img-add"><div class="add-btn"></div></li>
+			</ul>
+		</div>
+		<div id="shareOrderInfo">
+			
+			
+				
+				
+				
+					
+					
+						
+							
+							
+						
+						
+							
+							
+						
+						
+							
+							
+						
+					
+				
+			
+
+			
+				
+				
+				
+					
+					
+						
+							
+							
+						
+						
+							
+							
+						
+						
+							
+							
+						
+					
+				
+			
+
+			
+				
+				
+				
+					
+					
+						
+							
+							
+						
+						
+							
+								
+									
+									
+								
+								
+									
+									
+								
+								
+									
+									
+								
+							
+						
+						
+							
+							
+						
+					
+				
+			
+			
+		</div>
+		<div class="detail-bg hide"></div>
+		
+		<div class="tj-weebox hide">
+			<div class="weebox-tip">是否想要重新选择分享的订单？</div>
+			<div class="weebox-action">
+				<span class="act-1">取消</span>
+				<span class="act-2">确定</span>
+			</div>
+		</div>
+		
+	</section>
+	<header class="sq-header">
+			<span class="sq-return" id="back"><i class="return-icon"></i><em class="return-txt">返回</em></span>
+			<span class="header-r" id="submit">发布</span>
+		</header>
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq-header").css({"padding-top":"40px"}),$(".trend-editor").css({"margin-top":"88px"})):($(".sq-header").css({"padding-top":"16px"}),$(".trend-editor").css({"margin-top":"64px"})));var imgArr="",Init=function(){var t={};t.isFirst=!0;var e=function(){$("#submit").html("修改").addClass("update");var t="/forum/api/note/new_get_note_info?note_id="+T.Util.getPara("note_id");T.Util.isEmpty(T.Storage.get("access_token"))||(t+="&access_token="+T.Storage.get("access_token")),T.Util.xmlHttpRequest({type:"get",reqUrl:t,callback:function(t){var e=t.new_get_note_info;if(imgArr=e.note_pics,imgArr.length>0){var i=[];$.each(imgArr,function(t,e){i.push('<li><img src="'+e+'" /><span class="img-delete"></span></li>')}),$(".img-box").html(i.join("")).removeClass("hide")}$(".trend-textarea").html(e.note_Content)},errorCallback:function(){}})},i=function(){$("#back").off().Touch(function(){$(".detail-bg").removeClass("hide"),$(".trend-textarea").blur(),confirm("确定退出本次编辑吗？",function(){T.Util.back()},"取消","是的"),$("#confirmBox .zfqx").off().Touch(function(){$("#confirmBox").hide(),$(".detail-bg").addClass("hide")})}),$("#submit").off().Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();if(0==$(".content").val().trim().length)return void tip("动态内容不能为空");if($(".content").blur(),$(this).hasClass("update")){var t={edit_note:{access_token:T.Storage.get("access_token"),note_id:T.Util.getPara("note_id"),note_content:$(".trend-textarea").val()}};if($(".img-box li").length>0){var e="";$.each($(".img-box img"),function(t,i){e=Global.isiOS?""==e?$(i).attr("showUrl"):e+","+$(i).attr("showUrl"):""==e?$(i).attr("src"):e+","+$(i).attr("src")});var i={logo_pic:e,src:2};T.isNative&&n(i,function(e){api.showLoadding({show:1,content:"正在修改"}),t.edit_note.note_pics=e,T.Util.xmlHttpRequest({type:"post",reqUrl:"/app-web/api/note/edit_note",reqData:t,callback:function(){T.isNative&&api.showLoadding({show:2}),tip("修改成功"),setTimeout(function(){T.Util.back()},500)},errorCallback:function(){}})})}else T.Util.xmlHttpRequest({type:"post",reqUrl:"/app-web/api/note/edit_note",reqData:t,callback:function(){tip("修改成功"),setTimeout(function(){T.Util.back()},500)},errorCallback:function(){}})}else o()}),$(".img-add").off().Touch(function(){T.isNative?Images.showChooseDialog():tip("请用app上传图片")}),$(".tj-weebox .act-1,.detail-bg").off().Touch(function(){$(".tj-weebox,.detail-bg").addClass("hide"),$("#confirmBox").hide()})},o=function(){var t={action:"SEND_NOTE",access_token:T.Storage.get("access_token"),note_Content:$(".content").val().trim()};if($(".img-box li").length){var e="";$.each($(".img-box img"),function(t,i){e=Global.isiOS?""==e?$(i).attr("showUrl"):e+","+$(i).attr("showUrl"):""==e?$(i).attr("src"):e+","+$(i).attr("src")});var i={logo_pic:e,src:2};T.isNative&&(api.showLoadding({show:1,content:"正在发布"}),n(i,function(e){t.note_pics=e,a(t)}))}else!T.Util.isEmpty(T.Util.getPara("type"))&&"shareOrder"==T.Util.getPara("type")&&$("#shareOrderInfo .other-clumn").length?(t.order_id=$($("#shareOrderInfo .other-clumn").get(0)).attr("order-id"),a(t)):a(t)},a=function(t){T.Util.xmlHttpRequest({type:"post",reqData:{add_note:t},reqUrl:"/forum/api/note/add_note",callback:function(t){T.isNative&&api.showLoadding({show:2}),setTimeout(function(){tip("发布成功，移步动态查看"),setTimeout(function(){T.Util.back()},500)},300)},errorCallback:function(t){T.isNative&&api.showLoadding({show:2}),setTimeout(function(){tip("发布失败！")},300)},interfaceError:function(){T.isNative&&api.showLoadding({show:2}),setTimeout(function(){tip("发布失败！")},300)}})},n=function(t,e){api.uploadImage(t,function(t){if(t.result&&t.result.imageUpload){var i=t.result.imageUpload.image_ids;e&&e(i)}else T.isNative&&api.showLoadding({show:2}),setTimeout(function(){tip("图片上传失败")},300)})},r=function(t){var e="z-no";return"win"==t?e="z-win":"lose"==t&&(e="z-lose"),e},s=function(){if(!T.Util.isEmpty(T.Util.getPara("type"))){var t=T.Util.getPara("type");"photo"==t&&T.isNative?Images.showChooseDialog():"shareOrder"==t&&($(".trend-img").addClass("hide"),T.Storage.remove("noteShareOrderInfo"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/index.html#page=betDetail.html?from=noteEditor"))}};return t.checkOrderInfo=function(){if(!T.Util.isEmpty(T.Storage.get("noteShareOrderInfo"))){var t=T.Storage.get("noteShareOrderInfo");$("#shareOrderInfo").html('<div class="other-clumn" order-id="'+t.orderId+'">\t\t\t\t\t\t\t\t<span class="other-close"></span>\t\t\t\t\t\t\t\t<div class="other-title"><i class="tz-icon"></i>投注分享</div>\t\t\t\t\t\t\t\t<div class="other-box">\t\t\t\t\t\t\t\t\t<div class="other-style" style="color:#ff5000"></div>\t\t\t\t\t\t\t\t\t<div class="other-content">\t\t\t\t\t\t\t\t\t\t<div class="other-c1">\t\t\t\t\t\t\t\t\t\t\t<div class="other-team">'+t.htName+" vs "+t.gtName+'</div>\t\t\t\t\t\t\t\t\t\t\t<span class="other-tj"><em>投注：</em>'+t.playName+'</span>\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t<div class="other-c2">\t\t\t\t\t\t\t\t\t\t\t<span class="other-date">'+t.betDate+'</span>\t\t\t\t\t\t\t\t\t\t\t<span class="'+r(t.retInfo[2])+'">'+t.statusStr+'</span>\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t<div class="other-c2">\t\t\t\t\t\t\t\t\t\t\t<div class="touz-t1"><em>投注:</em>'+t.itemMoney+'</div>\t\t\t\t\t\t\t\t\t\t\t<div class="touz-t2">'+t.retInfo[1]+"</div>\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t</div>"),T.Storage.remove("fromBetDetail"),$("#shareOrderInfo .other-clumn .other-close").off().Touch(function(){$(".tj-weebox,.detail-bg").removeClass("hide"),$(".tj-weebox .act-2").off().Touch(function(){$(".tj-weebox,.detail-bg").addClass("hide"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/game/index.html#page=betDetail.html?from=noteEditor")})})}T.Util.isEmpty(T.Util.getPara("type"))||"shareOrder"!=T.Util.getPara("type")||!T.Util.isEmpty(T.Storage.get("noteShareOrderInfo"))||T.Util.isEmpty(T.Storage.get("fromBetDetail"))||(T.Storage.remove("fromBetDetail"),T.Util.back())},t.init=function(){t.isFirst&&(t.isFirst=!1,T.Util.isEmpty(T.Util.getPara("note_id"))||e(),i(),s()),t.checkOrderInfo()},t}(),Images=function(){var t={};return t.showChooseDialog=function(){var t={maxWidth:"420",maxHeight:"720",maxNum:"9",imageIds:""},e=[],o=[];$.each($(".img-box li"),function(t,e){o.push($(e).attr("id"))}),t.imageIds=o.join(","),api.mutiPhoto(t,function(t){if(console.log("mutiPhoto---"+JSON.stringify(t)),""==t.result)e=[];else for(i in t.result)console.log(JSON.stringify(t[i])),Global.isiOS?e.push('<li id="'+i+'"><img src="data:image/gif;base64,'+t.result[i].base64+'" showUrl="'+t.result[i].showUrl+'"><span class="img-delete"></span></li>'):e.push('<li id="'+i+'"><img src="'+t.result[i].showUrl+'" ><span class="img-delete"></span></li>');$(".img-box").html(e.join("")),$(".img-box li").length&&$(".img-box").removeClass("hide"),$(".img-delete").off().Touch(function(){$(this).parent().remove()}),$(".img-box img").off().Touch(function(){var t=$(".img-box img").index($(this));if(T.isNative){var e=[];$.each($(".img-box img"),function(t,i){e.push(Global.isiOS?$(i).attr("showUrl"):$(i).attr("src"))});var i={ImageUrls:e,currentIndex:t};api.showImage(i,function(t){console.log("进入原生展示大图方法！")})}})})},t}();$(document).ready(function(){T.isNative?T.appToH5.init(Init.init):Init.init()})</script>
+	</body>
+</html>

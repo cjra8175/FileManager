@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>分析详情</title>
+		<link href="../css/zntj.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<section class="analysis-con" style="position:relative">
+			<header class="sq-header">
+				<h2 class="sq-title">分析详情</h2>
+			</header>
+			<span class="sq-return" id="back"><i class="return-icon"></i></span>
+			<div class="analysis-header">
+				<div class="det-date"></div>
+				<div class="det-fight">
+					<div class="f-team1">
+						<div class="team-f">
+							<img src="http://www.buyinball.com/img/f186b774dd4145eca205d1b57642f99a.jpeg">
+						</div>
+						<div class="team-x">
+							<div class="x-name"></div>
+							<div class="x-rank"></div>
+						</div>
+					</div>
+					<div class="f-middle">
+						<div class="f-vs hide">VS</div>
+						
+						<div class="f-over">
+							<div class="over-txt"></div>
+							<div class="over-sore"></div>
+							<div class="over-middle"></div>
+						</div>
+					</div>
+					<div class="f-team2">
+						<div class="team-f">
+							<img src="http://www.buyinball.com/img/f186b774dd4145eca205d1b57642f99a.jpeg">
+						</div>
+						<div class="team-x">
+							<div class="x-name"></div>
+							<div class="x-rank"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="analysis-box">
+				
+				<div id="forcast" class="analysis-clumn">
+					<div class="analysis-t1">结果预测</div>
+					<div class="jgyc-list">
+						<ul>
+								
+								
+									
+									
+										
+									
+								
+							
+							
+								
+									
+									
+										
+									
+								
+							
+							
+								
+									
+									
+										
+									
+								
+							
+
+						</ul>
+					</div>
+					
+					
+						
+						
+					
+
+
+				</div>
+				
+				
+				<div id="details" class="analysis-clumn">
+					<div class="analysis-t2">赛事匹配及推演</div>
+					<div class="ppty-tips"></div>
+					<div class="ppty-list">
+						<ul>
+							
+								
+								
+									
+										
+											
+												
+												
+											
+											
+											
+										
+										
+											
+												
+												
+											
+											
+											
+										
+										
+											
+												
+												
+											
+											
+											
+										
+									
+								
+							
+
+							
+								
+								
+									
+										
+											
+												
+												
+											
+											
+											
+										
+										
+											
+												
+												
+											
+											
+											
+										
+										
+											
+												
+												
+											
+											
+											
+										
+									
+								
+							
+
+							
+								
+								
+									
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+									
+								
+							
+
+							
+								
+								
+									
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+									
+
+									
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+
+										
+											
+												
+												
+											
+										
+									
+								
+							
+						</ul>
+					</div>
+					<div class="ppty-sum"></div>
+				</div>
+				
+				
+				<div id="history_matchs" class="analysis-clumn">
+					<div class="analysis-t1">匹配场次</div>
+					<div class="ppcc">
+						<table class="ppcc-table">
+							<thead>
+								<tr>
+									<td width="15%">联赛</td>
+									<td width="15%">日期</td>
+									<td width="40%">比分</td>
+									<td width="15%">赛果</td>
+									<td>盘路</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+									
+									
+									
+									
+									
+								
+								
+									
+									
+									
+									
+									
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<footer class="analysis-footer">
+				以上资料数据仅供浏览、投注参考之用，<br>并不作为最终投注依据。
+			</footer>
+		</section>
+	</body>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script type="text/javascript">function scroll(t){var s=document.body.scrollTop,t=t||function(){};window.addEventListener("scroll",function(a){var e=document.body.scrollTop,i=e-s;if(0===i)return!1;t(i>0?"down":"up"),s=e},!1)}function initCallBack(){appFirstInfo&&(appFirstInfo=!1,matchId=T.Util.getPara("matchId"),T.Util.isEmpty(matchId)||(getMatchDetailObject.getMatchDetail(),getMatchDetailObject.getMatchJpDetail()))}var matchId="";/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq-header").css({"padding-top":"40px"}),$(".sq-return,.header-r").css({top:"50px"}),$(".det-fight").css("margin-top","78px")):($(".sq-header").css({"padding-top":"16px"}),$(".sq-return,.header-r").css({top:"34px"})));var getMatchDetailObject=function(){function t(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/match/get_jp_detail?match_id="+matchId+"&access_token="+T.Storage.get("access_token"),callback:function(t){if(T.Util.isEmpty(t.get_jp_detail))$(".analysis-box").html("");else{if(T.Util.isEmpty(t.get_jp_detail.forcast)||T.Util.isEmpty(t.get_jp_detail.forcast.forcasts.length))$(".jgyc-list").addClass("hide");else{var s=a(t.get_jp_detail.forcast.forcasts);$(".jgyc-list ul").html(s.forcastHtml),$(".jgyc-list").after(s.bpHitRateHtml)}T.Util.isEmpty(t.get_jp_detail.details)||T.Util.isEmpty(t.get_jp_detail.details.length)?($(".ppty-list").addClass("hide"),$(".ppty-tips").addClass("hide"),$(".ppty-sum").addClass("hide")):(i(t.get_jp_detail.details),$(".ppty-tips").html(t.get_jp_detail.infer_desc),$(".ppty-sum").html(t.get_jp_detail.award_desc)),T.Util.isEmpty(t.get_jp_detail.history_matchs)||T.Util.isEmpty(t.get_jp_detail.history_matchs.length)?$("#history_matchs").addClass("hide"):l(t.get_jp_detail.history_matchs)}},errorCallback:function(){}})}function s(){T.Util.xmlHttpRequest({type:"get",reqUrl:"/app-web/api/match/get_match?match_id="+matchId+"&access_token="+T.Storage.get("access_token"),callback:function(t){if(!T.Util.isEmpty(t.get_match)){var s=t.get_match;$(".det-date").html(T.Util.stringToDate(s.match_time).format("MM月dd日 hh:mm")),$(".det-date").css("margin-left",-$(".det-date").width()/2),$(".f-team1 .team-f img").attr("src",s.home_team_logo),$(".f-team2 .team-f img").attr("src",s.guest_team_logo),$(".f-team1 .team-x .x-name").html(s.home_team_name),$(".f-team2 .team-x .x-name").html(s.guest_team_name),T.Util.isEmpty(s.home_rank_name)?$(".x-name").css("margin-top","12px"):$(".f-team1 .team-x .x-rank").html(s.home_rank_name),T.Util.isEmpty(s.guest_rank_name)?$(".x-name").css("margin-top","12px"):$(".f-team2 .team-x .x-rank").html(s.guest_rank_name),1==s.status_cd?($(".f-middle .f-vs").removeClass("hide"),$(".f-middle .f-over").addClass("hide")):5==s.status_cd?($(".f-middle .f-vs").addClass("hide"),$(".f-middle .f-over").removeClass("hide"),$(".f-middle .f-over .over-middle").addClass("hide"),$(".over-sore").html(s.home_team_score+":"+s.guest_team_score)):3==s.status_cd&&($(".f-middle .f-vs").addClass("hide"),$(".f-middle .f-over").removeClass("hide"),$(".over-txt").html("半场结束"),$(".f-middle .f-over .over-sore").addClass("hide"),$(".over-middle").html(s.home_team_score+":"+s.guest_team_score))}},errorCallback:function(){}})}var a=function(t){var s="",a='<span class="jgyc-txt">暂无推荐</span>',i='<span class="jgyc-txt">暂无推荐</span>',l="",c="",p={};return t&&t.length&&($.each(t,function(t,s){T.Util.isEmpty(s)||(0==s.type?(a=e(s),c='<div class="'+(0==s.is_hit?"result-ing":1==s.is_hit?"result-yes":"result-no")+'"><div class="result-percent">'+s.rate+'<span></span>%</div><div class="result-txt">标盘预测概率</div></div>'):1==s.type?i=e(s):l+=e(s))}),""==l&&(l='<span class="jgyc-txt">暂无推荐</span>'),s='<li><div class="jgyc-con"><span class="jgyc-style">标盘：</span><span class="jgyc-intro">'+a+'</span></div></li><li><div class="jgyc-con"><span class="jgyc-style">亚盘：</span><span class="jgyc-intro">'+i+'</span></div></li><li><div class="jgyc-con"><span class="jgyc-style">其他：</span><span class="jgyc-intro">'+l+"</span></div></li>"),p.forcastHtml=s,p.bpHitRateHtml=c,p},e=function(t){var s=3==t.type?"比分 ":"",a="";return!T.Util.isEmpty(t)&&t.forcast&&t.forcast.split(",").length&&$.each(t.forcast.split(","),function(e,i){a=i==t.result?"win-t1":"",s+='<em class="'+(3==t.type?"":"jgyc-txt ")+a+'">'+i+" </em>"}),s},i=function(t){var s=[],a=[];$(".ppty-list ul").html(""),t&&t.length&&$.each(t,function(t,e){if(!T.Util.isEmpty(e))if(0==e.type||1==e.type){var i="";if(0==e.type?i="标盘":1==e.type&&(i="亚盘"),s.push('<li><div class="ppty-style">'+i+'</div><div class="ppty-right"><div class="ppty-con">'),!T.Util.isEmpty(e.forcast)&&e.forcast.length&&!T.Util.isEmpty(e.awards)&&e.awards.length&&!T.Util.isEmpty(e.his)&&e.his.length&&!T.Util.isEmpty(e.rates)&&e.rates.length)for(var l="",c=0;c<e.forcast.length;c++)l=T.Util.isEmpty(e.awards[c])?"none":"inline-block",s.push('<div class="ppty-box"><div class="pptyBox-con"><div class="ppty-g">'+e.forcast[c]+'</div><div class="ppty-p">'+e.rates[c]+'%</div></div><div class="ppty-p1">历史:'+e.his[c]+'</div><div class="ppty-p2">返奖:<span class="win-t1" style="display: '+l+'">'+e.awards[c]+"%</span></div></div>");s.push("</div></div></li>")}else if(2==e.type||3==e.type){var p="";if(2==e.type?p="进球":3==e.type&&(p="比分"),a.push('<li><div class="ppty-style">'+p+'</div><div class="ppty-right ppty-four"><div class="ppty-con">'),!T.Util.isEmpty(e.forcast)&&e.forcast.length&&!T.Util.isEmpty(e.rates)&&e.rates.length)if(2==e.type)for(var d=0;d<e.forcast.length;d++)a.push('<div class="ppty-box"><div class="pptyBox-con"><div class="ppty-g">'+e.forcast[d]+'</div><div class="ppty-p">'+e.rates[d]+"%</div></div></div>");else if(3==e.type)for(var n=($(window).width()-44-16-14-12)/4+"px",o=0;o<e.forcast.length;o++)(o+1)%4==0?a.push('<div class="ppty-box" style="display: inline-block;margin-right: 0px;;width: '+n+'"><div class="pptyBox-con"><div class="ppty-g">'+e.forcast[o]+'</div><div class="ppty-p">'+e.rates[o]+"%</div></div></div>"):a.push('<div class="ppty-box" style="display: inline-block;width: '+n+'"><div class="pptyBox-con"><div class="ppty-g">'+e.forcast[o]+'</div><div class="ppty-p">'+e.rates[o]+"%</div></div></div>");a.push("</div></div></li>")}});var e=s.concat(a);$(".ppty-list ul").html(e.join(""))},l=function(t){var s=[],a="";$(".ppcc-table tbody").html(""),$.each(t,function(t,e){e.match_time=e.match_time.substring(0,2)+"-"+e.match_time.substring(2,4)+"-"+e.match_time.substring(4,6),a=e.home_team_score>e.guest_team_score?"win":e.home_team_score==e.guest_team_score?"draw":"lose",s.push("<tr>\t\t\t\t\t\t<td>"+e.league_name+"</td>\t\t\t\t       <td>"+e.match_time+'</td>\t\t\t\t      <td><span class="ppcc-team1 '+a+'">'+e.home_team_name+'</span>\t\t\t\t\t<span class="ppcc-sore">'+e.home_team_score+":"+e.guest_team_score+'</span><span class="ppcc-team2">'+e.guest_team_name+'</span></td>\t\t\t\t\t  <td><span class="'+a+'">'+e.match_result+"</span></td>\t\t\t\t\t <td>"+e.cap_type_name+'<span class="'+a+'">'+e.match_cap_result+"</span></td>\t\t\t\t\t</tr>")}),$(".ppcc-table tbody").html(s.join(""))};return{getMatchJpDetail:t,getMatchDetail:s}}(),a,opacity=0,timer=null;scroll(function(t){"down"==t?document.body.scrollTop>60&&(clearInterval(timer),timer=setInterval(function(){opacity+=.1,opacity>=1&&(opacity=1,clearInterval(timer)),$(".sq-header").css("opacity",opacity)},30)):"up"==t&&document.body.scrollTop<60&&(clearInterval(timer),timer=setInterval(function(){opacity-=.1,opacity<=0&&(opacity=0,clearInterval(timer)),$(".sq-header").css("opacity",opacity)},30))});var appFirstInfo=!0;$(document).ready(function(){$(".sq-return").off().Touch(function(){window.removeEventListener("scroll",function(t){},!1),T.Util.back()}),T.isNative?T.appToH5.init(initCallBack):initCallBack()})</script>
+
+</html>

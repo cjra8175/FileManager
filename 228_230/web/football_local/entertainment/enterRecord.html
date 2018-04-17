@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>娱乐竞猜</title>
+    <link rel="stylesheet" href="./css/enter.css">
+</head>
+<style>section{padding-bottom:15px}</style>
+<body>
+<header class="header">
+    <em class="back"></em>
+    
+    <span class="headerText">娱乐竞猜</span>
+    <b class="shareBtn share"></b>
+</header>
+<nav style="border-bottom:1px solid #171a22">
+    <div class="recordLoad on" data-box="recordLoad">进行中</div>
+    <div class="recordEnd" data-box="recordEnd">已结束</div>
+</nav>
+<section>
+    <div class="recordData">
+        <div id="recordLoad">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        <div id="recordEnd" class="hide">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</section>
+<div class="shareFooterBox">(<span class="shareNum">0</span>/3)确定分享</div>
+</body>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&/QAPP/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($("header").css("padding-top","40px"),$("nav").css("top","88px"),$("section").css("padding-top","128px")):($("header").css("padding-top","16px"),$("nav").css("top","64px"),$("section").css("padding-top","104px")))</script>
+<script>var scroll=0,IsMoreBegin=!1,IsMoreEnd=!1,bpage=1,epage=1;$("section").scroll(function(){scroll=$(this).scrollTop();var e=$(this).scrollTop(),a=$(".recordData").height();e+$(this).height()>=a-2&&("recordLoad"==$("nav div.on").attr("data-box")?IsMoreBegin&&(bpage++,IsMoreBegin=!1,Record.recordLoad()):IsMoreEnd&&(epage++,IsMoreEnd=!1,Record.recordEnd()))}),$("nav div").off().Touch(function(){if(!$(this).hasClass("on")){var e=$(this).attr("data-box");$(this).addClass("on").siblings().removeClass("on"),$("#"+e).removeClass("hide").siblings().addClass("hide"),$("#"+e).empty(),bpage=1,epage=1,Record[e]()}}),$(".back").off().Touch(function(){T.Util.back()}),$(".shareBtn").off().Touch(function(){var e=$("section");$(this).toggleClass("share"),$(this).hasClass("share")?($(this).html(""),e.find(".recordContent,.recordFooter").removeClass("recordPadding"),e.find(".recordContent").removeClass("selectN selectY"),$(".shareFooterBox").removeClass("sureY").addClass("sureN")):($(this).html("取消"),$(".shareFooterBox").removeClass("sureN").addClass("sureY"),e.find(".recordContent,.recordFooter").addClass("recordPadding"),e.find(".recordContent").addClass("selectN"))});var Record=function(){var e=function(){bpage=1,epage=1,$("#recordLoad").empty(),a()},a=function(){var e={type:1,page:bpage,accessToken:T.Storage.get("access_token")};T.Util.xmlHttpRequest({type:"post",reqUrl:"/v1/h5game/FunnyQuiz/history",reqData:e,callback:function(e){var a=e.data;if(a&&a.length){IsMoreBegin=!(a.length<10);var s=[];if($.each(a,function(e,a){for(var r=0,t=0,o="",n=0,d=0;d<a.optionNum;d++)a["voteAmount"+(d+1)]>0&&(o=String.fromCharCode(64+parseInt(d+1))+". "+a["option"+(d+1)],n=a["rate"+(d+1)],r=a["voteAmount"+(d+1)],t=parseInt(a["voteAward"+(d+1)]));s.push('<div class="recordList">                                 <div class="recordContent" data-oid="'+a.orderId+'" data-quizId="'+a.quizId+'" data-item="'+r+'">                                 <p class="recordTitle">'+a.title+'</p>                                 <div class="recordBox1"><span class="recordType" style="color:'+(2==a.type?"#8153ac":"#3fa98f")+'">'+o+" "+(2==a.type?"":" "+NumberUtil.fmoney(n)+"倍")+'</span><span class="recordStatus">待开奖</span></div>                            <div class="recordBox2">共投<span>'+T.Util.parseNumber(r)+'</span>金币 <span class="prizeM">预计返还'+T.Util.parseNumber(t)+'金币</span></div>                            </div>                            <div class="recordFooter">                                 订单号<span>'+a.orderId.substr(0,14)+'</span>                                 <span class="recordTime">'+a.voteTime+"</span>                            </div>                            </div>")}),$("#recordLoad").append(s.join("")),a.length<10&&($(".allnotel").remove(),$("#recordLoad").append("<div class='allnotel' style='text-align: center'>已全部加载完毕</div>")),!$(".shareBtn").hasClass("share")){var t=$("section");t.find(".recordContent,.recordFooter").addClass("recordPadding"),t.find(".recordContent").addClass("selectN")}r()}else 1==bpage&&$("#recordLoad").html("<div class='nodd'><b></b><p>暂无竞猜记录</p></div>")},errorCallback:function(){}})},s=function(){var e={type:2,page:epage,accessToken:T.Storage.get("access_token")};T.Util.xmlHttpRequest({type:"post",reqUrl:"/v1/h5game/FunnyQuiz/history",reqData:e,callback:function(e){var a=e.data;if(a&&a.length){IsMoreEnd=!(a.length<10);var s=[];if($.each(a,function(e,a){for(var r,t=0,o="",n=0,d="",i=0;i<a.optionNum;i++)a["voteAmount"+(i+1)]>0&&(o=String.fromCharCode(64+parseInt(i+1))+". "+a["option"+(i+1)],n=a["rate"+(i+1)],t=parseInt(a["voteAmount"+(i+1)]));3==a.state?parseInt(a.voteEarn)>0?(d='<span class="recordStatus winType">赢</span>',r='<span class="prizeM winMoney">返还'+T.Util.parseNumber(parseInt(a.voteEarn))+"金币</span>"):(r='<span class="prizeM"><span>',d='<span class="recordStatus">输</span>'):5==a.state&&(d='<span class="recordStatus">已取消</span>',r='<span class="prizeM">退款'+T.Util.parseNumber(t)+"金币</span>"),s.push('<div class="recordList">                                 <div class="recordContent" data-oid="'+a.orderId+'" data-quizId="'+a.quizId+'" data-item="'+t+'">                                 <p class="recordTitle">'+a.title+'</p>                                 <div class="recordBox1"><span class="recordType" style="color:'+(2==a.type?"#8153ac":"#3fa98f")+'">'+o+" "+(2==a.type?"":" "+NumberUtil.fmoney(n)+"倍")+"</span>"+d+'</div>                            <div class="recordBox2">共投<span>'+T.Util.parseNumber(t)+"</span>金币 "+r+'</div>                            </div>                            <div class="recordFooter">                                 订单号<span>'+a.orderId.substr(0,14)+'</span>                                 <span class="recordTime">'+a.voteTime+"</span>                            </div>                            </div>")}),$("#recordEnd").append(s.join("")),a.length<10&&($(".allnote").remove(),$("#recordEnd").append("<div class='allnote' style='text-align: center'>已全部加载完毕</div>")),!$(".shareBtn").hasClass("share")){var t=$("section");t.find(".recordContent,.recordFooter").addClass("recordPadding"),t.find(".recordContent").addClass("selectN")}r()}else 1==epage&&$("#recordEnd").html("<div class='nodd'><b></b><p>暂无竞猜记录</p></div>")},errorCallback:function(){}})},r=function(){$(".recordContent").off().Touch(function(){if(!$(".shareBtn").hasClass("share")){if($(this).hasClass("selectY"))$(this).removeClass("selectY").addClass("selectN");else{if($(".selectY").length>=3)return void tip("最多分享3个订单");$(this).removeClass("selectN").addClass("selectY")}$(".shareNum").html($(".selectY").length),$(".selectY").length>0?$(".shareFooterBox").addClass("shareSelect"):$(".shareFooterBox").removeClass("shareSelect")}}),$(".shareFooterBox").off().Touch(function(){if($(this).hasClass("shareSelect")){for(var e="",a=0,s=$(".selectY"),r=[],o=0;o<s.length;o++)t($(s[o]).attr("data-quizId"),r)||(r.push($(s[o]).attr("data-quizId")),o==s.length-1?e+=$(s[o]).attr("data-oid"):e+=$(s[o]).attr("data-oid")+","),a+=parseInt($(s[o]).attr("data-item"));var n={obj_type:"ccl",obj_id:e,title:"《娱乐竞猜》猜尽天下事！",text:$(s[0]).find(".recordTitle").html()};api.share(n,function(e){$(".shareBtn").html("").addClass("share"),$("section").find(".recordContent,.recordFooter").removeClass("recordPadding"),$("section").find(".recordContent").removeClass("selectN selectY"),$(".shareFooterBox").removeClass("sureY").addClass("sureN")})}else tip("请选择您要分享的订单")})},t=function(e,a){var s=!1;if(a.length)for(var r=0;r<a.length;r++)if(a[r]==e){s=!0;break}return s};return{init:e,addListener:r,recordLoad:a,recordEnd:s}}(),initCallBack=function(){Record.init()};$(function(){T.isNative?T.appToH5.init(initCallBack):T.Util.isEmpty(T.Storage.get("access_token"))?(T.Storage.remove("access_token"),T.Storage.remove("userinfo"),initCallBack()):T.User.getUInfo(T.Storage.get("access_token"),initCallBack)})</script>
+</html>

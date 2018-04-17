@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>奖品详情</title>
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<section class="mall-content">
+    <header class="mall-header">
+        <span class="mall-return"></span>
+        <h2 class="mall-ttile">奖品详情</h2>
+    </header>
+    <div class="mall-box">
+        <div class="jp-tu">
+            <img src="" class="jp-img">
+        </div>
+        <div class="jp-con">
+            <div class="jp-name"></div>
+            <div class="jp-price"></div>
+        </div>
+        <div class="jp-c1 clearfix">
+            <div class="c1-con">
+                <span class="c1-price"></span>
+                <span class="c1-fen"></span>
+            </div>
+            <div class="c1-btn">立即兑换</div>
+        </div>
+        <article class="jp-article cp-desc-box">
+            <div class="cp-intro" style="display:none">
+                <h3 class="cp-title">奖品介绍</h3>
+                <div class="cp-content cp-desc"></div>
+            </div>
+            <div class="cp-rules" style="display:none">
+                <h3 class="cp-title">兑换奖品活动规则：</h3>
+                <div class="cp-content">
+                    1. 参与方式：满足对应奖品获取条件则获得奖品<br>
+                    2. 奖品领取：所获得在奖品记录可查询；获得的话费、京
+                    东卡及实物奖品的用户，工作人员将在兑奖后的15个工作
+                    日没与您取得联系并安排奖品的发放。<br>
+                    3. 请务必在“收货地址”中填写自己的真实姓名和联系方式
+                    以便获奖后与您取得联系
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<div class="ceng-bg hide"></div>
+
+<div class="ceng-weebox pay-success hide">
+    <div class="suc-title">支付成功！</div>
+    <div class="ceng-hd"></div>
+    <div class="ceng-action">
+        <span class="ceng-btn2">确定</span>
+    </div>
+</div>
+
+
+
+<div class="ceng-weebox tip-box hide">
+    <div class="ceng-top">
+        <div class="ceng-title">提示</div>
+        <span class="ceng-close"></span>
+    </div>
+    <div class="ceng-tips"></div>
+    <div class="ceng-action">
+        <span class="ceng-btn1">再看看</span>
+        <span class="ceng-btn2">马上去</span>
+    </div>
+</div>
+
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+
+<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".mall-header").css({"padding-top":"40px"}),$(".mall-box").css({"padding-top":"88px"})):($(".mall-header").css({"padding-top":"16px"}),$(".mall-box").css({"padding-top":"64px"})));var Init=function(){var t=function(){e(),T.Util.isEmpty(T.Util.getPara("goods_id"))||a(T.Util.getPara("goods_id"))},e=function(){$(".ceng-close,.tip-box .ceng-btn1").off().Touch(function(){$(".ceng-weebox,.ceng-bg").addClass("hide")}),$(".pay-success .ceng-btn2").off().Touch(function(){$(".pay-success,.ceng-bg").addClass("hide")}),$(".mall-return").off().Touch(function(){T.Util.back()}),$(".c1-btn").off().Touch(function(t){if($(t).hasClass("robbed"))return tip("已抢光"),!1;if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var e=$(t).attr("data-itemId"),n=$(t).attr("data-price");T.Util.xmlHttpRequest({type:"get",reqUrl:"/forum/api/acct/activity_check?obj_type=2&item_id="+e+"&price="+n+"&access_token="+T.Storage.get("access_token"),errorType:1,callback:function(i){T.User.getUInfo(T.Storage.get("access_token"),function(){if(parseInt(n)>parseInt(T.Storage.get("userinfo").coin))return void Init.tipMsg("您的金币数量不足，是否马上购买金币？",function(){$(".tip-box,.ceng-bg").addClass("hide"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/shoppingMall.html?type=JB")});Init.tipMsg("本次花费<span>"+n+"金币</span>",function(){var i={item_id:e,price:n,obj_type:2,access_token:T.Storage.get("access_token")};T.Util.xmlHttpRequest({reqUrl:"/forum/api/acct/activity_pay",reqData:i,type:"post",callback:function(e){$(".tip-box").addClass("hide");var i=T.Storage.get("userinfo");i.coin=parseInt(i.coin)-n,T.Storage.set("userinfo",i),a(T.Util.getPara("goods_id")),Init.tipSuccess("恭喜您已获得"+$(t).attr("data-name"),function(){$(".pay-success,.ceng-bg").addClass("hide")})},errorCallback:function(){}})})})},errorCallback:function(t){1405==t.msg_code?($(".tip-box .ceng-btn2").html("去充值"),Init.tipMsg(t.result_msg,function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/shoppingMall.html?type=JB")})):($(".tip-box .ceng-btn2").html("去抽奖"),Init.tipMsg(t.result_msg,function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/shangcheng/gift_draw.html")}))}})},{noRepeat:1})},a=function(t){var e="/forum/api/shop/qry_award_details?award_id="+t;T.Util.isEmpty(T.Storage.get("access_token"))||(e+="&access_token="+T.Storage.get("access_token")),T.Util.xmlHttpRequest({type:"get",reqUrl:e,callback:function(t){if(t.qry_award_details){var e=t.qry_award_details;$(".c1-price").html(T.Util.parseNumber(e.award_money)+"金币"),$(".jp-price").html("参考价："+T.Util.parseNumber(e.orignal_money)+"元"),$(".jp-name").html(e.award_ref_name),$(".c1-fen").html("剩余："+e.award_count+"份"),$(".cp-desc-box").html(e.award_desc),e.award_pic_large&&$(".jp-img").attr("src",e.award_pic_large),parseInt(e.award_count)<=0&&$(".c1-btn").addClass("robbed"),$(".c1-btn").attr({"data-itemId":e.award_id,"data-price":e.award_money,"data-name":e.award_name})}},errorCallback:function(){}})};return{init:t,tipMsg:function(t,e){$(".ceng-tips").html(t),$(".tip-box .ceng-btn2").off().Touch(function(){e&&e()},{noRepeat:1}),$(".tip-box,.ceng-bg").removeClass("hide")},tipSuccess:function(t,e,a){a&&$(".suc-title").html(a),$(".pay-success .ceng-hd").html(t),$(".pay-success,.ceng-bg").removeClass("hide")}}}();$(document).ready(function(){T.isNative?T.appToH5.init(Init.init):Init.init()})</script>
+</body>
+</html>

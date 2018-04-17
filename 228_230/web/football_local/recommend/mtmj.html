@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>媒体名家</title>
+    <link href="../css/recommend.css" type="text/css" rel="stylesheet">
+    <style>.no-content{padding:120px 10px}.mj-act,.mj-article{padding-left:44px}.mj-article{text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.mlist-main{margin-top:97px}</style>
+</head>
+<body>
+<div id="loading-new">
+    <div id="loading-new-center">
+        <div id="loading-new-center-absolute">
+            <div class="object" id="loading"></div>
+        </div>
+    </div>
+</div>
+<header class="sq_header" id="inHead">
+    <div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+    <span class="sq_headerText">媒体名家</span>
+</header>
+<nav class="recommend-nav">
+    <ul>
+        <li value="0" class="on"><span class="nav-other">全部</span></li>
+        <li value="9"><span>电视大咖</span></li>
+        <li value="10"><span>报刊名记</span></li>
+        <li value="11"><span>网络大拿</span></li>
+        <li class="hide"><span>网络大拿</span></li>
+    </ul>
+</nav>
+<section class="mlist-main">
+    
+    <div class="mlist-box">
+        <ul>
+            
+        </ul>
+        <div class="no-content hide">
+            <div class="none-icon"></div>
+            <div class="none-txt">空空荡荡...</div>
+        </div>
+        <div class="content"></div>
+
+        
+    </div>
+</section>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../recommend/recommend.js"></script>
+<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".mlist-main").css({"margin-top":"137px"}),$(".recommend-nav").css({top:"88px"})):($(".sq_header").css({"padding-top":"16px"}),$(".mlist-main").css({"margin-top":"113px"}),$(".recommend-nav").css({top:"64px"})));var page_index=1,item_type=7,isRequest=!1,isPull=!0,obj_type=0,dropLoadObj=null,sType,tabAllLoadEnd=!1,tabDsLoadEnd=!1,tabBkLoadEnd=!1,tabWlLoadEnd=!1,type=T.Util.getPara("type");if(T.Util.isEmpty(type)||"cgyx"!=type||(item_type=9,$(".sq_headerText").html("草根英雄"),$(".recommend-nav ul li").eq(1).attr("value",4).find("span").html("资深专家"),$(".recommend-nav ul li").eq(2).attr("value",3).find("span").html("高级专家"),$(".recommend-nav ul li").eq(3).attr("value",2).find("span").html("中级专家"),$(".recommend-nav ul li").eq(4).attr("value",1).find("span").html("初级专家"),$(".recommend-nav ul li").eq(4).show()),!T.Util.isEmpty(T.Util.getPara("obj_type"))){var objType=T.Util.getPara("obj_type");obj_type=objType;for(var nav=$(".recommend-nav ul li"),i=0;i<nav.length;i++)$(nav[i]).attr("value")==obj_type&&$(nav[i]).addClass("on").siblings().removeClass("on")}var requestData=function(){return{getData:function(t){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/recom/qry_media_expert?page_index="+page_index+"&page_size=10&obj_type="+obj_type+"&item_type="+item_type+"&access_token="+T.Storage.get("access_token")+"&sport_type="+sType,callback:function(e){console.log(e),$("#loading-new").hide(),isRequest=!1;var i=[],a=e.qry_media_expert;if(T.Util.isEmpty(a)||T.Util.isEmpty(a.data)||a.data.length<=0)return doDropLoadInit(!0,t),T.Util.isEmpty(a)||(page_index=a.page_index),$(".mlist-box ul").html(i.join("")),void recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more");page_index=a.page_index;for(var o=a.data,n="this.src='../img/iconfail.png'",s=0;s<o.length;s++){var l=o[s];if(!T.Util.isEmpty(l)){var d="";1==T.Util.notNullValue(l.has_recom,0)&&(d='<i class="dot"></i>'),"cgyx"==type?i.push('<li userNo="'+l.user_no+'">                                <div class="mlist-user clearfix">                                <div class="user-pic">                                <img src="'+l.portrait_pic+'" class="user-tou" onerror="'+n+'">                                '+d+'                                </div>                                <div class="user-intro">                                <div class="mj-sum"><span class="mj-name">'+isEmpty(l.nick_name)+"</span>"+expertAlias(l)+'</div>                                <div class="mj-tag">'+addBiaoQian(l.new_tags)+'</div>                                <div class="mj-good">'+lastDesc(l.last_desc)[0]+'<em class="zj-p">'+lastDesc(l.last_desc)[1]+'</em></div>                                </div>                                </div>                                <article class="mj-article">'+isEmpty(l.signature)+'</article>                                <div class="mj-act">粉丝: <h style="display: inline-block;width: 28px;">'+isEmpty(l.follow_num)+'</h> <span class="zj-win">近30天胜率: <em class="zj-em">'+T.Util.notNullValue(l.hit_rate,"0%")+'</em></span> </div>                                <span class="concern-btn'+isFollow(l)+'" isFollow ='+l.is_friend+" userNo="+l.user_no+">"+isGuanZhu(l.is_friend)+"</span>                                </li>"):i.push('<li userNo="'+l.user_no+'">                                <div class="mlist-user clearfix">                                <div class="user-pic">                                <img src="'+l.portrait_pic+'"class="user-tou" onerror="'+n+'">                                '+d+'                                </div>                                <div class="user-intro">                                <div class="mj-sum"><span class="mj-name">'+isEmpty(l.nick_name)+"</span>"+expertAlias(l)+'</div>                                <div class="mj-tag" >'+addBiaoQian(l.new_tags)+'</div>                                <div class="mj-good">'+(1==T.Util.isEmpty(l.good_at)?"":"擅长：")+"<span>"+isEmpty(l.good_at)+'</span></div>                                </div>                                </div>                                <article class="mj-article">'+isEmpty(l.signature)+'</article>                                <div class="mj-act">粉丝: <h  style="display: inline-block;width: 28px;">'+isEmpty(l.follow_num)+"</h> <span>篇均推荐: "+isEmpty(l.content_num)+'字</span></div>                                <span class="concern-btn'+isFollow(l)+'" isFollow ='+l.is_friend+" userNo="+l.user_no+">"+isGuanZhu(l.is_friend)+"</span>                                </li>")}}isPull?$(".mlist-box ul").html(i.join("")):$(".mlist-box ul").append(i.join("")),Global.isAndroid&&$(".mj-tag span,.tag-3").css("line-height","15px"),doDropLoadInit(0==page_index,t),recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more"),initListener().addListener()},errorCallback:function(e){$("#loading-new").hide(),isRequest=!1,t&&t.resetload();var i=[];isPull&&1==page_index&&($(".mlist-box ul").html(i.join("")),recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more"))}})},refrashEvent:function(){$(".dropload-down,.download-up").remove(),dropLoadObj=$(".mlist-main").off().dropload({scrollArea:window,loadUpFn:function(t){console.log("下拉刷新"),t.resetload(),t.unlock(),t.noData(!1),page_index=1,isPull=!0,isRequest=!0,requestData().getData(t)},loadDownFn:function(t){isRequest||(isPull=!1,isRequest=!0,requestData().getData(t))},threshold:50})}}},decreaseGuanZhu=function(t){var e=$(t).prev().find("h");if(!T.Util.isEmpty(e.html())&&0!=e.html()){var i=e.html();e.html(--i)}},lastDesc=function(t){if(T.Util.isEmpty(t))return["",""];var e=t.split(":");return 2==e.length?e:["",""]},addGuanZhu=function(t){var e=$(t).prev().find("h");if(T.Util.isEmpty(e.html()))return void e.html("1");var i=e.html();e.html(++i)},initListener=function(){return{addListener:function(){$(".recommend-nav ul li").off().Touch(function(t){if(!$(t).hasClass("on")){$(t).addClass("on").siblings().removeClass("on"),$(".mlist-box ul").empty();var e=$(t).attr("value");obj_type=e,page_index=1,isPull=!0,isRequest=!0,"0"==$(t).index()?tabAllLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1)):"1"==$(t).index()?tabDsLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1)):"2"==$(t).index()?tabBkLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1)):"3"==$(t).index()&&(tabWlLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1))),dropLoadObj.resetload(),$(".mlist-box ul").empty(),requestData().getData(dropLoadObj)}}),$(".concern-btn").off().Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var t=$(this).attr("isfollow"),e=$(this).attr("userno");T.Util.isEmpty(t)&&T.Util.isEmpty(e)||(1==t?delFriend(e,$(this)):addFriend(e,$(this)))}),$(".mlist-box ul li").off().Touch(function(t,e){if(!$(e.target).hasClass("concern-btn")){var i=$(this).attr("userNo");if(console.log(i),!T.Util.isEmpty(i)){var a=i;"BB"==T.Util.getPara("sType")&&(a=i+"&sType=BB"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/expert.html?user_no="+a)}}})}}},appFirstInfo=!0;$(document).ready(function(){sType="BB"==T.Util.getPara("sType")?1:0,T.isNative?T.appToH5.init(function(){appFirstInfo&&(appFirstInfo=!1,requestData().refrashEvent(),initListener().addListener())}):(requestData().refrashEvent(),initListener().addListener())})</script>
+</body>
+</html>

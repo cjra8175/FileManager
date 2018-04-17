@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>推荐赛事</title>
+    <link href="../css/recommend.css" type="text/css" rel="stylesheet">
+    <style>#tjss-header{height:38px;line-height:38px;text-align:center;color:#ff5000;background:#fff;position:fixed;top:64px;z-index:1;width:100%}.sq_header{z-index:11}.siblingText{color:#fff;font-size:15px;margin-left:12px}.jingcai{display:inline-block;font-size:8px;background:#ff5000;color:#fff;padding:1px 1px;transform:scale(.85);-webkit-transform:scale(.85);border-radius:2px}.sDown{-webkit-animation:down .3s ease-out 0s;animation:down .3s ease-out 0s;-moz-animation:down .3s ease-out 0s;-ms-animation:down .3s ease-out 0s}.sUp{animation:up .3s ease-out 0s;-webkit-animation:up .3s ease-out 0s;-ms-animation:up .3s ease-out 0s;-moz-animation:up .3s ease-out 0s}.animated{-ms-animation-duration:.5s;-moz-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-ms-animation-fill-mode:both;-moz-animation-fill-mode:both}.slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp;-moz-animation-name:slideInUp;-ms-animation-name:slideInUp}.slideInDown{-webkit-animation-name:slideInDown;animation-name:slideInDown;-moz-animation-name:slideInDown;-ms-animation-name:slideInDown}.slideOutDown{-webkit-animation-name:slideOutDown;animation-name:slideOutDown;-moz-animation-name:slideOutDown;-ms-animation-name:slideOutDown}@-webkit-keyframes down{0%{-webkit-transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(0,0,0)}}@keyframes down{0%{transform:translate3d(0,-100%,0)}100%{transform:translate3d(0,0,0)}}@-ms-keyframes down{0%{-ms-transform:translate3d(0,-100%,0)}100%{-ms-transform:translate3d(0,0,0)}}@-moz-keyframes down{0%{-moz-transform:translate3d(0,-100%,0)}100%{-moz-transform:translate3d(0,0,0)}}@-webkit-keyframes up{0%{-webkit-transform:translate3d(0,0,0)}100%{-webkit-transform:translate3d(0,-100%,0)}}@keyframes up{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(0,-100%,0)}}@-ms-keyframes up{0%{-ms-transform:translate3d(0,0,0)}100%{-ms-transform:translate3d(0,-100%,0)}}@-moz-keyframes up{0%{-moz-transform:translate3d(0,0,0)}100%{-moz-transform:translate3d(0,-100%,0)}}@-ms-keyframes slideInUp{from{-ms-transform:translate3d(0,100%,0)}100%{-ms-transform:translate3d(0,0,0)}}@-moz-keyframes slideInUp{from{-moz-transform:translate3d(0,100%,0)}100%{-moz-transform:translate3d(0,0,0)}}@-ms-keyframes slideInDown{from{-ms-transform:translate3d(0,-100%,0)}100%{-ms-transform:translate3d(0,0,0)}}@-moz-keyframes slideInDown{from{-moz-transform:translate3d(0,-100%,0)}100%{-moz-transform:translate3d(0,0,0)}}@-ms-keyframes slideOutDown{from{-ms-transform:translate3d(0,0,0)}100%{-ms-transform:translate3d(0,100%,0)}}@-moz-keyframes slideOutDown{from{-moz-transform:translate3d(0,0,0)}100%{-moz-transform:translate3d(0,100%,0)}}</style>
+</head>
+<body>
+<div id="loading-new">
+    <div id="loading-new-center">
+        <div id="loading-new-center-absolute">
+            <div class="object" id="loading"></div>
+        </div>
+    </div>
+</div>
+<header class="sq_header" id="inHead">
+    <div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+    <span class="sq_headerText">足球赛事推荐</span>
+    <span class="siblingText hide" sport-type="BB">篮球</span>
+    <span class="change-icon hide"></span>
+</header>
+
+
+<div class="nav-bg hide" style="transform-origin:0 0 0;opacity:1;transform:scale(1,1)"></div>
+
+<div class="index-nav hide">
+    <ul id="statusNav" style="padding:10px;overflow:auto">
+        <li class="on" data-status="0">全部</li>
+        <li data-status="1" class="">热门</li>
+        <li data-status="2" class="">竞彩</li>
+    </ul>
+    <div id="qryContent" class="contentBox" style="max-height:278px">
+        <div data-status="0" class="change-m">
+            <ul class="change-list">
+                
+                
+                
+                
+                
+            </ul>
+        </div>
+        <div data-status="1" class="change-m hide">
+            <ul class="change-list">
+                
+
+            </ul>
+        </div>
+        <div data-status="2" class="change-m hide">
+            <ul class="change-list">
+                
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="change-action">
+        <div class="act-box">
+            <span class="xuan-yes on">全选</span>
+            <span class="xuan-no">全不选</span>
+        </div>
+        <span class="act-sure">确定</span>
+    </div>
+</div>
+
+<div id="tjss-header" class="hide">(周五)2016-10-28</div>
+
+<section class="recommend-main" style="overflow-y:scroll;-webkit-overflow-scrolling:touch">
+    <div class="no-content hide">
+        <div class="none-icon"></div>
+        <div class="none-txt">空空荡荡...</div>
+    </div>
+    
+
+     <div class="tj-match">
+
+            <div class="tjss">
+                <header class="tjss-date hide">(周五)2016-10-28</header>
+                <div class="tjss-list hide">
+                    <ul>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+</section>
+<footer class="footer-tz hide" style="z-index:50">
+    <div class="tz-cang">已选择<span>0</span>场</div>
+    <div class="tz-tips">最多可以选择3场</div>
+    <span class="tz-btn">确定</span>
+</footer>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="recommend.js"></script>
+<script src="../js/main.js"></script>
+<script>var headerHeight=38;if(/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)){var navHeadHeight=64;812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?(navHeadHeight=88,$(".sq_header").css({"padding-top":"40px"}),$("#tjss-header,.index-nav").css({top:"88px"})):($(".sq_header").css({"padding-top":"16px"}),$("#tjss-header,.index-nav").css({top:"64px"}));var mTop=headerHeight+navHeadHeight;$(".recommend-main").css({"margin-top":mTop+"px"})}else{$("#tjss-header").css({top:"48px"});var mTop=headerHeight+48;$(".recommend-main").css({"margin-top":mTop+"px"})}var matchData=[],matchListDatas=[],is_media="",choiceArr=[],sType=0,pageDropLoadObj=null,recommend=function(){var e="1",s="",a=!0,t=0,o=function(e){$(e).addClass("on").siblings().removeClass("on");var s=$(e).attr("data-status");$("#qryContent .change-m").eq(s).removeClass("hide").siblings().addClass("hide");var a=$("#qryContent .change-m").eq(s).children(".change-list"),t=a.children().length,o=a.children(".on").length;0==o?($(".xuan-yes").removeClass("on"),$(".xuan-no").addClass("on")):t==o?($(".xuan-yes").addClass("on"),$(".xuan-no").removeClass("on")):($(".xuan-yes").removeClass("on"),$(".xuan-no").removeClass("on"))},i=function(){(T.isNative&&lib.nativeApi.compareJSSDKVersion("1.0.1")||!T.isNative)&&$(".siblingText").removeClass("hide"),"1"==T.Storage.get("recomSuccess")&&(T.Storage.set("recomSuccess","0"),$(".choise-on").removeClass("choise-on"),$(".tjss-have").removeClass("tjss-have"),$(".tjss-up").removeClass("tjss-up"),$(".tjss-choise").addClass("hide"),$(".tz-cang span").html(0),choiceArr=[]),"BB"==T.Util.getPara("sType")?(sType=1,$(".sq_headerText").html("篮球赛事推荐"),$(".siblingText").html("足球").attr("sport-type","S")):(sType=0,$(".change-icon").removeClass("hide")),n(),c(),d.user_info(),d.matchslist(),d.matchsName(0),d.matchsName(1),d.matchsName(2),$(".dropload-refresh").remove()},n=function(){$(".dropload-down,.download-up").remove(),pageDropLoadObj=$(".tj-match").off().dropload({scrollArea:window,loadUpFn:function(s){console.log("下拉刷新"),s.resetload(),s.unlock(),s.noData(!1),e="1",d.matchslist(s)},loadDownFn:function(e){a&&(console.log("上拉刷新"),a=!1,d.matchslist(e))},threshold:50,autoLoad:!1});var s=function(){for(var e=$(this).scrollTop(),s=$(document).height(),t=$(this).height(),o=$(".tjss-date"),i=o.length-1;i>=0;i--){var n=o.eq(i).offset().top;if(/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)?n-=64:n-=48,e>n){$("#tjss-header").html(o.eq(i).html());break}}e+t>=s&&a&&(console.log("上拉刷新"),a=!1,d.matchslist())};$(window).scroll(s)},l=function(e){var s=e.parents("li").attr("m_id"),a=e.parents("li").attr("h_name"),t=e.parents("li").attr("g_name"),o=e.parents("li").attr("company_id"),i=e.parents(".choise-box").attr("play_type"),n=e.attr("codes"),l=e.attr("odd"),d=e.parents(".choise-box").attr("handicap"),r=e.parents(".choise-box").attr("let_ball"),c=e.parents(".choise-box").attr("odds"),h="";return 1==i&&(h=0==sType?"竞彩":"胜负"),2==i&&(h=0==sType?"欧赔":"胜负"),3==i&&(h=0==sType?"欧赔":"让分胜负"),4==i&&(h=0==sType?"大小球":"大小分"),{m_id:s,company_id:o,play_name:h,play_type:i,codes:n,handicap:d,odd:l,odds:c,let_ball:r,h_name:a,g_name:t}},d=function(){var i=function(e){var s=new Date;s.setTime(Date.parse(e));var a="";switch(s.getDay()){case 0:a="(周日)";break;case 1:a="(周一)";break;case 2:a="(周二)";break;case 3:a="(周三)";break;case 4:a="(周四)";break;case 5:a="(周五)";break;case 6:a="(周六)"}return a+e},n=function(e){var s=e;return s=s.replace("竞彩","竞"),s=s.replace("欧赔","欧"),s=s.replace("亚盘","亚"),s=s.replace("大小球","大")},l=function(e){for(var s=[],a=[],t=0;t<e.length;t++)e[t].mTime=e[t].m_time.substring(11,16),e[t].headTime=i(e[t].group_date),e[t].playNames=n(e[t].play_names),0!=t&&e[t].group_date!=e[t-1].group_date&&(s.push(a.concat([])),a=[]),a.push(e[t]);return s.push(a.concat([])),s},d=function(e){for(var s=-1,a=-1,t=0;t<e.length;t++)1==e[t].play_type&&(s=t),2==e[t].play_type&&(a=t);-1!=a&&-1!=s&&(e=e.splice(a,1));for(var o=[],i=0;i<e.length;i++){var n=e[i],l="",d="";1==n.play_type&&(0==sType?(l="竞彩",d="胜,平,负"):(l="胜负",d="胜,-,负")),2==n.play_type&&(0==sType?(l="欧赔",d="胜,平,负"):(l="胜负",d="胜,-,负")),3==n.play_type&&(0==sType?(l="亚盘",d="主,"+n.handicap+",客"):(l="让分胜负",d="主,"+n.handicap+",客")),4==n.play_type&&(0==sType?(l="大小球",d="大,"+n.handicap+",小"):(l="大小分",d="大,"+n.handicap+",小")),n.play_name=l,n.oddsName=d,o.push(n)}for(var t=0;t<o.length;t++)for(var i=t;i<o.length;i++){if(o[t].play_type==o[i].play_type&&o[t].let_ball){var r=o[t];o[t]=o[i],o[i]=r}if(o[t].play_type>o[i].play_type){var r=o[t];o[t]=o[i],o[i]=r}}return o},h=function(o,i){var n=e;if("0"==e)return o&&o.noData(!0),o&&o.lock(),o&&o.resetload(),void(a=!0);!o&&i&&(i.resetload(),i.unlock(),i.noData(!1),o=i);var d="/app-web/api/recom/qry_recom_matchs?league_id="+s+"&page_index="+e+"&page_size=20&sport_type="+sType;1==t?d+="&is_hot=1":2==t&&(d+="&is_jc=1"),T.Util.xmlHttpRequest({type:"get",reqUrl:d,version:"2.0.0",callback:function(s){if(a=!0,"0"==s.msg_code){if(s.qry_recom_matchs.data.length>0){$(".no-content").addClass("hide"),$(".tj-match").removeClass("hide"),$(".footer-tz").removeClass("hide"),$("#tjss-header").removeClass("hide");var t=s.qry_recom_matchs.data;r.matchsListHtml(l(t),n)}else $(".no-content").removeClass("hide"),$(".tj-match").addClass("hide"),$(".footer-tz").addClass("hide"),$("#tjss-header").addClass("hide"),c();$("#loading-new").hide(),e=s.qry_recom_matchs.page_index,0==e&&0!=s.qry_recom_matchs.data.length?($(".no-more").removeClass("hide"),doDropLoadInit(!0,o)):($(".no-more").addClass("hide"),doDropLoadInit(!1,o))}},errorCallback:function(){a=!0,$("#loading-new").hide(),o&&o.resetload()}})},m=function(e,s){var a="/app-web/api/recom/get_recom_match?access_token="+T.Storage.get("access_token")+"&m_id="+e+"&sport_type="+sType;T.Util.xmlHttpRequest({type:"get",reqUrl:a,version:"2.0.0",callback:function(a){if("0"==a.msg_code){if(!T.Util.isEmpty(a.get_recom_match.content)){var t=d(a.get_recom_match.content);r.matchsOddsHtml(e,t,s)}}else console.log("赔率数据异常"),tip("赔率数据异常")},errorCallback:function(){}})},p=function(e){var s="/app-web/api/match/qry_recom_leagues";1==e&&(s+="?is_hot=1"),2==e&&(s+="?is_jc=1"),T.Util.xmlHttpRequest({type:"get",reqUrl:s,version:"2.0.0",callback:function(s){if("0"==s.msg_code)if(T.Util.isEmpty(s.qry_recom_leagues.data))r.matchsName(e,[]);else{var a=s.qry_recom_leagues.data;0!=a.length&&2==e&&o($("#statusNav li").eq(2)),r.matchsName(e,a)}},errorCallback:function(){}})};return{user_info:function(){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/forum/api/user/qry_user_info?user_no="+T.Storage.get("userinfo").user_no,callback:function(e){T.Util.isEmpty(e.qry_user_info.is_media)||(is_media=e.qry_user_info.is_media),console.log(is_media),"1"!=is_media?($(".tjss-up").addClass("hide"),$(".tjss-down").addClass("hide"),$(".footer-tz").addClass("hide"),$(".tj-match").css("padding-bottom","0px")):($(".tjss-up").removeClass("hide"),$(".tjss-down").removeClass("hide"),$(".footer-tz").removeClass("hide"),$(".tj-match").css("padding-bottom","70px"))},errorCallback:function(){}})},matchslist:h,matchsOdds:m,matchsName:p}}(),r=function(){var e=function(e,s,a){$('[m_id="'+e+'"] .tjss-down').addClass("tjss-up");var t=$('[m_id="'+e+'"] .choise-box');$('[m_id="'+e+'"]').attr("company_id",s[0].company_id);for(var o,i=!1,n=-1,l=0;l<choiceArr.length;l++)if(choiceArr[l].m_id==e){n=l,o=choiceArr[n];break}if(o){var d=o.play_type,r=!1;s.forEach(function(s){if(s.play_type==d&&s.let_ball==o.let_ball){if(r=!0,o.handicap&&o.handicap!=s.handicap)return i=!0,void a({m_id:e,msg:"当前选中的盘口类型不存在"});if(s.min_odds>o.odd+.01)return i=!0,void a({m_id:e,msg:"当前选中项的赔率小于新数据的最小赔率"})}}),r||(i=!0,a({m_id:e,msg:"当前选中的盘口类型不存在"}))}if(i){var e=choiceArr[n].m_id;$('[m_id="'+e+'"] .tjss-have').removeClass("tjss-have"),$('[m_id="'+e+'"] .choise-on').removeClass("choise-on"),choiceArr.splice(n,1),o=void 0}if(!t)return void(i||a({m_id:e,msg:""}));for(var l=0;l<5;l++)if(l<s.length){t.eq(l).show();var c=s[l].oddsName.split(","),h=s[l].odds.split(",");if(1!=s[l].play_type&&2!=s[l].play_type||(t.eq(l).children(".choise-tab").eq(1).attr("codes","1"),"null"==h[1]?t.eq(l).children(".choise-tab").eq(1).attr("odd",""):t.eq(l).children(".choise-tab").eq(1).attr("odd",h[1]),t.eq(l).children(".choise-tab").eq(1).attr("min_odds",s[l].min_odds)),t.eq(l).children(".choise-tab").eq(0).attr("odd",h[0]),t.eq(l).children(".choise-tab").eq(2).attr("odd",h[2]),t.eq(l).children(".choise-tab").eq(0).attr("min_odds",s[l].min_odds),t.eq(l).children(".choise-tab").eq(2).attr("min_odds",s[l].min_odds),t.eq(l).children(".choise-tab").eq(0).attr("codes","3"),t.eq(l).children(".choise-tab").eq(2).attr("codes","0"),t.eq(l).children(".choise-title").html(s[l].play_name),s[l].let_ball&&(t.eq(l).attr("let_ball",s[l].let_ball),t.eq(l).children(".choise-title").html(s[l].play_name+"("+s[l].let_ball+")")),s[l].handicap?(t.eq(l).attr("handicap",s[l].handicap),t.eq(l).children(".choise-tab").eq(1).html(c[1])):"null"==h[1]?t.eq(l).children(".choise-tab").eq(1).html(c[1]):t.eq(l).children(".choise-tab").eq(1).html(c[1]+" <em>"+parseFloat(h[1]).toFixed(2)+"</em>"),t.eq(l).attr("play_type",s[l].play_type),t.eq(l).attr("odds",s[l].odds),t.eq(l).children(".choise-tab").eq(0).html(c[0]+" <em>"+parseFloat(h[0]).toFixed(2)+"</em>"),t.eq(l).children(".choise-tab").eq(2).html(c[2]+" <em>"+parseFloat(h[2]).toFixed(2)+"</em>"),t.eq(l).removeClass("hide"),$('.tjss-list [m_id="'+e+'"] .tjss-choise').removeClass("hide"),o&&o.play_type==s[l].play_type&&o.let_ball==s[l].let_ball){var n=1;"3"==o.codes?n=0:"0"==o.codes&&(n=2),t.eq(l).children(".choise-con .choise-tab").removeClass("choise-on"),t.eq(l).children(".choise-tab").eq(n).addClass("choise-on")}}else t.eq(l).hide();i||a({m_id:e,msg:""})};return{matchsListHtml:function(e,s){for(var a=[],t=0;t<e.length;t++){for(var o=e[t][0].headTime,i=[],n=0;n<e[t].length;n++){var l=e[t][n],r=l.playNames;-1!=l.playNames.indexOf("[竞]")&&(r=l.playNames.replace("[竞]","")+'<span class="jingcai">竞彩</span>'),i.push('<li h_name="'+l.h_name+'" g_name="'+l.g_name+'"  m_id='+l.m_id+" company_id="+l.company_id+'>                                    <div class="tjss-fight">                                    <div class="fight-style">                                    <div class="style-m" style="color:'+l.l_style+'">'+l.l_name+'</div>                                    <div class="style-tap">'+r+'</div>                                    </div>                                    <div class="fight-team">                                    <div class="fight-time">'+l.mTime+'</div>                                    <div class="fight-intro">                                    <span class="fight-team1">'+l.h_name+'</span>                                    <span class="fight-vs">VS</span>                                    <span class="fight-team2">'+l.g_name+'</span>                                    </div>                                    </div>                                    <span class="tjss-down"></span>                                    </div><div class="tjss-choise hide">                                    <div class="choise-con">                                    <div class="choise-box hide">                                    <span class="choise-title">亚盘</span>                                    <span class="choise-tab">胜<em></em></span>                                    <span class="choise-tab">两球<em></em></span>                                    <span class="choise-tab">负<em></em></span>                                    </div>                                    <div class="choise-box hide">                                    <span class="choise-title">大小球</span>                                    <span class="choise-tab">大<em></em></span>                                    <span class="choise-tab">3/3.5<em></em></span>                                    <span class="choise-tab">小<em></em></span>                                    </div>                                    <div class="choise-box hide">                                    <span class="choise-title">大小球</span>                                    <span class="choise-tab">大<em></em></span>                                    <span class="choise-tab">3/3.5<em></em></span>                                    <span class="choise-tab">小<em></em></span>                                    </div>                                    <div class="choise-box hide">                                    <span class="choise-title">大小球</span>                                    <span class="choise-tab">大<em></em></span>                                    <span class="choise-tab">3/3.5<em></em></span>                                    <span class="choise-tab">小<em></em></span>                                    </div>                                    <div class="choise-box hide">                                    <span class="choise-title">欧赔</span>                                    <span class="choise-tab">胜<em></em></span>                                    <span class="choise-tab">平<em></em></span>                                    <span class="choise-tab">负<em></em></span>                                    </div>                                    </div>                                    </div></li>')}a.push({headTime:o,li:i.concat([])})}if("1"==s){for(var h=[],t=0;t<a.length;t++)h.push('<header class="tjss-date" headTime="'+a[t].headTime+'">'+a[t].headTime+"</header>"),h.push('<div class="tjss-list"><ul>'),h.push(a[t].li.join("")),h.push("</ul></div>");$(".tjss").html(h.join("")),$("#tjss-header").html($(".tjss-date").eq(0).html())}else{for(var h=[],t=0;t<a.length;t++){var m=$('[headtime="'+a[t].headTime+'"]');m.length>0?m.next(".tjss-list").find("ul").append(a[t].li.join("")):(h.push('<header class="tjss-date" headTime="'+a[t].headTime+'">'+a[t].headTime+"</header>"),h.push('<div class="tjss-list"><ul>'),h.push(a[t].li.join("")),h.push("</ul></div>"))}$(".tjss").append(h.join(""))}$(".tjss-date").eq(0).addClass("hide"),"1"!=is_media?($(".tjss-up").addClass("hide"),$(".tjss-down").addClass("hide"),$(".footer-tz").addClass("hide"),$(".tj-match").css("padding-bottom","0px")):($(".tjss-up").removeClass("hide"),$(".tjss-down").removeClass("hide"),$(".footer-tz").removeClass("hide"),$(".tj-match").css("padding-bottom","70px"));for(var t=0;t<choiceArr.length;t++){var p=choiceArr[t].m_id;d.matchsOdds(p,function(e){$('[m_id="'+e.m_id+'"] .tjss-fight').addClass("tjss-have"),$('[m_id="'+e.m_id+'"] .tjss-down').removeClass("tjss-up"),$('[m_id="'+e.m_id+'"] .tjss-choise').addClass("hide")})}c()},matchsOddsHtml:e,matchsName:function(e,s){var a=[];a.push('<ul class="change-list">');for(var t=0;t<s.length;t++){var o=s[t].league_name.substr(0,3),i='<li class="on" leagues-id="'+s[t].league_id+'"><span class="change-btn">'+o+"<em>"+s[t].match_num+"场</em></span></li>";a.push(i)}a.push("</ul>"),$("#qryContent .change-m").eq(e).html(a.join("")),c()}}}(),c=function(){$(".tjss-fight").off().Touch(function(e){var s=[{m_id:$(e).parents("li").attr("m_id")}];if(console.log(s),"1"!=is_media)return T.Storage.set("choise",s),T.Storage.set("is_media",is_media),void T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/tjEditor.html?sType="+sType);!$(e).next(".tjss-choise")[0]||$(e).next(".tjss-choise").hasClass("hide")?d.matchsOdds($(e).parents("li").attr("m_id"),function(e){console.log(e.msg)}):($(e).find(".tjss-down").removeClass("tjss-up"),$(e).next(".tjss-choise").addClass("hide"))}),$(".choise-tab").off().Touch(function(e){var s=choiceArr.length,a=$(e).parents("li").attr("m_id");if($(e).hasClass("choise-on")){$(e).removeClass("choise-on");for(var t=0;t<s;t++)if(choiceArr[t].m_id==a){choiceArr.splice(t,1);break}$(e).parents(".tjss-choise").removeAttr("choiseData"),$(e).parents(".tjss-choise").prev(".tjss-fight").removeClass("tjss-have")}else{if(s>=3&&0==$(e).parents("li").find(".tjss-have").length)return void tip("最多可以选择3场");if(!$(e).attr("odd"))return;if(parseFloat($(e).attr("min_odds")-1e-5)>parseFloat($(e).attr("odd")))return void tip("赔率低于"+$(e).attr("min_odds")+",不可选");$(e).parents(".choise-con").find(".choise-tab").removeClass("choise-on"),$(e).addClass("choise-on"),$(e).parents(".tjss-choise").prev(".tjss-fight").addClass("tjss-have");for(var o=l($(e)),i=!1,t=0;t<s;t++)if(choiceArr[t].m_id==o.m_id){i=!0,choiceArr[t]=o;break}i||choiceArr.push(o)}console.log(l($(e)));var n=choiceArr.length;$(".footer-tz .tz-cang span").text(n)}),$(".change-icon").off().Touch(function(e){document.createEvent("HTMLEvents").stopPropagation(),$(this).toggleClass("more-up"),$(".nav-bg").toggle(),"none"==$(".index-nav").css("display")?($("#qryContent").css("max-height",$(window).height()-290),$(".index-nav").css("display","block"),$(".index-nav").removeClass("sUp").addClass("sDown"),document.documentElement.style.overflow="hidden",o($("#statusNav li").eq(t))):($(".index-nav").removeClass("sDown").addClass("sUp"),setTimeout(function(){$(".index-nav").css("display","none")},300),document.documentElement.style.overflow="")}),$("#statusNav li").off().Touch(function(e){o(e)}),$("#qryContent .change-m li").off().Touch(function(e){$(e).toggleClass("on");var s=$(e).parents(".change-list").children().length,a=$(e).parents(".change-list").children(".on").length;0==a?($(".xuan-yes").removeClass("on"),$(".xuan-no").addClass("on")):s==a?($(".xuan-yes").addClass("on"),$(".xuan-no").removeClass("on")):($(".xuan-yes").removeClass("on"),$(".xuan-no").removeClass("on"))}),$(".xuan-yes").off().Touch(function(e){var s=$("#statusNav .on").attr("data-status");$("#qryContent .change-m").eq(s).find("li").addClass("on"),$(".xuan-yes").addClass("on"),$(".xuan-no").removeClass("on")}),$(".xuan-no").off().Touch(function(e){var s=$("#statusNav .on").attr("data-status");$("#qryContent .change-m").eq(s).find("li").removeClass("on"),$(".xuan-yes").removeClass("on"),$(".xuan-no").addClass("on")}),$(".act-sure").off().Touch(function(a){choiceArr=[],$(".footer-tz .tz-cang span").text("0");var o=$("#statusNav .on").attr("data-status"),i=$("#qryContent .change-m").eq(o).find(".on"),n=$("#qryContent .change-m").eq(o).find("li"),l=[];$(".change-icon").removeClass("more-up");for(var r=0;r<i.length;r++){var c=i.eq(r).attr("leagues-id");l.push(c)}e="1",s=n.length==i.length?"":l.join(","),t=o,d.matchslist(null,pageDropLoadObj),$(".nav-bg").css("display","none"),$(".index-nav").removeClass("sDown").addClass("sUp"),setTimeout(function(){$(".index-nav").css("display","none")},300),document.documentElement.style.overflow=""}),$(".tz-btn").off().Touch(function(){var e=choiceArr;e.length||tip("至少选择一场");for(var s=[],a=0;a<e.length;a++)d.matchsOdds(e[a].m_id,function(a){if(s.push(a),s.length==e.length){var t=!1;s.forEach(function(e){if(""!=e.msg)return tip(e.msg),void(t=!0)}),t?console.log(s):(console.log(e),T.Storage.set("choise",e),T.Storage.set("is_media",is_media),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/tjEditor.html?sType="+sType))}})},{noRepeat:1}),$(".siblingText").off().Touch(function(){if(!$(".index-nav").hasClass("sDown")){choiceArr.length=0,$(".tz-cang span").html(0);var a=$(this).html(),t=$(this).attr("sport-type");$(this).html($(".sq_headerText").html().substr(0,2)),$(".sq_headerText").html(a+"赛事推荐"),"BB"==t?(sType=1,$(".change-icon").addClass("hide"),$(this).attr("sport-type","S")):(sType=0,$(".change-icon").removeClass("hide"),$(this).attr("sport-type","BB")),e=1,s="",d.matchslist()}}),$(".nav-bg").off().Touch(function(){$(this).hasClass("hide")&&"none"==$(this).css("display")||($(".nav-bg").css("display","none"),$(".index-nav").removeClass("sDown").addClass("sUp"),$(".change-icon").removeClass("more-up"),setTimeout(function(){$(".index-nav").css("display","none")},300),document.documentElement.style.overflow="")}),T.Util.preventBottomLayerScroll($(".nav-bg"),$(".index-nav"),".contentBox")};return{init:i,getData:d,doHtml:r,addListener:c}}(),first=!0;$(function(){function e(){if(first){if(first=!1,T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();recommend.init()}}T.isNative?T.appToH5.init(e):e()})</script>
+</body>
+</html>

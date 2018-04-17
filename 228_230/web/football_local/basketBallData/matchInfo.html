@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>资料库</title>
+    <link href="css/data.css" type="text/css" rel="stylesheet">
+    <script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+    <script src="js/myPpload.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<div id="loading-new">
+    <div id="loading-new-center">
+        <div id="loading-new-center-absolute">
+            <div class="object" id="loading"></div>
+        </div>
+    </div>
+</div>
+<header class="data-header">
+    <span class="h-return"></span>
+    <div class="h-title"><span class="h-name">loading...</span><i class="title-more"></i></div>
+    <nav class="data-nav">
+        <ul>
+            <li class="on" data-type="matchDuring">赛程</li>
+            <li data-type="matchScore">积分</li>
+            <li data-type="matchPanLu">盘路</li>
+            <li data-type="matchCalculate">统计</li>
+        </ul>
+    </nav>
+</header>
+
+<div class="data-bg hide"></div>
+
+<div class="season-weebox hide">
+    <span class="weebox-close"></span>
+    <div class="season-title">赛季选择</div>
+    <div class="season-list">
+        <div class="season-select hide">
+            <ul>
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </div>
+        <div class="group-select hide">
+            <ul>
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </div>
+        <div class="match-select1 hide">
+            <ul>
+                <li data-type="3"><span class="tab-intro">季前赛</span></li>
+                <li class="on" data-type="1"><span class="tab-intro">常规赛</span></li>
+                <li data-type="2"><span class="tab-intro">季后赛</span></li>
+            </ul>
+        </div>
+        <div class="match-select2 hide">
+            <ul>
+                <li data-type="3"><span class="tab-intro">季前赛</span></li>
+                <li class="on" data-type="1"><span class="tab-intro">常规赛</span></li>
+                <li data-type="2"><span class="tab-intro">季后赛</span></li>
+            </ul>
+        </div>
+        <div class="panlu-rangfen hide">
+            <ul>
+                <li class="on" data-type="1"><span class="tab-intro">让分总榜</span></li>
+                <li data-type="2"><span class="tab-intro">主场让分</span></li>
+                <li data-type="3"><span class="tab-intro">客场让分</span></li>
+            </ul>
+        </div>
+        <div class="panlu-daoxiao hide">
+            <ul>
+                <li class="on" data-type="1"><span class="tab-intro">大小总榜</span></li>
+                <li data-type="2"><span class="tab-intro">主场大小</span></li>
+                <li data-type="3"><span class="tab-intro">客场大小</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="match-main">
+    
+    <div id="matchDuring" class="match-con">
+        <div class="match-style">
+            <div class="match-tab">
+                <ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="matchList">
+            <div id="matchListDetail">
+            </div>
+            <div class="no-content" style="display:none">
+                <div class="none-icon"></div>
+                <div class="none-txt">空空荡荡...</div>
+            </div>
+            
+            
+                
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+                
+            
+
+            
+            
+                
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+
+                    
+                        
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                    
+                
+            
+        </div>
+
+    </div>
+    <div id="matchScore" class="jifen-con hide">
+        <div id="matchScoreDetail">
+            
+                
+                    
+                    
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                
+
+                
+                    
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                    
+                
+            
+            
+                
+                    
+                    
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                
+
+                
+                    
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                        
+                    
+                
+            
+            
+                
+                
+            </div>
+        </div>
+        <div class="no-content4" style="display:none">
+            <div class="none-icon"></div>
+            <div class="none-txt">空空荡荡...</div>
+        </div>
+    
+    <div id="matchPanLu" class="panlu-con hide">
+        <div class="panlu-nav" id="PL">
+            <ul class="panlu-tab clearfix">
+                <li class="on" data-type="1">让分</li>
+                <li data-type="2">大小</li>
+            </ul>
+        </div>
+        <div class="panlu-class">
+            <div class="panlu-detail">
+                <table class="panlu-table rangfen">
+                    <thead>
+
+                </thead></table>
+                <table class="panlu-table daxiao hide">
+
+                </table>
+            </div>
+        </div>
+
+
+        </div>
+    <div id="matchCalculate" class="tj-con hide">
+        <div class="tj-nav" id="TJ">
+            <ul class="tj-tab clearfix">
+                <li class="on" data-type="1">球队资料</li>
+                <li data-type="2">球员资料</li>
+            </ul>
+        </div>
+        <div class="tj-class">
+            <div class="jifen-box panlu-jifenBox">
+                <div class="pan-lu-jifen-left">
+                    <div class="top-rank"><span class="bang-name">常规赛</span><i class="bang-icon"></i></div>
+                    <div class="rank-team">
+                        <ul>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">活塞</span></li>
+                            <li><span class="team-name">魔术</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                            <li><span class="team-name">凯尔特人</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panlu-jifen-right tj-drop-jifen">
+                    <table class="table-box">
+                        <thead>
+                        <tr>
+                            <td width="56">赛</td>
+                            <td width="56">均得</td>
+                            <td width="56">均失</td>
+                            <td width="56">投中%</td>
+                            <td width="56">三分%</td>
+                            <td width="56">罚中%</td>
+                            <td width="56">篮板</td>
+                            <td width="56">助攻</td>
+                            <td width="56">盖帽</td>
+                            <td width="56">抢断</td>
+                            <td width="56">失误</td>
+                            <td width="56">犯规</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>107.8</td>
+                            <td>102.5</td>
+                            <td>52.6%</td>
+                            <td>42.8%</td>
+                            <td>88.9%</td>
+                            <td>41</td>
+                            <td>31.7</td>
+                            <td>5.9</td>
+                            <td>9</td>
+                            <td>13.7</td>
+                            <td>23.1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="player-con hide">
+                    <div class="player-left">
+                        <div class="player-rank"><span class="bang-name">常规赛</span><i class="bang-icon"></i></div>
+                        <div class="player-tab">
+                            <ul>
+                                <li class="on" static-type="1">得分</li>
+                                <li static-type="2">投篮</li>
+                                <li static-type="3">三分</li>
+                                <li static-type="4">罚球</li>
+                                <li static-type="5">篮板</li>
+                                <li static-type="6">助攻</li>
+                                <li static-type="7">盖帽</li>
+                                <li static-type="8">抢断</li>
+                                <li static-type="9">失误</li>
+                                <li static-type="10">犯规</li>
+                                <li static-type="11">两双</li>
+                                <li static-type="12">三双</li>
+                            </ul>
+                        </div>
+                    </div>
+                   <div class="player-right">
+                        <table class="table-box">
+                            <thead>
+                            <tr>
+                                <td width="80">球员</td>
+                                <td width="70">球队</td>
+                                <td width="65">参赛场次</td>
+                                <td width="65">总投篮次数</td>
+                                <td width="65">总命中次数</td>
+                                <td width="65">总得分</td>
+                                <td width="65">平均得分</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            <tr>
+                                <td>詹姆斯-哈登</td>
+                                <td>火箭</td>
+                                <td>15</td>
+                                <td>316</td>
+                                <td>140</td>
+                                <td>461</td>
+                                <td>30.7</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                       <div class="no-content3" style="display:none">
+                           <div class="none-icon"></div>
+                           <div class="none-txt">空空荡荡...</div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no-content2" style="display:none">
+            <div class="none-icon"></div>
+            <div class="none-txt">空空荡荡...</div>
+        </div>
+        </div>
+</section>
+<script>T.Util.isEmpty(T.Util.getPara("has_calculate"))||"1"!=T.Util.getPara("has_calculate")?$(".data-nav li[data-type=matchCalculate]").hide():$(".data-nav li[data-type=matchCalculate]").show(),/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?$(".data-header").css({"padding-top":"40px"}):$(".data-header").css({"padding-top":"16px"})),$(".match-main").css("top",$(".data-header").height()+$(".data-nav").height()+"px"),$(".panlu-nav").css("top",$(".data-header").height()+$(".data-nav").height()+"px"),$(".tj-nav").css("top",$(".data-header").height()+$(".data-nav").height()+"px"),$(".match-main").css("height",$(window).height()-$(".data-header").height()-$(".data-nav").height()+"px");var dropLoad=null,selectData="",page_index=1,page_size=10,seasonList_page_size=999,minNum=[],seasonList_page_index=1,errorPic="images/logo.png",matchDuringPage_size=10,matchDuringPage_index=1,matchDuringPage_downSize=10,matchDuringPage_downIndex=1,upIsMore=!1,downIsMore=!1,selectFirstLoad=!0,firstLoad=!0,dateArr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],mWidth=0,isMore=!1,basketBallSeasonLeagueId="",elementObj={1:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">总投篮次数</td><td width="65">总命中次数</td> <td width="65">总得分</td><td width="65">平均得分</td> </tr>',2:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">总投篮次数</td><td width="65">总命中次数</td> <td width="65">命中率</td> </tr>',3:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">投三分总数</td><td width="65">三分命中数</td> <td width="65">命中率</td></tr>',4:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">罚球总数</td><td width="65">罚球命中数</td> <td width="65">命中率</td></tr>',5:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">进攻篮板</td><td width="65">防守篮板</td> <td width="65">篮板总数</td><td width="65">平均篮板</td> </tr>',6:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">助攻总数</td><td width="65">平均助攻</td></tr>',7:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">盖帽总数</td><td width="65">平均盖帽</td></tr>',8:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">抢断总数</td><td width="65">平均抢断</td></tr>',9:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">失误总数</td><td width="65">平均失误</td></tr>',10:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">犯规总数</td><td width="65">平均犯规</td></tr>',11:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">得两双次数</td></tr>',12:'<tr> <td width="80">球员</td> <td width="70">球队</td><td width="65">参赛场次</td><td width="65">得三双次数</td></tr>'},matchInfoObject=function(){var t=[],a=function(){var t={league_id:T.Util.getPara("league_id"),PAGE_SIZE:seasonList_page_size,PAGE_INDEX:seasonList_page_index};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_season_by_league?sport_type=1",reqData:t,callback:function(t){try{if($.isArray(t.qry_season_by_league.data)&&t.qry_season_by_league.data.length){$(".h-title .h-name").html(""),$(".h-title .h-name").removeAttr("current-season");for(var a=[],e="",s=0;s<t.qry_season_by_league.data.length;s++)1==t.qry_season_by_league.data[s].current_type&&(e=t.qry_season_by_league.data[s].season_name,basketBallSeasonLeagueId=t.qry_season_by_league.data[s].season_id,$(".h-title .h-name").html(e),$(".h-title .h-name").attr("current-season",1)),a.push('<li class="'+(1==t.qry_season_by_league.data[s].current_type?"on":"")+'" current-season="'+t.qry_season_by_league.data[s].current_type+'" season-id="'+t.qry_season_by_league.data[s].season_id+'" season-name="'+t.qry_season_by_league.data[s].season_name+'"><span class="tab-intro">'+t.qry_season_by_league.data[s].season_id+"</span></li>");$(".season-select ul").html(a.join("")),1==$(".h-title .h-name").attr("current-season")?matchInfoObject.matchDuring().init(basketBallSeasonLeagueId,1):matchInfoObject.matchDuring().init(basketBallSeasonLeagueId,0)}else $(".h-title").html("");$(".season-select li").off().Touch(function(t){if(!$(t).hasClass("on")){$(t).addClass("on").siblings().removeClass("on"),$(".data-header .h-name").html($(t).attr("season-name"));var a=$(".data-nav").find(".on");$(".data-bg,.season-weebox,.season-select").addClass("hide");var e=$(a).attr("data-type");basketBallSeasonLeagueId=$(t).attr("season-id");var s=$(t).attr("current-season");"0"==s&&setTimeout(function(){$(".match-style").scrollLeft($(".match-tab").width())},400),$(".h-title .h-name").attr("current-season",s),matchDuringPage_index=1,matchDuringPage_downIndex=1,page_index=1,upIsMore=!1,downIsMore=!1,isMore=!1,selectFirstLoad=!0,firstLoad=!0,matchInfoObject.removeLoadDrop(),$(window).scrollTop(0),T.Util.isEmpty(basketBallSeasonLeagueId)||T.Util.isEmpty(e)||("matchDuring"==e?matchInfoObject[e]().getMatchStage(basketBallSeasonLeagueId,s):matchInfoObject[e]().getData(basketBallSeasonLeagueId))}})}catch(t){}},errorCallback:function(){}})},e=function(t,a){$(".dropload-down,.dropload-up").remove(),"matchScoreDetail"==t||"matchPanLu"==t||"matchCalculate"==t||"no-content2"==t||"no-content3"==t||"no-content4"==t?(t="matchPanLu"==t?"#"+t:"matchCalculate"==t?"1"==$(".tj-nav li.on").attr("data-type")?".tj-class":".player-right":"no-content3"==t?".player-right":"matchScoreDetail"==t?"#"+t:"."+t,".player-right"==t?($(".tj-class").off().dropload({}),dropLoad=$(t).off().dropload({loadUpFn:function(t){dropLoad=t,dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),isMore=!1,page_index=1;var a=$(".data-nav ul li.on").attr("data-type");"matchCalculate"==a?matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId):matchInfoObject[a]().getData(basketBallSeasonLeagueId)},threshold:20})):dropLoad=$(t).off().dropload({scrollArea:window,loadUpFn:function(t){dropLoad=t,dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),isMore=!1,page_index=1;var a=$(".data-nav ul li.on").attr("data-type");"matchCalculate"==a?matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId):matchInfoObject[a]().getData(basketBallSeasonLeagueId)},threshold:20})):(t="no-content"!=t?"#"+t:"."+t,dropLoad="#matchList"==t&&T.Util.isEmpty(a)?$(t).off().matchInfoDropload({scrollArea:$("#matchList"),matchInloadUpFn:function(t){upIsMore&&0!=matchDuringPage_index?matchInfoObject.matchDuring().getUPLoadData(basketBallSeasonLeagueId,"up",t):(matchInfoObject.doDropLoadInit(upIsMore,t),tip("无更多数据加载"))},matchInloadDownFn:function(t){downIsMore&&0!=matchDuringPage_downIndex?matchInfoObject.matchDuring().getUPLoadData(basketBallSeasonLeagueId,"down",t):matchInfoObject.doDropLoadInit(!0,dropLoad)},threshold:20}):$(t).off().matchInfoDropload({scrollArea:$("#matchList"),matchInloadUpFn:function(t){dropLoad=t,dropLoad.resetload(),dropLoad.unlock(),isMore=!1,page_index=1;var a=$(".data-nav ul li.on").attr("data-type");1==$(".h-title .h-name").attr("current-season")?1!=$(".match-style li.on").attr("defalut-select")&&matchInfoObject[a]().getData(basketBallSeasonLeagueId,1,T.Util.isEmpty($(".match-style li.on").attr("group_id"))?"group_id":$(".match-style li.on").attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id")):0==$(".h-title .h-name").attr("current-season")&&(1!=$(".match-style li.on").attr("default-select")?matchInfoObject[a]().getData(basketBallSeasonLeagueId,0,T.Util.isEmpty($(".match-style li.on").attr("group_id"))?"group_id":$(".match-style li.on").attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id")):matchInfoObject[a]().getData(basketBallSeasonLeagueId,0,"",$(".match-style .match-tab ul li.on").attr("stage_id")))},matchInloadDownFn:function(t){dropLoad=t;var a=$(".data-nav ul li.on").attr("data-type");isMore&&0!=page_index&&(isMore=!1,1==$(".h-title .h-name").attr("current-season")?1!=$(".match-style li.on").attr("default-select")?matchInfoObject[a]().getData(basketBallSeasonLeagueId,1,T.Util.isEmpty($(".match-style li.on").attr("group_id"))?"group_id":$(".match-style li.on").attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id")):matchInfoObject[a]().getData(basketBallSeasonLeagueId,1,"",$(".match-style .match-tab ul li.on").attr("stage_id")):0==$(".h-title .h-name").attr("current-season")&&(1!=$(".match-style li.on").attr("default-select")?matchInfoObject[a]().getData(basketBallSeasonLeagueId,0,T.Util.isEmpty($(".match-style li.on").attr("group_id"))?"group_id":$(".match-style li.on").attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id")):matchInfoObject[a]().getData(basketBallSeasonLeagueId,0,"",$(".match-style .match-tab ul li.on").attr("stage_id"))))},threshold:50}))},s=function(){T.Util.isEmpty(dropLoad)||(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),$(".dropload-down,.dropload-up").remove(),dropLoad=null)},d=function(t,a){var e=new Date,s=(t-e.getTime())/6e4,d=60*(24-e.getHours())-e.getMinutes();return t.getFullYear()+"-"+(t.getMonth()+1)+"-"+t.getDate()==e.getFullYear()+"-"+(e.getMonth()+1)+"-"+e.getDate()?"day"==a?"今天":"今天 "+new Date(t).format("hh:mm"):d<s&&s<d+1440?"day"==a?"明天":"明天 "+new Date(t).format("hh:mm"):"day"==a?"":new Date(t).format("MM/dd hh:mm")},i=function(){$(".h-return").off().Touch(function(){T.Util.back()}),$(".data-nav ul li").off().Touch(function(t){if(!$(this).hasClass("on")){$(window).scrollTop(0),$(t).addClass("on").siblings().removeClass("on");var a=$(this).attr("data-type");$("div[id='"+a+"']").removeClass("hide").siblings().addClass("hide"),page_index=1,isMore=!1,upIsMore=!1,downIsMore=!1,selectFirstLoad=!0,firstLoad=!0,matchDuringPage_downIndex=1,matchDuringPage_index=1,matchInfoObject.scoreArr=[],matchInfoObject.removeLoadDrop(),$(".no-content").css("display","none");var e=$(".h-title .h-name").attr("current-season");"0"==e&&setTimeout(function(){$(".match-style").scrollLeft($(".match-tab").width())},400),"matchDuring"==a?matchInfoObject.matchDuring().getMatchStage(basketBallSeasonLeagueId,e):($(".match-main").css("top",$(".data-header").height()+$(".data-nav").height()+"px"),matchInfoObject[a]().init(basketBallSeasonLeagueId))}}),$(".h-name,.title-more").off().Touch(function(t){$(".season-weebox,.data-bg").removeClass("hide"),$(".season-select").removeClass("hide").siblings().addClass("hide"),T.Util.preventBottomLayerScroll($(".data-bg"),$(".season-weebox"),".season-list")}),$(".data-bg,.weebox-close").off().Touch(function(){$(".season-weebox").addClass("hide"),$(".data-bg").addClass("hide")})},n=function(){var t=function(t,a){var e=$(window).width();mWidth=e/5,matchInfoObject.matchDuring().addListener(),matchInfoObject.matchDuring().getMatchStage(t,a)},a=function(t,a){var e="";"1"==T.Util.getPara("league_cup")?e="/forum/api/match/qry_stage_group?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t:"2"==T.Util.getPara("league_cup")&&(e="/forum/api/match/qry_stage_group?sport_type=1&border_type=2&league_id="+T.Util.getPara("league_id")+"&season_id="+t),T.Util.xmlHttpRequest({type:"get",reqUrl:e,callback:function(e){try{if(T.Util.isEmpty(e)||T.Util.isEmpty(e.qry_stage_group)||!e.qry_stage_group.data.length)$(".match-style").hide(),matchInfoObject.matchDuring().getData(t,a);else{$(".match-style .match-tab ul").empty();for(var s=[],d=0;d<e.qry_stage_group.data.length;d++){var i=e.qry_stage_group.data[d],n="";if(0==d&&(n="on"),-1!=i.group_name.indexOf(",")&&2==i.group_name.split(",").length){var o=i.group_name.split(",")[1];s.push('<li  class="'+n+'" stage_id="'+i.stage_id+'" group_id="'+i.group_id+'" league_id="'+i.league_id+'" season_id="'+i.season_id+'"><span>'+o+"月<br />常规赛</span></li>")}else s.push('<li style="margin-right: 8px;"  class="'+n+'" stage_id="'+i.stage_id+'" group_id="'+i.group_id+'" league_id="'+i.league_id+'" season_id="'+i.season_id+'"><span>'+i.group_name+"</span></li>")}$(".match-style .match-tab ul").append(s.join("")),$(".match-tab li").width(mWidth),$(".match-tab").css("width",(mWidth+12)*s.length+"px"),$(".match-tab li").off().Touch(function(a){$(a).hasClass("on")||($(a).addClass("on").siblings().removeClass("on"),$("#matchListDetail").empty(),isMore=!1,matchDuringPage_downIndex=1,matchDuringPage_index=1,upIsMore=!1,downIsMore=!1,page_index=1,selectFirstLoad=!0,minNum=[],matchInfoObject.removeLoadDrop(),setTimeout(function(){$(".match-style").scrollLeft($(a).index()*mWidth-$(window).width()/2+mWidth/2)},400),1==$(".h-title .h-name").attr("current-season")?1==$(a).attr("default-select")?matchInfoObject.matchDuring().getData(basketBallSeasonLeagueId,1,"",$(".match-style .match-tab ul li.on").attr("stage_id")):($(window).scrollTop(0),matchInfoObject.matchDuring().getData(t,1,T.Util.isEmpty($(a).attr("group_id"))?"group_id":$(a).attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id"))):1==$(a).attr("default-select")?matchInfoObject.matchDuring().getData(basketBallSeasonLeagueId,0,"",$(".match-style .match-tab ul li.on").attr("stage_id")):matchInfoObject.matchDuring().getData(t,0,T.Util.isEmpty($(a).attr("group_id"))?"group_id":$(a).attr("group_id"),$(".match-style .match-tab ul li.on").attr("stage_id")))}),matchInfoObject.matchDuring().getData(t,a,"","")}}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})};return{getData:function(t,a,e,s){var d="",i=selectFirstLoad&&firstLoad?"":"&stage_id="+s;d=1==a?T.Util.isEmpty(e)?"/forum/api/match/get_bk_matchs_schedule?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&current_type=1&border_type="+T.Util.getPara("league_cup")+i:"/forum/api/match/get_bk_matchs_schedule?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&current_type=1&group_id="+e+"&page_index="+page_index+"&page_size="+page_size+"&border_type="+T.Util.getPara("league_cup")+i:T.Util.isEmpty(e)?"/forum/api/match/get_bk_matchs_schedule?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&current_type=0&border_type="+T.Util.getPara("league_cup")+i:"/forum/api/match/get_bk_matchs_schedule?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&current_type=0&group_id="+e+"&page_index="+page_index+"&page_size="+page_size+"&border_type="+T.Util.getPara("league_cup")+i,T.Util.xmlHttpRequest({type:"get",reqUrl:d,callback:function(t){try{if(T.Util.isEmpty(t.get_bk_matchs_schedule)||T.Util.isEmpty(t.get_bk_matchs_schedule.data)||!t.get_bk_matchs_schedule.data.length)$("#loading-new").addClass("hide"),page_index=1,isMore=!1,selectFirstLoad&&$(".no-content").css("display","block"),T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchList","notCurrentMonth"),dropLoad.noData(!0),dropLoad.resetload(),selectFirstLoad=!1,firstLoad=!1;else if($(".no-content").css("display","none"),selectFirstLoad=!1,firstLoad=!1,1==a&&T.Util.isEmpty(e)){$("#matchListDetail").empty();var s=t.get_bk_matchs_schedule.stage_id;$.each($(".match-style li"),function(a,e){if(!T.Util.isEmpty(s))if("1"==s||"2"==s||"3"==s){var d=t.get_bk_matchs_schedule.group_id;if(T.Util.isEmpty(d))$(e).attr("default-select",0);else if(d==$(e).attr("group_id")){$(e).addClass("on").siblings().removeClass("on"),$(e).attr("default-select",1);var i=$($(".match-style").find(".on")).index()*mWidth;matchInfoObject.PcUserAugent()?$(".match-style").scrollLeft(i-240+mWidth/2):$(".match-style").scrollLeft(i-$(window).width()/2+mWidth/2)}}else if(T.Util.isEmpty(s))$(e).attr("default-select",0);else if(s==$(e).attr("stage_id")){$(e).addClass("on").siblings().removeClass("on"),$(e).attr("default-select",1);var i=$($(".match-style").find(".on")).index()*mWidth;matchInfoObject.PcUserAugent()?$(".match-style").scrollLeft(i-240+mWidth/2):$(".match-style").scrollLeft(i-$(window).width()/2+mWidth/2)}});for(var d=[],i=0;i<t.get_bk_matchs_schedule.data.length;i++){for(var n=t.get_bk_matchs_schedule.data[i],o=[],l=0;l<n.length;l++){if(0==l){var r=n[l].match_time_desc.split(" "),c=new Date(Date.parse(n[l].match_time.split(".")[0].replace(/-/g,"/"))),h=matchInfoObject.doTimeParse(c,"day"),m=new Date,_=matchInfoObject.equTime(i,n[l].match_time.split(",")[0].split(" ")[0],m.getFullYear()+"-"+(m.getMonth()+1)+"-"+m.getDate())?"scrollTopId":"";if(2==t.get_bk_matchs_schedule.stage_id){var p="",u="";parseInt(n[l].home_big_sore)>parseInt(n[l].away_big_sore)?p="red":parseInt(n[l].home_big_sore)<parseInt(n[l].away_big_sore)&&(u="red"),o.push('<div id="'+_+'" data-index="'+i+'" class="match-date" style="text-align: center">'+n[l].home_name+'<em style="color:'+p+'">'+T.Util.notNullValue(n[l].home_big_sore,"-")+"</em>("+T.Util.notNullValue(n[l].match_rule_num,"-")+')<em style="color:'+u+'">'+T.Util.notNullValue(n[l].away_big_sore,"-")+"</em>"+n[l].away_name+"</div>")}else o.push('<div id="'+_+'" data-index="'+i+'" class="match-date">'+h+T.Util.stringToDate(n[l].match_time.split(".")[0]).format("MM月dd日")+"<span>"+r[2]+"</span></div>");o.push('<div class="match-list"><ul>')}var g=parseInt(n[l].home_score)>parseInt(n[l].away_score)?"score-win":"score-lose",f=parseInt(n[l].away_score)>parseInt(n[l].home_score)?"score-win":"score-lose";o.push('<li match-time="'+n[l].match_time+'" m-id="'+n[l].m_id+'" group-id="'+n[l].group_id+'">                                                    <div class="match-team1">                                                    <span class="team-c1"><img src="'+n[l].home_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].home_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+g+'">'+T.Util.notNullValue(n[l].home_score,"--")+'</span>                                                    </div>                                                    <div class="match-team2">                                                    <span class="team-c1"><img src="'+n[l].away_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].away_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+f+'">'+T.Util.notNullValue(n[l].away_score,"--")+'</span>                                                    </div>                                                    <span class="match-time">'+T.Util.stringToDate(n[l].match_time.split(".")[0]).format("hh:mm")+"</span>                                            </li>")}o.push("</ul></div>"),d.push(o.join(""))}if($("#matchListDetail").html(d.join("")),minNum.length){var b=!0;$.each($("#matchListDetail .match-date"),function(t,a){"scrollTopId"==$(a).attr("id")&&(b=!1)}),b&&$.each($("#matchListDetail .match-date"),function(t,a){$(a).attr("data-index")==minNum[minNum.length-1]&&$(a).attr("id","scrollTopId")})}if(T.Util.isEmpty(dropLoad)&&("1"==T.Util.getPara("league_cup")?matchInfoObject.selectDrop("matchList"):matchInfoObject.selectDrop("matchList","notCurrentMonth")),$("#matchListDetail").find("#scrollTopId").length){var y=$("#scrollTopId").offset().top;setTimeout(function(){$("#matchList").scrollTop(y-$(".data-header").height()-85)},100)}0==t.get_bk_matchs_schedule.page_index?(isMore=!1,upIsMore=!1,downIsMore=!1,dropLoad.direction="up"):(isMore=!0,upIsMore=!0,downIsMore=!0),matchInfoObject.doDropLoadInit(0==t.get_bk_matchs_schedule.page_index,dropLoad)}else if(1!=a||T.Util.isEmpty(e))if(0==a&&T.Util.isEmpty(e)){var s=t.get_bk_matchs_schedule.stage_id;$.each($(".match-style li"),function(a,e){if(!T.Util.isEmpty(s))if("1"==s||"2"==s||"3"==s){var d=t.get_bk_matchs_schedule.group_id;T.Util.isEmpty(d)?$(e).attr("default-select",0):d==$(e).attr("group_id")&&($(e).addClass("on").siblings().removeClass("on"),$(e).attr("default-select",1),$(".match-style").scrollLeft($(".match-tab").width()))}else T.Util.isEmpty(s)?$(e).attr("default-select",0):s==$(e).attr("stage_id")&&($(e).addClass("on").siblings().removeClass("on"),$(e).attr("default-select",1),$(".match-style").scrollLeft($(".match-tab").width()))}),1==page_index&&$("#matchListDetail").empty();for(var w=[],i=0;i<t.get_bk_matchs_schedule.data.length;i++){for(var n=t.get_bk_matchs_schedule.data[i],o=[],l=0;l<n.length;l++){if(0==l){n[l].match_time=n[l].match_time.split(".")[0];var c=new Date(Date.parse(n[l].match_time.replace(/-/g,"/"))).getTime(),_=new Date(c).toDateString()==(new Date).toDateString()?"scrollTopId":"";if(2==t.get_bk_matchs_schedule.stage_id){var p="",u="";parseInt(n[l].home_big_sore)>parseInt(n[l].away_big_sore)?p="red":parseInt(n[l].home_big_sore)<parseInt(n[l].away_big_sore)&&(u="red"),o.push('<div id="'+_+'" class="match-date" style="text-align: center">'+n[l].home_name+'<em style="color:'+p+'">'+T.Util.notNullValue(n[l].home_big_sore,"-")+"</em>("+T.Util.notNullValue(n[l].match_rule_num,"-")+')<em style="color:'+u+'">'+T.Util.notNullValue(n[l].away_big_sore,"-")+"</em>"+n[l].away_name+"</div>")}else o.push('<div id="'+_+'" class="match-date">'+T.Util.stringToDate(n[l].match_time.split(".")[0]).format("MM月dd日")+"<span>"+dateArr[T.Util.stringToDate(n[l].match_time).getDay()]+"</span></div>");o.push('<div class="match-list"><ul>')}var g=parseInt(n[l].home_score)>parseInt(n[l].away_score)?"score-win":"score-lose",f=parseInt(n[l].away_score)>parseInt(n[l].home_score)?"score-win":"score-lose",v=T.Util.stringToDate(n[l].match_time.split(".")[0]).format("hh:mm");o.push('<li match-time="'+n[l].match_time+'" m-id="'+n[l].m_id+'" group-id="'+n[l].group_id+'">                                                    <div class="match-team1">                                                    <span class="team-c1"><img src="'+n[l].home_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].home_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+g+'">'+T.Util.notNullValue(n[l].home_score,"--")+'</span>                                                    </div>                                                    <div class="match-team2">                                                    <span class="team-c1"><img src="'+n[l].away_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].away_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+f+'">'+T.Util.notNullValue(n[l].away_score,"--")+'</span>                                                    </div>                                                    <span class="match-time">'+v+"</span>                                            </li>")}o.push("</ul></div>"),w.push(o.join(""))}$("#matchListDetail").append(w.join("")),page_index=t.get_bk_matchs_schedule.page_index,isMore=0!=page_index,T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchList","notCurrentMonth"),0==t.get_bk_matchs_schedule.page_index&&(dropLoad.direction="up"),matchInfoObject.doDropLoadInit(0==t.get_bk_matchs_schedule.page_index,dropLoad)}else{1==page_index&&$("#matchListDetail").empty();for(var w=[],i=0;i<t.get_bk_matchs_schedule.data.length;i++){for(var n=t.get_bk_matchs_schedule.data[i],o=[],l=0;l<n.length;l++){if(0==l){n[l].match_time=n[l].match_time.split(".")[0];var c=new Date(Date.parse(n[l].match_time.replace(/-/g,"/"))).getTime(),_=new Date(c).toDateString()==(new Date).toDateString()?"scrollTopId":"";if(2==t.get_bk_matchs_schedule.stage_id){var p="",u="";parseInt(n[l].home_big_sore)>parseInt(n[l].away_big_sore)?p="red":parseInt(n[l].home_big_sore)<parseInt(n[l].away_big_sore)&&(u="red"),o.push('<div id="'+_+'" class="match-date" style="text-align: center">'+n[l].home_name+'<em style="color:'+p+'">'+T.Util.notNullValue(n[l].home_big_sore,"-")+"</em>("+T.Util.notNullValue(n[l].match_rule_num,"-")+')<em style="color:'+u+'">'+T.Util.notNullValue(n[l].away_big_sore,"-")+"</em>"+n[l].away_name+"</div>")}else o.push('<div id="'+_+'" class="match-date">'+T.Util.stringToDate(n[l].match_time.split(".")[0]).format("MM月dd日")+"<span>"+dateArr[T.Util.stringToDate(n[l].match_time).getDay()]+"</span></div>");o.push('<div class="match-list"><ul>')}var g=parseInt(n[l].home_score)>parseInt(n[l].away_score)?"score-win":"score-lose",f=parseInt(n[l].away_score)>parseInt(n[l].home_score)?"score-win":"score-lose",v=T.Util.stringToDate(n[l].match_time.split(".")[0]).format("hh:mm");o.push('<li match-time="'+n[l].match_time+'" m-id="'+n[l].m_id+'" group-id="'+n[l].group_id+'">                                                    <div class="match-team1">                                                    <span class="team-c1"><img src="'+n[l].home_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].home_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+g+'">'+T.Util.notNullValue(n[l].home_score,"--")+'</span>                                                    </div>                                                    <div class="match-team2">                                                    <span class="team-c1"><img src="'+n[l].away_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].away_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+f+'">'+T.Util.notNullValue(n[l].away_score,"--")+'</span>                                                    </div>                                                    <span class="match-time">'+v+"</span>                                            </li>")}o.push("</ul></div>"),w.push(o.join(""))}$("#matchListDetail").append(w.join("")),page_index=t.get_bk_matchs_schedule.page_index,isMore=0!=page_index,T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchList","notCurrentMonth"),0==t.get_bk_matchs_schedule.page_index&&(dropLoad.direction="up"),matchInfoObject.doDropLoadInit(0==t.get_bk_matchs_schedule.page_index,dropLoad)}else{1==page_index&&$("#matchListDetail").empty();for(var w=[],i=0;i<t.get_bk_matchs_schedule.data.length;i++){for(var n=t.get_bk_matchs_schedule.data[i],o=[],l=0;l<n.length;l++){if(0==l){n[l].match_time=n[l].match_time.split(".")[0];var c=new Date(Date.parse(n[l].match_time.replace(/-/g,"/"))).getTime(),_=new Date(c).toDateString()==(new Date).toDateString()?"scrollTopId":"";if(2==t.get_bk_matchs_schedule.stage_id){var p="",u="";parseInt(n[l].home_big_sore)>parseInt(n[l].away_big_sore)?p="red":parseInt(n[l].home_big_sore)<parseInt(n[l].away_big_sore)&&(u="red"),o.push('<div id="'+_+'" class="match-date" style="text-align: center">'+n[l].home_name+'<em style="color:'+p+'">'+T.Util.notNullValue(n[l].home_big_sore,"-")+"</em>("+T.Util.notNullValue(n[l].match_rule_num,"-")+')<em style="color:'+u+'">'+T.Util.notNullValue(n[l].away_big_sore,"-")+"</em>"+n[l].away_name+"</div>")}else o.push('<div id="'+_+'" class="match-date">'+T.Util.stringToDate(n[l].match_time.split(".")[0]).format("MM月dd日")+"<span>"+dateArr[T.Util.stringToDate(n[l].match_time).getDay()]+"</span></div>");o.push('<div class="match-list"><ul>')}var g=parseInt(n[l].home_score)>parseInt(n[l].away_score)?"score-win":"score-lose",f=parseInt(n[l].away_score)>parseInt(n[l].home_score)?"score-win":"score-lose",v="";v=T.Util.stringToDate(n[l].match_time.split(".")[0]).format("hh:mm"),o.push('<li match-time="'+n[l].match_time+'" m-id="'+n[l].m_id+'" group-id="'+n[l].group_id+'">                                                    <div class="match-team1">                                                    <span class="team-c1"><img src="'+n[l].home_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].home_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+g+'">'+T.Util.notNullValue(n[l].home_score,"--")+'</span>                                                    </div>                                                    <div class="match-team2">                                                    <span class="team-c1"><img src="'+n[l].away_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+n[l].away_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+f+'">'+T.Util.notNullValue(n[l].away_score,"--")+'</span>                                                    </div>                                                    <span class="match-time">'+v+"</span>                                            </li>")}o.push("</ul></div>"),w.push(o.join(""))}$("#matchListDetail").append(w.join("")),page_index=t.get_bk_matchs_schedule.page_index,isMore=0!=page_index,T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchList","notCurrentMonth"),0==t.get_bk_matchs_schedule.page_index&&(dropLoad.direction="up"),matchInfoObject.doDropLoadInit(0==t.get_bk_matchs_schedule.page_index,dropLoad)}}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})},getUPLoadData:function(t,a,e){var s="";if("up"==a){var d=$($($("#matchList").find(".match-list")[0]).find("li")[0]).attr("m-id"),i=$($($("#matchList").find(".match-list")[0]).find("li")[0]).attr("match-time"),n=$($($("#matchList").find(".match-list")[0]).find("li")[0]).attr("group-id"),o="&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&start_id="+d+"&start_time="+i+"&page_size="+matchDuringPage_size+"&page_index="+matchDuringPage_index+"&group_id="+n;s="/forum/api/match/get_bk_matchs_schedule?sport_type=1&current_type=1"+o+"&border_type="+T.Util.getPara("league_cup")+"&stage_id="+$(".match-style .match-tab ul li.on").attr("stage_id")}else if("down"==a){var l=$("#matchList").find(".match-list").length-1,r=$($("#matchList").find(".match-list")[l]).find("li").length-1,c=$($($("#matchList").find(".match-list")[l]).find("li")[r]).attr("m-id"),h=$($($("#matchList").find(".match-list")[l]).find("li")[r]).attr("match-time"),n=$($($("#matchList").find(".match-list")[l]).find("li")[r]).attr("group-id"),o="&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&end_id="+c+"&end_time="+h+"&page_size="+matchDuringPage_downSize+"&page_index="+matchDuringPage_downIndex+"&group_id="+n;s="/forum/api/match/get_bk_matchs_schedule?sport_type=1&current_type=1"+o+"&border_type="+T.Util.getPara("league_cup")+"&stage_id="+$(".match-style .match-tab ul li.on").attr("stage_id")}T.Util.xmlHttpRequest({type:"get",reqUrl:s,callback:function(t){try{if(T.Util.isEmpty(t.get_bk_matchs_schedule)||T.Util.isEmpty(t.get_bk_matchs_schedule.data)||!t.get_bk_matchs_schedule.data.length)"up"==a?matchDuringPage_index=t.get_bk_matchs_schedule.page_index:matchDuringPage_downIndex=t.get_bk_matchs_schedule.page_index,0==t.get_bk_matchs_schedule.page_index&&("up"==a?upIsMore=!1:downIsMore=!1,"up"==a?matchInfoObject.doDropLoadInit(!1,e):matchInfoObject.doDropLoadInit(!downIsMore,e));else{var s=[];"up"==a?matchDuringPage_index=t.get_bk_matchs_schedule.page_index:matchDuringPage_downIndex=t.get_bk_matchs_schedule.page_index;for(var d=0;d<t.get_bk_matchs_schedule.data.length;d++){for(var i=t.get_bk_matchs_schedule.data[d],n=[],o=0;o<i.length;o++){if(0==o){var l=i[o].match_time_desc.split(" "),r="";d==t.get_bk_matchs_schedule.data.length-1&&"up"==a&&(r="upLoad-flag"),n.push('<div id="'+r+'" class="match-date">'+T.Util.stringToDate(i[o].match_time.split(".")[0]).format("MM月dd日")+"<span>"+l[2]+"</span></div>"),n.push('<div class="match-list"><ul>')}var c=parseInt(i[o].home_score)>parseInt(i[o].away_score)?"score-win":"score-lose",h=parseInt(i[o].away_score)>parseInt(i[o].home_score)?"score-win":"score-lose"
+;n.push('<li match-time="'+i[o].match_time+'" m-id="'+i[o].m_id+'" group-id="'+i[o].group_id+'">                                                    <div class="match-team1">                                                    <span class="team-c1"><img src="'+i[o].home_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+i[o].home_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+c+'">'+T.Util.notNullValue(i[o].home_score,"--")+'</span>                                                    </div>                                                    <div class="match-team2">                                                    <span class="team-c1"><img src="'+i[o].away_url+'" onerror="this.src=errorPic" class="team-logo"><em class="team-name">'+i[o].away_name.substring(0,8)+'</em></span>                                                    <span class="team-score '+h+'">'+T.Util.notNullValue(i[o].away_score,"--")+'</span>                                                    </div>                                                    <span class="match-time">'+T.Util.stringToDate(i[o].match_time.split(".")[0]).format("hh:mm")+"</span>                                            </li>")}n.push("</ul></div>"),s.push(n.join(""))}if("up"==a?$($("#matchList").find(".match-date")[0]).before(s.join("")):$($("#matchList").find(".match-list")[$("#matchList").find(".match-list").length-1]).after(s.join("")),$("#matchList").find("#upLoad-flag").length){var m=$("#upLoad-flag").offset().top;setTimeout(function(){$(window).scrollTop(m-$(".data-header").height()-85-36)},100),$("#matchList").find("#upLoad-flag").attr("id","")}0==t.get_bk_matchs_schedule.page_index?("up"==a?upIsMore=!1:downIsMore=!1,matchInfoObject.doDropLoadInit(!0,e)):("up"==a?upIsMore=!0:downIsMore=!0,matchInfoObject.doDropLoadInit("up"==a?!upIsMore:!downIsMore,e))}}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})},getMatchStage:a,init:t,addListener:function(){}}},o=function(t,a,e){if(3==a.split("-").length||3==e.split("-").length)return parseInt(a.split("-")[0])==e.split("-")[0]&&parseInt(a.split("-")[1])==e.split("-")[1]&&parseInt(a.split("-")[2])==e.split("-")[2]||parseInt(a.split("-")[2])-e.split("-")[2]<0&&void minNum.push(t)},l=function(t,a){a&&(pageDropLoadObj=a,t||"down"!=a.direction?t?(a.noData(!0),a.lock(),a.resetload()):a.resetload():(a.resetload(),a.noData(!1),a.unlock()))};return{scoreArr:t,equTime:o,PcUserAugent:function(){return!window.navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)},removeLoadDrop:s,doDropLoadInit:l,doTimeParse:d,addListener:i,selectDrop:e,matchDuring:n,matchScore:function(){var t=function(t){matchInfoObject.matchScore().addListener(),matchInfoObject.matchScore().getData(t)};return{getData:function(t){var a="",e=T.Util.getPara("league_cup");"1"==e?a="/forum/api/match/qry_league_scoreboard?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t:"2"==e&&(a="/forum/api/match/qry_cup_scoreboard?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t),T.Util.xmlHttpRequest({type:"get",reqUrl:a,callback:function(t){try{var a="1"==e?t.qry_league_scoreboard:t.qry_cup_scoreboard;if(!T.Util.isEmpty(t)&&!T.Util.isEmpty(a))if("1"==e?t.qry_league_scoreboard.data.length:t.qry_cup_scoreboard.stage_data.length){$(".no-content").css("display","none");var s,d=[],i=[],n=!0,o="",l="",r="";if($("#matchScoreDetail").empty(),"1"==e){if(t.qry_league_scoreboard.data.length>2){$("#matchScoreDetail").append('<div class="jifen-box clearfix">                                                  <div class="jifen-left">                                                  <div class="matchScore-rank">东部排行榜</div>                                                  <div class="matchScore-rank-team">                                                  <ul>                                                  </ul>                                                  </div>                                                  </div>                                                  <div class="jifen-right">                                                  <table class="table-box">                                                  <thead>                                                  <tr>                                                  <td width="56">赛</td>                                                  <td width="56">胜-负</td>                                                  <td width="56">胜率%</td>                                                  <td width="56">均得</td>                                                  <td width="56">均失</td>                                                  <td width="56">主场战绩</td>                                                  <td width="56">客场战绩</td>                                                  <td width="56">近十场</td>                                                  <td width="56">近况</td>                                                </tr>                                               </thead>                                              <tbody class="my-body">                                                </tbody>                                                </table>                                               </div>                                                </div><div class="match-rules">'),d=[],i=[];for(var c=0;c<t.qry_league_scoreboard.data.length;c++){var h=t.qry_league_scoreboard.data[c];l=parseInt(h.rank)<=8?"rank-2":"rank-1",r=-1!=h.recent_status.indexOf("连胜")?"win-lx":"lose-lx","3"==h.rank_type&&n&&($($($("#matchScoreDetail").find(".jifen-box")).find(".matchScore-rank")).html(h.rank_name),n=!1),d.push('<li><i class="'+l+'">'+h.rank+'</i><span class="team-name">'+h.team_name.substring(0,4)+"</span></li>"),i.push("<tr><td>"+T.Util.notNullValue(h.match_num,"--")+"</td><td>"+h.win_num+"-"+h.lost_num+"</td> <td>"+h.win_rate+"</td> <td>"+h.avg_get_num+"</td><td>"+h.avg_lose_num+"</td><td>"+h.home_result+"</td><td>"+h.guest_result+"</td> <td>"+h.recent_ten+'</td><td><span class="'+r+'">'+h.recent_status+"</span></td></tr>")}$($($("#matchScoreDetail").find(".jifen-box")).find(".matchScore-rank-team")).append(d.join("")),$($($("#matchScoreDetail").find(".jifen-box")).find(".my-body")).append(i.join(""))}else if(2==t.qry_league_scoreboard.data.length){$("#matchScoreDetail").append('<div class="jifen-box clearfix">                                                  <div class="jifen-left">                                                  <div class="matchScore-rank">东部排行榜</div>                                                  <div class="matchScore-rank-team">                                                  <ul>                                                  </ul>                                                  </div>                                                  </div>                                                  <div class="jifen-right">                                                  <table class="table-box">                                                  <thead>                                                  <tr>                                                  <td width="56">赛</td>                                                  <td width="56">胜-负</td>                                                  <td width="56">胜率%</td>                                                  <td width="56">均得</td>                                                  <td width="56">均失</td>                                                  <td width="56">主场战绩</td>                                                  <td width="56">客场战绩</td>                                                  <td width="56">近十场</td>                                                  <td width="56">近况</td>                                                </tr>                                               </thead>                                              <tbody class="my-body">                                                </tbody>                                                </table>                                               </div>                                                </div><div class="jifen-box clearfix">                                                  <div class="jifen-left">                                                  <div class="matchScore-rank">西部排行榜</div>                                                  <div class="matchScore-rank-team">                                                  <ul>                                                  </ul>                                                  </div>                                                  </div>                                                  <div class="jifen-right">                                                  <table class="table-box">                                                  <thead>                                                  <tr>                                                  <td width="56">赛</td>                                                  <td width="56">胜-负</td>                                                  <td width="56">胜率%</td>                                                  <td width="56">均得</td>                                                  <td width="56">均失</td>                                                  <td width="56">主场战绩</td>                                                  <td width="56">客场战绩</td>                                                  <td width="56">近十场</td>                                                  <td width="56">近况</td>                                                </tr>                                               </thead>                                              <tbody class="my-body">                                                </tbody>                                                </table>                                               </div>                                                </div><div class="match-rules">');for(var m=t.qry_league_scoreboard.data.length-1;m>=0;m--){d=[],i=[],n=!0;for(var c=0;c<t.qry_league_scoreboard.data[m].length;c++){var h=t.qry_league_scoreboard.data[m][c];l=parseInt(h.rank)<=8?"rank-2":"rank-1",r=-1!=h.recent_status.indexOf("连胜")?"win-lx":"lose-lx","2"==h.rank_type&&n?($($("#matchScoreDetail").find(".jifen-box")[0]).find(".matchScore-rank").html(h.rank_name),n=!1,o="2"):"1"==h.rank_type&&n&&($($("#matchScoreDetail").find(".jifen-box")[1]).find(".matchScore-rank").html(h.rank_name),n=!1,o="1"),d.push('<li><i class="'+l+'">'+h.rank+'</i><span class="team-name">'+h.team_name.substring(0,4)+"</span></li>"),i.push("<tr><td>"+T.Util.notNullValue(h.match_num,"--")+"</td><td>"+h.win_num+"-"+h.lost_num+"</td> <td>"+h.win_rate+"</td> <td>"+h.avg_get_num+"</td><td>"+h.avg_lose_num+"</td><td>"+h.home_result+"</td><td>"+h.guest_result+"</td> <td>"+h.recent_ten+'</td><td><span class="'+r+'">'+h.recent_status+"</span></td></tr>")}"2"==o?($($($("#matchScoreDetail").find(".jifen-box")[0]).find(".matchScore-rank-team")).html(d.join("")),$($($("#matchScoreDetail").find(".jifen-box")[0]).find(".my-body")).html(i.join(""))):"1"==o&&($($($("#matchScoreDetail").find(".jifen-box")[1]).find(".matchScore-rank-team")).html(d.join("")),$($($("#matchScoreDetail").find(".jifen-box")[1]).find(".my-body")).html(i.join("")))}}$(".jifen-left").css("height",$(".jifen-right").height()+"px")}else if("2"==e){if($("#matchScoreDetail").empty(),s=[],t.qry_cup_scoreboard.stage_data.length>1){for(var _=[],p=0;p<t.qry_cup_scoreboard.stage_data.length;p++){var a=t.qry_cup_scoreboard.stage_data[p],u=0==p?"on":"";_.push('<li stage-id="'+a.stage_id+'" class="'+u+'"><span class="tab-intro">'+a.stage_name+"</span></li>")}$(".group-select  ul").html(_.join("")),$("#matchScoreDetail").append('<div class="datum-top">'+t.qry_cup_scoreboard.stage_data[0].stage_name+'<span class="top-icon"></span></div>'),matchInfoObject.scoreArr=t.qry_cup_scoreboard.stage_data}for(var g=0;g<t.qry_cup_scoreboard.stage_data.length;g++)if(0==g)for(var c=0;c<t.qry_cup_scoreboard.stage_data[g].group_data.length;c++){d=[],i=[],s.push(' <div class="jifen-box clearfix">');var h=t.qry_cup_scoreboard.stage_data[g].group_data[c];d.push('<div class="jifen-left"><div class="matchScore-rank">'+h.group_name+'组</div><div class="rank-team"><ul>'),i.push('<div class="jifen-right"> <table class="table-box"><thead> <tr><td width="56">赛</td><td width="56">胜-负</td>                                                          <td width="56">胜率%</td><td width="56">均得</td><td width="56">均失</td><td width="56">近十场</td>                                                          <td width="56">近况</td></tr></thead><tbody class="my-body">');for(var f=0;f<h.match_data.length;f++){var b=h.match_data[f];l=parseInt(b.rank)<=8?"rank-2":"rank-1",r=-1!=b.recent_status.indexOf("连胜")?"win-lx":"lose-lx",d.push('<li><i class="'+l+'">'+b.rank+'</i><span class="team-name">'+b.team_name.substring(0,4)+"</span></li>"),i.push("<tr><td>"+T.Util.notNullValue(b.match_num,"--")+"</td><td>"+b.win_num+"-"+b.lost_num+"</td> <td>"+b.win_rate+"</td> <td>"+b.avg_get_num+"</td><td>"+b.avg_lose_num+"</td> <td>"+T.Util.notNullValue(b.recent_ten,"--")+'</td><td><span class="'+r+'">'+b.recent_status+"</span></td></tr>")}d.push(" </ul> </div></div>"),i.push("</tbody></table></div></div>"),s.push(d.join("")),s.push(i.join(""))}$("#matchScoreDetail").append(s.join("")),t.qry_cup_scoreboard.stage_data.length>1&&$($("#matchScoreDetail").find(".jifen-box")[0]).css("padding-top","30px"),$("#matchScoreDetail .datum-top").off().Touch(function(t){$(".season-weebox,.data-bg").removeClass("hide"),$(".season-title").html("分组选择"),$(".season-weebox .group-select").removeClass("hide").siblings().addClass("on")}),$(".group-select ul li").off().Touch(function(a){if(!$(a).hasClass("on")){$(a).addClass("on").siblings().removeClass("on"),$(".season-weebox,.data-bg,.group-select").addClass("hide"),$("#matchScoreDetail").find(".jifen-box").remove();for(var e=[],s=[],d=[],i="",n="",o=0;o<matchInfoObject.scoreArr.length;o++)if($(a).attr("stage-id")==matchInfoObject.scoreArr[o].stage_id){$("#matchScoreDetail .datum-top").html(matchInfoObject.scoreArr[o].stage_name+'<span class="top-icon"></span>');for(var l=0;l<t.qry_cup_scoreboard.stage_data[o].group_data.length;l++){e=[],s=[],d.push(' <div class="jifen-box clearfix">');var r=t.qry_cup_scoreboard.stage_data[o].group_data[l];e.push('<div class="jifen-left"><div class="top-rank">'+r.group_name+'组</div><div class="matchScore-rank-team"><ul>'),s.push('<div class="jifen-right"> <table class="table-box"><thead> <tr><td width="56">胜-负</td>                                                          <td width="56">胜率%</td><td width="56">均得</td><td width="56">均失</td><td width="56">近十场</td>                                                          <td width="56">近况</td></tr></thead><tbody class="my-body">');for(var c=0;c<r.match_data.length;c++){var h=r.match_data[c];i=parseInt(h.rank)<=8?"rank-2":"rank-1",n=-1!=h.recent_status.indexOf("连胜")?"win-lx":"lose-lx",e.push('<li><i class="'+i+'">'+h.rank+'</i><span class="team-name">'+h.team_name.substring(0,4)+"</span></li>"),s.push("<tr><td>"+h.win_num+"-"+h.lost_num+"</td> <td>"+h.win_rate+"</td> <td>"+h.avg_get_num+"</td><td>"+h.avg_lose_num+"</td> <td>"+T.Util.notNullValue(h.recent_ten,"--")+'</td><td><span class="'+n+'">'+h.recent_status+"</span></td></tr>")}e.push(" </ul> </div></div>"),s.push("</tbody></table></div></div>"),d.push(e.join("")),d.push(s.join(""))}$("#matchScoreDetail").append(d.join("")),matchInfoObject.scoreArr.length>1&&$($("#matchScoreDetail").find(".jifen-box")[0]).css("padding-top","30px");break}}})}T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchScoreDetail"),"1"==e&&$("#matchScoreDetail .match-rules").html(t.qry_league_scoreboard.match_rule)}else $("#matchScoreDetail").empty(),$("#loading-new").addClass("hide"),$(".no-content4").css("display","block"),matchInfoObject.selectDrop("no-content4")}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})},addListener:function(){},init:t}},matchPanLu:function(){return{init:function(t){matchInfoObject.matchPanLu().addListener(),matchInfoObject.matchPanLu().getData(t)},getData:function(t){var a=$(".panlu-nav li.on").attr("data-type"),e="1"==a?$(".panlu-rangfen li.on").attr("data-type"):$(".panlu-daoxiao li.on").attr("data-type"),s="1"==a?$(".panlu-rangfen li.on .tab-intro").html():$(".panlu-daoxiao li.on .tab-intro").html(),d="/forum/api/match/get_matchs_plate?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&data_type="+e+"&border_type="+a;T.Util.xmlHttpRequest({type:"get",reqUrl:d,callback:function(t){try{if(T.Util.isEmpty(t)||T.Util.isEmpty(t.get_matchs_plate)||!t.get_matchs_plate.data.length)dropLoad=$(".no-content").off().dropload({scrollArea:window,loadUpFn:function(t){dropLoad=t,dropLoad.resetload(),dropLoad.unlock();var a=$(".data-nav ul li.on").attr("data-type");matchInfoObject[a]().getData(basketBallSeasonLeagueId)},threshold:50}),$(".rangfen").empty(),$(".daxiao").empty(),$("#loading-new").addClass("hide"),$(".no-content").css("display","block");else{$(".no-content").css("display","none"),$(".rangfen").empty(),$(".daxiao").empty();var d=[];if("1"==a){d.push('<thead>                                            <tr style="border-top:1px solid #dfe6ec" data-type="'+e+'">                                            <td width="80" class="td-left"><span class="bang-name">'+s+'</span><i class="bang-icon"></i></td>                                            <td width="56">赛</td>                                            <td width="56">上盘</td>                                            <td width="56">下盘</td>                                            <td width="56">赢</td>                                            <td width="56">走</td>                                            <td width="56">输</td>                                            <td width="56">净</td>                                            <td width="56">胜%</td>                                            </tr>                                            </thead><tbody>');for(var i=0;i<t.get_matchs_plate.data.length;i++){var n=t.get_matchs_plate.data[i];d.push('<tr>                                                <td class="td-left"><span class="td-rank">'+n.rank+"</span>"+n.team_name+"</td>                                                <td>"+n.match_num+"</td>                                                <td>"+n.up_plate+"</td>                                                <td>"+n.down_plate+"</td>                                                <td>"+n.win_plate+"</td>                                                <td>"+n.go_plate+"</td>                                                <td>"+n.lost_plate+"</td>                                                <td>"+n.got_plate+'</td>                                                <td><span class="win-percent">'+n.win_rate+"%</span></td>                                                </tr>")}d.push("</tbody>"),$(".rangfen").html(d.join(""))}else if("2"==a){d.push('<thead>                                            <tr style="border-top:1px solid #dfe6ec" data-type="'+e+'">                                            <td width="80" class="td-left"><span class="bang-name">'+s+'</span><i class="bang-icon"></i></td>                                            <td width="56">赛</td>                                            <td width="56">大球</td>                                            <td width="56">走</td>                                            <td width="56">小球</td>                                            <td width="56">大球%</td>                                            <td width="56">小球%</td>                                            </tr>                                            </thead><tbody>');for(var i=0;i<t.get_matchs_plate.data.length;i++){var n=t.get_matchs_plate.data[i];d.push('<tr>                                                <td class="td-left"><span class="td-rank">'+n.rank+"</span>"+n.team_name+"</td>                                                <td>"+n.match_num+"</td>                                                <td>"+n.big_num+"</td>                                                <td>"+n.go_num+"</td>                                                <td>"+n.small_num+'</td>                                                <td><span class="win-percent">'+n.big_rate+'%</span></td>                                                <td><span class="win-percent">'+n.small_rate+"%</span></td>                                                </tr>")}d.push("</tbody>"),$(".daxiao").html(d.join(""))}T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchPanLu")}$(".panlu-class thead tr").off().Touch(function(){$(".season-weebox,.data-bg").removeClass("hide"),"1"==$("#PL li.on").attr("data-type")?$(".season-list .panlu-rangfen").removeClass("hide").siblings().addClass("hide"):$(".season-list .panlu-daoxiao").removeClass("hide").siblings().addClass("hide"),T.Util.preventBottomLayerScroll($(".data-bg"),$(".season-weebox"),".season-list")}),$(".panlu-rangfen ul li").off().Touch(function(t){$(t).hasClass("on")||($(t).addClass("on").siblings().removeClass("on"),$(".season-weebox,.data-bg,.panlu-rangfen").addClass("hide"),matchInfoObject.matchPanLu().getData(basketBallSeasonLeagueId))}),$(".panlu-daoxiao ul li").off().Touch(function(t){$(t).hasClass("on")||($(t).addClass("on").siblings().removeClass("on"),$(".season-weebox,.data-bg,.panlu-daoxiao").addClass("hide"),matchInfoObject.matchPanLu().getData(basketBallSeasonLeagueId))})}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})},addListener:function(){$("#PL li").off().Touch(function(){$(this).hasClass("on")||($(this).addClass("on").siblings().removeClass("on"),$(".no-content").css("display","none"),"1"==$(this).attr("data-type")?($(".rangfen").removeClass("hide"),$(".daxiao").addClass("hide")):($(".daxiao").removeClass("hide"),$(".rangfen").addClass("hide")),matchInfoObject.removeLoadDrop(),matchInfoObject.matchPanLu().getData(basketBallSeasonLeagueId))})}}},matchCalculate:function(){var t=function(t){matchInfoObject.matchCalculate().addListener(),matchInfoObject.matchCalculate().getData(t)},a=function(){$("#TJ li").off().Touch(function(){$(this).hasClass("on")||(1==$(this).index()?$("#matchCalculate .tj-class").css("height","100%"):$("#matchCalculate .tj-class").css("height",""),$(".no-content2,.no-content3").css("display","none"),$(this).addClass("on").siblings().removeClass("on"),"1"==$(this).attr("data-type")?($(".panlu-jifenBox").removeClass("hide"),$(".player-con").addClass("hide")):($(".player-con").removeClass("hide"),$(".panlu-jifenBox").addClass("hide")),matchInfoObject.removeLoadDrop(),matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId))}),$(".player-rank").off().Touch(function(){$(".season-weebox,.data-bg").removeClass("hide"),$(".match-select2").removeClass("hide").siblings().addClass("hide"),T.Util.preventBottomLayerScroll($(".data-bg"),$(".season-weebox"),".season-list")}),$("#matchCalculate .top-rank").off().Touch(function(){$(".season-weebox,.data-bg").removeClass("hide"),$(".match-select1").removeClass("hide").siblings().addClass("hide"),T.Util.preventBottomLayerScroll($(".data-bg"),$(".season-weebox"),".season-list")}),$(".match-select1 ul li").off().Touch(function(t){$(t).hasClass("on")||($(t).addClass("on").siblings().removeClass("on"),$(".season-weebox,.data-bg,.match-select").addClass("hide"),"1"==$(".tj-nav li.on").attr("data-type")&&$(".pan-lu-jifen-left .bang-name").html($(t).find(".tab-intro").html()),matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId))}),$(".match-select2 ul li").off().Touch(function(t){$(t).hasClass("on")||($(t).addClass("on").siblings().removeClass("on"),$(".season-weebox,.data-bg,.match-select").addClass("hide"),"2"==$(".tj-nav li.on").attr("data-type")&&$(".player-rank .bang-name").html($(t).find(".tab-intro").html()),matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId))})};return{init:t,getData:function(t){"2"==$(".tj-nav li.on").attr("data-type")?$("#matchCalculate").css("height",window.innerHeight-$(".data-header").height()-$(".data-nav").height()-$(".tj-nav").height()):$("#matchCalculate").css("height","");var a=$(".tj-nav li.on").attr("data-type"),e="1"==a?$(".match-select1 li.on").attr("data-type"):$(".match-select2 li.on").attr("data-type"),s=$(".player-con li.on").attr("static-type"),d="";d=1==a?"/forum/api/match/get_matchs_data_statistics?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&data_type="+e+"&border_type="+a:"/forum/api/match/get_matchs_data_statistics?sport_type=1&league_id="+T.Util.getPara("league_id")+"&season_id="+t+"&data_type="+e+"&border_type="+a+"&static_type="+s,T.Util.xmlHttpRequest({type:"get",reqUrl:d,callback:function(t){try{if(!T.Util.isEmpty(t)&&!T.Util.isEmpty(t.get_matchs_data_statistics))if("1"==a)if(t.get_matchs_data_statistics.data.length){var e=[],d=[];$("#loading-new").addClass("hide"),$(".panlu-jifenBox .rank-team").show(),$(".panlu-jifenBox tbody").show(),$("#matchCalculate .no-content2").css("display","none"),$(".pan-lu-jifen-left ul").empty(),$(".panlu-jifen-right tbody").empty();for(var i=0;i<t.get_matchs_data_statistics.data.length;i++){var n=t.get_matchs_data_statistics.data[i];e.push('<li><span class="team-name">'+n.team_name+"</span></li>"),d.push("<tr><td>"+n.match_num+"</td> <td>"+n.avg_got+"</td>                                                    <td>"+n.avg_lost+"</td>                                                    <td>"+n.shot_rate+"</td>                                                    <td>"+n.three_rate+"</td>                                                    <td>"+n.punish_rate+"</td>                                                    <td>"+n.avg_board+"</td>                                                    <td>"+n.avg_help+"</td>                                                    <td>"+n.avg_head+"</td>                                                    <td>"+n.avg_cut+"</td>                                                    <td>"+n.avg_miss+"</td>                                                    <td>"+n.avg_error+"</td>                                                    </tr>")}$(".pan-lu-jifen-left ul").html(e.join("")),$(".panlu-jifen-right tbody").html(d.join("")),T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchCalculate")}else $(".panlu-jifenBox .rank-team").hide(),$(".panlu-jifenBox tbody").hide(),$("#loading-new").addClass("hide"),$("#matchCalculate .no-content2").css("display","block"),matchInfoObject.selectDrop("no-content2");else if("2"==a){if(t.get_matchs_data_statistics.data.length){var d=[];$("#loading-new").addClass("hide"),$(".player-con .table-box").show(),$(".no-content3").css("display","none"),$(".player-right thead").empty(),$(".player-right tbody").empty(),$(".player-right thead").html(elementObj[s]);for(var i=0;i<t.get_matchs_data_statistics.data.length;i++){var n=t.get_matchs_data_statistics.data[i];switch(s){case"1":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.total_shot+"</td>                                                    <td>"+n.total_bingo+"</td>                                                    <td>"+n.total_score+"</td>                                                    <td>"+n.avg_score+"</td>                                                    </tr>");break;case"2":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.total_shot+"</td>                                                    <td>"+n.total_bingo+"</td>                                                    <td>"+n.total_bingo_rate+"</td>                                                    </tr>");break;case"3":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.three_shot+"</td>                                                    <td>"+n.three_bingo+"</td>                                                    <td>"+n.three_bingo_rate+"</td>                                                    </tr>");break;case"4":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.punishball_shot+"</td>                                                    <td>"+n.punishball_bingo+"</td>                                                    <td>"+n.punishball_bingo_rate+"</td>                                                    </tr>");break;case"5":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.board_attack+"</td>                                                    <td>"+n.board_defen+"</td>                                                    <td>"+n.board_total+"</td>                                                    <td>"+n.board_avg+"</td>                                                    </tr>");break;case"6":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.help_shot+"</td>                                                    <td>"+n.help_avg+"</td>                                                   </tr>");break;case"7":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.cover_shot+"</td>                                                    <td>"+n.cover_avg+"</td>                                                    </tr>");break;case"8":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.rob_shot+"</td>                                                    <td>"+n.rob_avg+"</td>                                                    </tr>");break;case"9":
+d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.mis_shot+"</td>                                                    <td>"+n.mis_avg+"</td>                                                    </tr>");break;case"10":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.foul_shot+"</td>                                                    <td>"+n.foul_avg+"</td>                                                    </tr>");break;case"11":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.double_2+"</td>                                                     </tr>");break;case"12":d.push("<tr>                                                    <td>"+n.player_name+"</td>                                                    <td>"+n.team_name+"</td>                                                    <td>"+n.match_num+"</td>                                                    <td>"+n.double_3+"</td>                                                   </tr>")}}$(".player-right tbody").html(d.join("")),T.Util.isEmpty(dropLoad)&&matchInfoObject.selectDrop("matchCalculate")}else $("#loading-new").addClass("hide"),$(".player-con .table-box").hide(),$(".no-content3").css("display","block"),matchInfoObject.selectDrop("no-content3");$("#matchCalculate .player-tab li").off().Touch(function(t){$(t).hasClass("on")||($(t).addClass("on").siblings().removeClass("on"),matchInfoObject.matchCalculate().getData(basketBallSeasonLeagueId))})}}catch(t){$("#loading-new").addClass("hide")}finally{$("#loading-new").addClass("hide")}},errorCallback:function(){$("#loading-new").addClass("hide")}})},addListener:a}},getMatchSeasonLeague:a}}(),appFirstInfo=!0;$(document).ready(function(){function t(){appFirstInfo&&($("#matchList").css("height",$(window).height()-$(".data-header").height()-$(".data-nav").height()-$(".match-style").height()+"px"),appFirstInfo=!1,matchInfoObject.addListener(),matchInfoObject.getMatchSeasonLeague())}T.isNative?T.appToH5.init(t):t()})</script>
+</body>
+</html>

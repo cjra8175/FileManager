@@ -1,0 +1,155 @@
+<style>.stage-weebox{position:fixed;top:50%;left:50%;width:270px;margin-left:-135px;border-radius:5px;-webkit-transform:translateY(-50%);z-index:100;background:#fff}.stage-title{margin:0 20px;height:40px;line-height:40px;text-align:center;font-size:15px;border-bottom:1px solid #f5f5f5}.stage-list{padding:10px 0 20px;max-height:180px;overflow-y:auto;-webkit-overflow-scrolling:touch}.stage-list li{line-height:30px;font-size:15px;color:#7f8c8d;text-align:center}.stage-list li.on{color:#2479e2}.stage-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:90}</style>
+
+<div id="loading-new">
+	<div id="loading-new-center">
+		<div id="loading-new-center-absolute">
+			<div class="object" id="loading"></div>
+		</div>
+	</div>
+</div>
+	<section>
+			<div class="zlk-left">
+				<div class="zlk-nav">
+					<ul>
+						<li data-type="total" class="select">总榜</li>
+						<li data-type="home">主场</li>
+						<li data-type="away">客场</li>
+						<li data-type="half_total">上半场</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+			<div class="zlk-right" style="display:none;overflow-x:hidden">
+				<div class="zlk-rigth-item">
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+				</div>
+				<div id="bottomIntrdutionFlag" style="background-color:#fff;width:100%;height:33px;color:#8c8c8c;display:none">
+					<p style="background-color:#f9f9f9;text-align:center;font-size:10px;height:32px;line-height:32px">以上资料仅供浏览参考之用,并不作为最终投注依据</p>
+				</div>
+				<div class="no-content" style="display:none">
+					<div class="none-icon"></div>
+					<div class="none-txt">空空荡荡...</div>
+				</div>
+			</div>
+
+
+		</section>
+		<div class="stage-bg hide"></div>
+		<div class="stage-weebox hide">
+			<div class="stage-title">赛事类型选择</div>
+			<div class="stage-list">
+				<ul>
+					
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+		</div>
+		<script>function initDropload(){droploadInitFlag||(droploadInitFlag=!0,$(".foot-ball-data").off().dropload({scrollArea:window,loadUpFn:function(t){dropLoad=t,$(".no-content").css("display","none"),console.log("赛前列表下拉刷新"),dataType=T.Storage.get("navSelectClickType"),console.log(dataType),footBallDataInt.getFirstData(dataType)},threshold:50,autoLoad:!1}))}function initDroploadNot(){droploadInitNotFlag||(droploadInitNotFlag=!0,$(".no-content").off().dropload({scrollArea:window,loadUpFn:function(t){dropLoad=t,$(".no-content").css("display","none"),console.log("赛前列表下拉刷新"),dataType=T.Storage.get("navSelectClickType"),footBallDataInt.getFirstData(dataType)},threshold:50,autoLoad:!1}))}/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)?812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".zlk-header").css({"padding-top":"40px"}),$(".column-nav").css({top:"88px"}),$(".zlk-left").css({top:"128px"})):($(".zlk-header").css({"padding-top":"16px"}),$(".column-nav").css({top:"64px"}),$(".zlk-left").css({top:"105px"})):$(".zlk-left").css("top","89px");var dropLoad="",notTagFlag=!0,tagIndex=0,page_size=999,page_index=1,dataType="",stageId="",stageName="",loadindFirst=!0,defaultImage="images/ball_icon.png",lWidth=$(window).width()-60+"px",seasonStageArray=[],footBallDataInt=function(){function t(){clickType?dataType=clickType:$(".zlk-nav ul li").each(function(t,a){$(a).hasClass("select")&&(dataType=$(a).attr("data-type"))}),footBallDataInt.getFirstData(dataType)}function a(){T.Util.isEmpty(dropLoad)||(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),dropLoad="")}function e(t){"total"==t||"home"==t||"away"==t||"half_total"==t?($(".zlk-left").css("display","block"),$(".zlk-right").css("margin-left","60px"),$(".zlk-left .zlk-nav ul li").each(function(a,e){$(e).attr("data-type")==t&&$(e).addClass("select").siblings().removeClass("select")}),clickType&&(loadindFirst=!0),s(t)):($(".zlk-left").css("display","none"),$(".zlk-right").css("margin-left","0"),l(t))}function l(t){console.log(t),"total"!=t&&"home"!=t&&"away"!=t&&"half_total"!=t&&(console.log(t),clickType&&(stageId="default",clickType="")),console.log(stageId);var e={current_type:1,border_type:t,stage_id:stageId,league_id:T.Storage.get("footBallLeagueId"),season_id:T.Storage.get("footBallSeasonLeagueId"),PAGE_SIZE:page_size,PAGE_INDEX:page_index};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_league_scoreboard",reqData:e,callback:function(e){try{var l=[];if($.isArray(e.qry_league_scoreboard.data)&&e.qry_league_scoreboard.data.length){switch($(".zlk-right").css("display","block"),$("#loading-new").css("display","none"),$(".no-content").css("display","none"),$(".zlk-right .zlk-rigth-item").html(""),t){case"total":case"home":case"away":case"half_total":!function(t){var e=t.qry_league_scoreboard.data,s=t.qry_league_scoreboard.color_data;l.push('<div class="datum-top"><div style="display: inline-block;height: 30px;width: 100px;position: absolute;left: 50%;margin-left: -73px;">'+stageName+'<span class="top-icon"></span></div></div><div class="doWall" style="height: 30px;width: 100%;"></span></div>\t\t\t\t\t\t\t\t\t\t    <table id="setWidthFlag" class="datum-table" style="position: fixed;padding-left: 60px;box-sizing: border-box;background: #fff;z-index: 3">\t\t\t\t\t\t\t\t\t\t\t\t <thead><tr style="position: relative">\t\t\t\t\t\t\t\t\t\t<td align="left"  width="34%"><span class="table-1" style="margin-left: 6px;position: absolute;left: 2px;">排行</span><span style="margin-left: 40px;">球队</span></td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="13%">已赛</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="17%">胜/平/负</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="13%">得/失</td>\t\t\t\t\t\t\t\t\t\t<td align="left" width="9%">积分</td>\t\t\t\t\t\t\t\t\t </tr></thead></table>'),l.push('<div class="foot-ball-data" style="padding: 30px 4px 0 4px"><table class="datum-table"><tbody>');for(m in e)l.push('<tr style="background-color:'+e[m].team_color+'">\t                                   <td align="left" width="40%">\t                                    <span style="position: absolute;width: 18px;display: inline-block;text-align: center">'+e[m].rank+'</span>\t\t\t\t\t\t\t\t\t\t<span class="table-1"><img src="'+e[m].picture_url+'" class="table-flag" onerror="this.src=defaultImage"/><em class="table-name">'+e[m].team_name+'</em></span>\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="15%">'+e[m].match_num+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center"  width="20%">'+e[m].win_num+"/"+e[m].draw_num+"/"+e[m].lost_num+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="15%">'+e[m].get_num+"/"+e[m].lose_num+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center">'+e[m].score+"</td>                          \t\t\t  </tr>");if(l.push("</tbody></table></div>"),$.isArray(s)&&s.length){l.push('<div class="datum-tips clearfix"><ul>');for(myColor in s)if(!T.Util.isEmpty(s[myColor]))for(var i in s[myColor])l.push('<li style="font-size: 10px;"><i style="display:inline-block;width:13px;height:13px;margin-right:3px;background-color: '+s[myColor][i]+'"></i><span class="col-intro">'+i+"</span></li>");l.push("</ul></div>")}a(),$(".zlk-right .zlk-rigth-item").html(l.join("")),$("#setWidthFlag").css("width",lWidth),$(".datum-top").off().Touch(function(t){$(".stage-bg").removeClass("hide"),$(".stage-weebox").removeClass("hide")}),$(".stage-bg").off().Touch(function(t){$(".stage-bg").addClass("hide"),$(".stage-weebox").addClass("hide")}),$.isArray(seasonStageArray)&&seasonStageArray.length<=1&&($(".datum-top").css("display","none"),$(".doWall").css("display","none")),initDropload(),droploadInitFlag=!1}(e);break;case"total_plate":!function(t){var e=t.qry_league_scoreboard.data;l.push('<div class="datum-top"><div style="display: none;height: 30px;width: 100px;position: absolute;left: 50%;margin-left: -73px;">'+stageName+'</div></div><div style="height: 30px;display: none;width: 100%;"></span></div>\t\t\t\t\t\t\t\t\t\t    <table id="setWidthFlag" class="datum-table" style="position: fixed;padding-left: 60px;box-sizing: border-box;background: #fff;z-index: 3">\t\t\t\t\t\t\t\t\t\t\t<thead><tr style="position: relative">\t\t\t                                    <td align="left" width="40%"><span class="table-1" style="margin-left: 6px;position: absolute;left: 2px;">排行</span><span style="margin-left: 40px;">球队</span></td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="12%">已赛</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="12%">胜</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="12%">平</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="12%">负</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="left">净</td>\t\t\t\t\t\t\t\t\t\t\t</tr></thead></table>'),l.push('<div class="foot-ball-data" style="padding: 30px 4px 0 4px;"><table class="datum-table"><tbody>');var s="",i="";for(m in e)s=e[m].got_plate>0?"#ff5b06":e[m].got_plate<0?"#2479e2":"#333",i=0==m?"#fdc006":1==m?"#8ac149":2==m?"#02bad4":"#333",l.push('<tr>\t                                   <td align="left" width="40%">\t                                    <span style="color: '+i+';position: absolute;width: 18px;display: inline-block;text-align: center">'+e[m].rank+'</span>\t\t\t\t\t\t\t\t\t\t<span class="table-1"><img src="'+e[m].picture_url+'" class="table-flag" onerror="this.src=defaultImage"/><em class="table-name">'+e[m].team_name+'</em></span>\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="12%">'+e[m].match_num+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="12%">'+e[m].win_plate+'</td>\t\t\t\t\t\t\t\t\t    <td align="center" width="12%">'+e[m].go_plate+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="12%">'+e[m].lost_plate+'</td>\t\t\t\t\t\t\t\t\t\t<td align="center" style="color: '+s+'">'+e[m].got_plate+"</td>                          \t\t\t  </tr>");l.push("</tbody></table></div>"),a(),$(".zlk-right .zlk-rigth-item").html(l.join("")),$("#setWidthFlag").css("width","100%"),initDropload(),droploadInitFlag=!1}(e);break;case"total_bs":!function(t){var e=t.qry_league_scoreboard.data;l.push('<div class="datum-top"><div style="display: none;height: 30px;width: 100px;position: absolute;left: 50%;margin-left: -73px;">'+stageName+'</div></div><div style="display: none;height: 30px;width: 100%;"></span></div>\t\t\t\t\t\t\t\t\t\t    <table id="setWidthFlag" class="datum-table" style="position: fixed;padding-left: 60px;box-sizing: border-box;background: #fff;z-index: 3">\t\t\t\t\t\t\t\t\t\t\t<thead><tr style="position: relative">\t\t\t                                    <td align="left" width="40%"><span class="table-1" style="margin-left: 6px;position: absolute;left: 2px;">排行</span><span style="margin-left: 40px;">球队</span></td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="15%">已赛</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="15%">大</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="center" width="15%">走</td>\t\t\t\t\t\t\t\t\t\t\t\t <td align="left">小</td>\t\t\t\t\t\t\t\t\t\t\t</tr></thead></table>'),l.push('<div class="foot-ball-data" style="padding: 30px 4px 0 4px"><table class="datum-table"><tbody>');var s="";for(m in e)s=0==m?"#fdc006":1==m?"#8ac149":2==m?"#02bad4":"#333",l.push('<tr>\t\t\t\t\t\t\t\t\t\t\t   <td align="left" width="40%">\t                                    <span style="color: '+s+';position: absolute;width: 18px;display: inline-block;text-align: center">'+e[m].rank+'</span>\t\t\t\t\t\t\t\t\t\t\t\t<span class="table-1"><img src="'+e[m].picture_url+'" class="table-flag" onerror="this.src=defaultImage"/><em class="table-name">'+e[m].team_name+'</em></span>\t\t\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t\t\t<td align="center" width="15%">'+e[m].match_num+'</td>\t\t\t\t\t\t\t\t\t\t\t\t<td align="center" width="15%">'+e[m].big_num+'</td>\t\t\t\t\t\t\t\t\t\t\t\t<td align="center" width="15%">'+e[m].go_num+'</td>\t\t\t\t\t\t\t\t\t\t\t\t<td align="center">'+e[m].small_num+"</td>\t\t\t\t\t\t\t\t\t\t\t  </tr>");l.push("</tbody></table></div>"),a(),$(".zlk-right .zlk-rigth-item").html(l.join("")),$("#setWidthFlag").css("width","100%"),initDropload(),droploadInitFlag=!1}(e)}$("#bottomIntrdutionFlag").css("display","block")}else{var s="";s="total_plate"==t||"total_bs"==t?"none":"inline-block",$(".zlk-right").css("display","block"),$(".zlk-right .zlk-rigth-item").html(""),l.push('<div class="datum-top"><div style="display: '+s+';height: 30px;width: 100px;position: absolute;left: 50%;margin-left: -73px;">'+stageName+'<span class="top-icon"></span></div></div><div class="doWall" style="display: '+s+';height: 30px;width: 100%;"></span></div>\t\t\t\t\t\t\t\t\t\t    <table id="setWidthFlag" class="datum-table" style="position: fixed;padding-left: 60px;box-sizing: border-box;background: #fff;z-index: 3">\t\t\t\t\t\t\t\t\t\t\t\t <thead><tr style="position: relative">\t\t\t\t\t\t\t\t\t\t<td align="left"  width="34%"><span class="table-1" style="margin-left: 0;position: absolute;left: 2px;">排行</span><span style="margin-left: 34px;">球队</span></td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="13%">已赛</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="17%">胜/平/负</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="13%">得/失</td>\t\t\t\t\t\t\t\t\t\t<td align="center" width="9%">积分</td>\t\t\t\t\t\t\t\t\t </tr></thead></table>'),l.push('<table class="datum-table"><tbody>'),l.push('<div style="height: 31px;width: 100%"></div>'),$(".zlk-right .zlk-rigth-item").html(l.join("")),$("#loading-new").addClass("hide"),$("#bottomIntrdutionFlag").css("display","none"),$(".no-content").css({display:"block","background-color":"#ebeef0"}),$("#setWidthFlag").css("width",lWidth),initDroploadNot(),droploadInitNotFlag=!1,$.isArray(seasonStageArray)&&seasonStageArray.length<=1&&($(".datum-top").css("display","none"),$(".doWall").css("display","none")),$(".datum-top").off().Touch(function(t){$(".stage-bg").removeClass("hide"),$(".stage-weebox").removeClass("hide")})}}catch(t){a(),$("#loading-new").addClass("hide")}finally{a()}},errorCallback:function(){a(),$("#loading-new").addClass("hide")}})}function s(t){var a={border_type:t,league_id:T.Storage.get("footBallLeagueId"),season_id:T.Storage.get("footBallSeasonLeagueId"),PAGE_SIZE:page_size,PAGE_INDEX:page_index};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/match/qry_season_stage_by_league",reqData:a,callback:function(a){try{var e=[];if($.isArray(a.qry_season_stage_by_league.data)){if(seasonStageArray=a.qry_season_stage_by_league.data,a.qry_season_stage_by_league.data.length){loadindFirst&&(console.log(loadindFirst),stageId=a.qry_season_stage_by_league.data[0].stage_id,stageName=a.qry_season_stage_by_league.data[0].stage_name,loadindFirst=!1,console.log(stageId));for(m in a.qry_season_stage_by_league.data)e.push('<li stage-id="'+a.qry_season_stage_by_league.data[m].stage_id+'" stage-name="'+a.qry_season_stage_by_league.data[m].stage_name+'">'+a.qry_season_stage_by_league.data[m].stage_name+"</li>");$(".stage-weebox .stage-list ul").html(e.join(""))}else stageId="",stageName="";$(".stage-weebox .stage-list ul li").off().Touch(function(a){$(a).addClass("on").siblings().removeClass("on"),$(".stage-bg").addClass("hide"),$(".stage-weebox").addClass("hide"),stageId=$(a).attr("stage-id"),stageName=$(a).attr("stage-name");var e=t;$(".datum-top").html('<div style="display: inline-block;height: 30px;width: 100px;position: absolute;left: 50%;margin-left: -73px;">'+stageName+'<span class="top-icon"></span></div>'),footBallDataInt.getFirstData(e)}),l(t)}}catch(t){}},errorCallback:function(){}})}return{getStageId:s,getBorderData:l,init:t,getFirstData:e}}();$(function(){$(".zlk-nav ul li").off().Touch(function(t){tagIndex=$(this).index(),notTagFlag=!1,$(".no-content").css("display","none"),$(t).hasClass("select")||($(t).addClass("select").siblings().removeClass("select"),dataType=$(t).attr("data-type"),T.Storage.set("navSelectClickType",dataType),footBallDataInt.getFirstData($(t).attr("data-type")))}),footBallDataInt.init(),$(".dropload-down,.download-up").remove()});var droploadInitFlag=!1,droploadInitNotFlag=!1</script>

@@ -1,0 +1,49 @@
+message EventMsg { 
+
+  message EventContent{
+  	optional sint32 cardNum = 1;
+  	optional sint32 cornerNum = 2;
+  	optional string fhScore = 3; 
+  	optional string score = 4; 
+  }
+  
+  required sint32 msgType = 1; 
+  optional string mId = 2; 
+  optional string uTime = 3;
+  //msgType=1
+  optional string evtCd = 4; 
+  optional sint32 cFlag = 5; 
+  optional string tFlg = 6; 
+  optional EventContent evtCont = 7; 
+  
+  //msgType=2
+   optional string play = 8;
+   optional sint32 match_phase = 9;
+   optional sint32 is_master = 10;
+   optional string odds = 11;
+   optional string handicap = 12; 
+   optional string msi = 22; 
+  
+  //msgType=3
+   optional string score = 13;
+   
+   //msgType=4
+   optional sint32 state = 14;
+   
+   //msgType=5
+   optional sint32 h_corner_368 = 23;
+   optional sint32 a_corner_368 = 24;
+   
+   //msgType=7
+   optional sint32 type = 15;
+   optional sint32 b_status = 16;  //封盘状态
+   
+   //msgType=8
+   optional sint32 odds_phase = 17;//赔率阶段
+   optional string h_value = 18;
+   
+   //msgType=100
+   optional string u_no = 19;//用户编码
+   optional string n_name = 20;//用户昵称
+   optional string msg = 21;//消息内容
+} 

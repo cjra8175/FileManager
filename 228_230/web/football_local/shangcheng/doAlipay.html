@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>支付宝支付</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+</body>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script>function standardPost(t,a,e){var r=document.getElementsByTagName("body")[0],i=document.createElement("form");i.setAttribute("id","aliFrom"),i.setAttribute("class","hide"),i.setAttribute("action",t),r.appendChild(i);var n=$("#aliFrom");n.attr({action:a+"?_input_charset=utf-8"});for(arg in e){var o=$("<input type='hidden'>");o.attr({name:arg}),o.val(e[arg]),n.append(o)}n.submit()}$(document).ready(function(){if(!T.Util.isEmpty(T.Storage.get("aliPayInfo"))){var t=T.Storage.get("aliPayInfo");standardPost(t.method,t.url,t.param)}})</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+	<title>七天红人</title>
+	<link href="../css/recommend.css" type="text/css" rel="stylesheet">
+	<style>.mj-act em{margin-left:0}.no-content{padding:120px 10px}.mlist-main{margin-top:97px}</style>
+</head>
+<body>
+<div id="loading-new">
+	<div id="loading-new-center">
+		<div id="loading-new-center-absolute">
+			<div class="object" id="loading"></div>
+		</div>
+	</div>
+</div>
+	<header class="sq_header" id="inHead">
+		<div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+		<span class="sq_headerText">七天红人</span>
+	</header>
+	<nav class="recommend-nav">
+		<ul>
+			<li class="on" value="2"><span class="nav-other">让分胜负</span></li>
+			<li value="3"><span class="nav-three">大小分</span></li>
+			<li value="1"><span>竞彩单关</span></li>
+		</ul>
+	</nav>
+	<section class="mlist-main">
+
+		<div class="mlist-box">
+			<ul>
+			
+			</ul>
+			<div class="no-content hide">
+				<div class="none-icon"></div>
+				<div class="none-txt">空空荡荡...</div>
+			</div>
+			<div class="content"></div>
+			
+		</div>
+	</section>
+	<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../recommend/recommend.js"></script>
+	<script>/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq_header").css({"padding-top":"40px"}),$(".mlist-main").css({"margin-top":"137px"}),$(".recommend-nav").css({top:"88px"})):($(".sq_header").css({"padding-top":"16px"}),$(".mlist-main").css({"margin-top":"113px"}),$(".recommend-nav").css({top:"64px"})));var sType,obj_type=2,isPull=!0,page_index=1,isRequest=!1,dropLoadObj=null,tabYpLoadEnd=!1,tabDxLoadEnd=!1,tabJcLoadEnd=!1,requestData=function(){return{getData:function(t){T.Util.xmlHttpRequest({type:"get",version:"2.0.0",reqUrl:"/app-web/api/expert/qry_expert_analysis?page_index="+page_index+"&sport_type="+sType+"&page_size=10&ana_type=7DAY&obj_type="+obj_type+"&access_token="+T.Storage.get("access_token"),callback:function(e){$("#loading-new").hide(),isRequest=!1,console.log(e);var i=[],a=e.qry_expert_analysis;if(T.Util.isEmpty(a)||T.Util.isEmpty(a.data)||a.data.length<=0)return doDropLoadInit(!0,t),T.Util.isEmpty(a)||(page_index=a.page_index),$(".mlist-box ul").html(i.join("")),void recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more");page_index=a.page_index;for(var o=a.data,n=0;n<o.length;n++){var s=o[n];if(!T.Util.isEmpty(s)){var l="";1==T.Util.notNullValue(s.has_recom,0)&&(l='<i class="dot"></i>'),i.push('<li userNo="'+s.user_no+'">\t\t\t\t\t\t\t\t<div class="mlist-user clearfix">\t\t\t\t\t\t\t\t<div class="user-pic" userNo="'+s.user_no+'" is_expert="'+s.is_expert+'">\t\t\t\t\t\t\t\t<img src="'+s.portrait_pic+'" class="user-tou" onerror="this.src=\'../img/iconfail.png\'">\t\t\t\t\t\t\t\t'+l+'\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<div class="user-intro">\t\t\t\t\t\t\t\t<div class="mj-sum" userNo="'+s.user_no+'" is_expert="'+s.is_expert+'"><span class="mj-name">'+isEmpty(s.nick_name)+"</span>"+expertAlias(s)+'</div>\t\t\t\t\t\t\t\t<div class="mj-tag">'+addBiaoQian(s.new_tags)+'</div>\t\t\t\t\t\t\t\t<div class="zj-con">七天胜率:<em class="zj-em">'+isEmpty(s.new_analysis.qiday_rate)+'</em></div>\t\t\t\t\t\t\t\t<div class="mj-act">七天战绩:<em class="act-red">'+isEmpty(s.new_analysis.qiday_gains)+"</em><span>"+wuGame(s,obj_type)+'</div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t<span class="concern-btn'+isFollow(s)+'" isFollow ='+s.is_friend+" userNo="+s.user_no+">"+isGuanZhu(s.is_friend)+"</span>\t\t\t\t\t\t\t\t</li>")}}isPull?$(".mlist-box ul").html(i.join("")):$(".mlist-box ul").append(i.join("")),Global.isAndroid&&$(".mj-tag span,.tag-3").css("line-height","15px"),doDropLoadInit(0==page_index,t),recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more"),initListener().addListener()},errorCallback:function(e){$("#loading-new").hide(),isRequest=!1;var i=[];t&&t.resetload(),isPull&&1==page_index&&($(".mlist-box ul").html(i.join("")),recommend().loadingfinish(page_index,".mlist-box ul li",".mlist-box .no-content",".mlist-box .no-more"))}})},refrashEvent:function(){$(".dropload-down,.download-up").remove(),dropLoadObj=$(".mlist-main").off().dropload({scrollArea:window,loadUpFn:function(t){console.log("下拉刷新"),t.resetload(),t.unlock(),t.noData(!1),page_index=1,isPull=!0,isRequest=!0,requestData().getData(t)},loadDownFn:function(t){isRequest||(isPull=!1,isRequest=!0,requestData().getData(t))},threshold:50})}}},initListener=function(){return{addListener:function(){$(".recommend-nav ul li").off().Touch(function(t){if(!$(t).hasClass("on")){$(t).addClass("on").siblings().removeClass("on"),$(".mlist-box ul").empty();var e=$(t).attr("value");obj_type=e,page_index=1,isPull=!0,"0"==$(t).index()?tabYpLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1)):"1"==$(t).index()?tabDxLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1)):"2"==$(t).index()&&(tabJcLoadEnd?(dropLoadObj.lock("down"),dropLoadObj.noData()):(dropLoadObj.unlock(),dropLoadObj.noData(!1))),dropLoadObj.resetload(),$(".mlist-box ul").empty()}}),$(".concern-btn").off().Touch(function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var t=$(this).attr("isfollow"),e=$(this).attr("userno");T.Util.isEmpty(t)&&T.Util.isEmpty(e)||(1==t?delFriend(e,$(this)):addFriend(e,$(this)))}),$(".mlist-box ul li").off().Touch(function(t,e){if(!$(e.target).hasClass("concern-btn")){var i=$(this).attr("userNo");if(console.log(i),!T.Util.isEmpty(i)){var a=i;"BB"==T.Util.getPara("sType")&&(a=i+"&sType=BB"),T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/recommend/expert.html?user_no="+a)}}})}}},appFirstInfo=!0;$(document).ready(function(){"BB"==T.Util.getPara("sType")?(sType=1,$("li[value='2']").html("<span>让分胜负</span>"),$("li[value='3']").html("<span>大小分</span>"),$("li[value='1']").html("<span>胜负</span>")):(sType=0,$("li[value='2']").html("<span>竞彩亚盘</span>"),$("li[value='3']").html("<span>大小球</span>"),$("li[value='1']").html("<span>竞彩单关</span>")),T.isNative?T.appToH5.init(function(){appFirstInfo&&(appFirstInfo=!1,isPull=!0,page_index=1,requestData().refrashEvent(),initListener().addListener())}):(requestData().refrashEvent(),initListener().addListener())})</script>
+</body>
+</html>

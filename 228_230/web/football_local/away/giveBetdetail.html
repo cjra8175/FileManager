@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,minimal-ui">
+
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>赠送</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>.zs-table{border-collapse:collapse;text-align:center;width:100%;background:#fff}.zs-table th{color:#333;height:40px;font-weight:400}.zs-table td{color:#333;height:50px}.zs-table td,.zs-table th{border-bottom:1px solid #d9d9d9;width:20%;word-break:break-all;word-wrap:break-word}.zs-table td span{color:#8c8c8c}@media screen and (-webkit-min-device-pixel-ratio:2){.zs-table td,.zs-table th{background-position:left bottom;background-repeat:repeat-x;background-size:100% 1px;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#d9d9d9),to(#d9d9d9));border:0}}</style>
+    <script>if(/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)){var head=document.getElementsByTagName("head")[0],styleLink=document.createElement("link");styleLink.setAttribute("rel","stylesheet"),styleLink.setAttribute("href","../css/iosBar.css"),head.appendChild(styleLink)}</script>
+</head>
+<body>
+<header class="sq_header" id="inHead">
+    <div class="sq_headerUpBox" id="back"><b class="icon sq_headerUp"></b></div>
+    <span class="sq_headerText">赠送记录</span>
+</header>
+<section class="zs-con" id="giveBetMain">
+    <table class="zs-table">
+        <thead>
+        <tr>
+            <th>赠送时间</th>
+            <th>赠送数量</th>
+            
+            <th>接受人/赠送人</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            
+                
+                    
+                
+                
+                
+                
+            
+            
+                
+                    
+                
+                
+                
+                
+            
+            
+                
+                    
+                
+                
+                
+                
+            
+            
+                
+                    
+                
+                
+                
+                
+            
+            
+                
+                    
+                
+                
+                
+                
+            
+        </tbody>
+    </table>
+</section>
+
+
+</body>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script>api=lib.API;var recordsListparams={page_index:"1",page_size:"20",is_last:"0"},html="",giveBetDetail=function(){var e=function(e){if(!e.qry_give||0==e.qry_give.data.length)return $("tbody").hide(),void $("#giveBetMain").append('<p class="no_beam bColor hide" style="display: block;"><b class="icon beam_book"></b><br><span>暂时还没有记录呢</span></p>');for(var t=e.qry_give.data,a=0;a<t.length;a++){var i=t[a],r=i.give_time.split(" "),s=r[0],o=r[1],n=i.give_type,d=i.give_num;d="0"==n?"-"+T.Util.parseNumber(d):"+"+T.Util.parseNumber(d);var l=i.nick_name;i.acct_no;html+="<tr><td><span>"+s+"</span><br/><span>"+o+"</span></td><td>"+d+"</td><td>"+l+"</td></tr>"}$("tbody").show(),"1"==recordsListparams.page_index?$("tbody").html(html):$("tbody").append(html)};return{doHtml:e,getData:function(){if("0"!=recordsListparams.page_index){var t="/forum/api/give/qry_give?access_token="+T.Storage.get("access_token")+"&page_index="+recordsListparams.page_index+"&page_size="+recordsListparams.page_size+"&is_last="+recordsListparams.is_last;T.Util.xmlHttpRequest({type:"get",reqUrl:t,callback:function(t){e(t),recordsListparams.page_index=t.qry_give.page_index},errorCallback:function(e){}})}}}},loadMoreData=function(){if("0"==recordsListparams.page_index)$(window).unbind("scroll",loadMoreData);else{var e=$(this).scrollTop(),t=$(document).height();e+$(this).height()>=t&&giveBetDetail().getData()}};$(window).scroll(loadMoreData),$(document).ready(function(){function e(){giveBetDetail().getData()}T.isNative?T.appToH5.init(e):T.Util.isEmpty(T.Storage.get("access_token"))?T.Util.login():T.User.getUInfo(T.Storage.get("access_token"),e)})</script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+		<title>百盈号管理</title>
+		<link href="../css/sq.css" type="text/css" rel="stylesheet">
+		<style>.nodata{width:100%;padding-top:70px;text-align:center}.nodata img{width:160px}.nodata span{color:#999}.wz-imgList li{overflow:hidden}.wz-imgList li img{width:auto}.mask{position:fixed;width:100%;z-index:101;left:0;top:0;background:rgba(0,0,0,.5);height:100%;border-radius:0}</style>
+	</head>
+	<body>
+		<div id="loading-new">
+			<div id="loading-new-center">
+				<div id="loading-new-center-absolute">
+					<div class="object" id="loading"></div>
+				</div>
+			</div>
+		</div>
+		<header class="sq-header">
+			<span class="sq-return"><i class="return-icon"></i><em class="return-txt">返回</em></span>
+			<h2 class="sq-title hide">百盈号管理</h2>
+			<span class="editor-icon"></span>
+		</header>
+		<section class="editor-con">
+			<div class="editor-top">
+				<div class="editor-peo clearfix">
+					<div class="peo-img"><img src=""></div>
+					<div class="peo-right">
+						<div class="peo-name"> </div>
+						<div class="peo-intro"> </div>
+					</div>
+				</div>
+				<div class="peo-tag"><span> </span><span> </span></div>
+			</div>
+			
+			<div class="editor-main">
+				
+				
+					
+						
+						
+							
+							
+						
+					
+					
+						
+							
+							
+							
+						
+					
+				
+				
+				
+				
+				
+					
+						
+							
+							
+								
+									
+								
+							
+							
+						
+					
+					
+						
+							
+							
+							
+						
+					
+				
+				
+				
+				
+				
+					
+						
+							
+							
+								
+									
+									
+									
+								
+							
+							
+						
+					
+					
+						
+							
+							
+							
+						
+					
+				
+				
+				
+				
+				
+					
+						
+							
+							
+								
+									
+										
+											
+											
+										
+										
+									
+
+									
+										
+											
+											
+										
+										
+									
+
+									
+										
+											
+											
+										
+										
+									
+								
+							
+							
+								
+								
+							
+							
+						
+					
+					
+						
+							
+							
+							
+						
+					
+				
+				
+				
+				
+				
+					
+						
+							
+							
+						
+					
+					
+						
+							
+							
+							
+						
+					
+				
+				
+
+				
+				
+				
+				
+				
+					
+						
+						
+						
+							
+								
+								
+							
+							
+								
+								
+								
+							
+							
+								
+								
+							
+						
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</section>
+		<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script>function checkImg(t){t.width>t.height?$(t).css("width","32px"):$(t).css("height","32px"),$(t).removeClass("hide")}function imgFn(t,i){if(i&&1==i)$(t).css("margin-top",-($(t).height()-150)/2+"px");else if(i&&2==i){var s=.33*(document.documentElement.clientWidth-30-8),e=75,a=$(t).height(),n=$(t).width();n/a>s/e?$(t).height(e+"px").css("margin-left",-(n/a*e-s)/2+"px"):$(t).width(s+"px").css("margin-top",-(a/n*s-e)/2+"px")}else{var s=$(".wz-imgList li").width(),e=$(".wz-imgList li").height(),a=$(t).height(),n=$(t).width();n/a>s/e?$(t).height(e+"px").css("margin-left",-(n/a*e-s)/2+"px"):$(t).width(s+"px").css("margin-top",-(a/n*s-e)/2+"px")}}var reg=/_[^.]*/g,page=1,isMore=!1,dropLoad="",isUp=!1;/iPhone|iPad|iPod|ios|IOS/.test(window.navigator.userAgent)&&(812==document.documentElement.clientHeight&&375==document.documentElement.clientWidth?($(".sq-header").css({"padding-top":"40px"}),$(".editor-con").css({"padding-top":"88px"})):($(".sq-header").css({"padding-top":"16px"}),$(".editor-con").css({"padding-top":"64px"}))),$(window).scroll(function(){var t=$(window).scrollTop(),i=t/180*.8;i>=.8?(i=.8,$(".sq-title").removeClass("hide")):$(".sq-title").addClass("hide");var s=$(this).scrollTop(),e=$(document).height();if(s+$(this).height()>=e){if(!isMore)return;isUp=!1,Init.initData()}});var Init=function(){var t="",i="",s=function(){if(T.Util.isEmpty(T.Storage.get("access_token")))return void T.Util.login();var t={person_homepage_info_query:{access_token:T.Storage.get("access_token"),page_index:page,page_size:10,note_type:10,is_byh:1,is_self:1}};T.Util.xmlHttpRequest({type:"POST",reqUrl:"/forum/api/note/person_homepage_info_query",reqData:t,version:"2.0.0",callback:function(t){$("#loading-new").hide();var i=t.person_homepage_info_query.data;if(t.person_homepage_info_query.user_info&&1==page){var s=t.person_homepage_info_query.user_info;$(".peo-name").html(s.nick_name),$(".peo-intro").html(s.signature),$(".peo-img img").attr("src",s.portrait_pic),$(".peo-tag span").eq(0).html("文章 "+s.note_num),$(".peo-tag span").eq(1).html("阅读 "+s.look_num)}if(0!=t.person_homepage_info_query.page_index?(page=t.person_homepage_info_query.page_index,isMore=!0):isMore=!1,!i.length)return $(".nodata").remove(),$(".editor-main").append('<div class="nodata"><img src="../img/no-note.png" alt=""/><br/><span>暂无发表记录</span></div>'),void(""!=dropLoad&&(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),dropLoad=""));$(".nodata").remove();var a=[];$.each(i,function(t,i){a.push(e(i.note_type,i))}),isUp?($(".editor-main div.editor-column").remove(),$(".editor-main").append(a.join(""))):$(".editor-main").append(a.join("")),$(".wz-imgList ul.itemImg li").css("height",parseInt($(".wz-imgList li").width()/(226/150))+"px"),$(".editor-action li").off().Touch(function(){var t=$(this).find("i").hasClass("delete-tu"),i=$(this).find("i").hasClass("update-tu"),s=$(this).parent().parent().attr("note-id"),e=$(this).parent().parent().attr("share-url"),a=$(this).parent().parent().attr("share-img"),n=$(this).parent().parent().prev().find(".wz-title").html(),o=$(this).parent().parent().attr("note-type"),l=function(t){var i={del_note:{access_token:T.Storage.get("access_token"),note_id:t}};T.Util.xmlHttpRequest({reqData:i,reqUrl:"/app-web/api/note/del_note",callback:function(){tip("删除成功"),$(".editor-t[note-id='"+t+"']").parent().remove(),0==$(".editor-main .editor-t").length&&Init.initData()},errorCallback:function(){}})};if(t)confirm("是否确定删除帖子?",function(){l(s)});else if(i)0==o||4==o?T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/trendEditor.html?note_id="+s):T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/buyinEditor.html?note_id="+s);else{var d={url:e,image_src:a,text:n,obj_type:"note",obj_id:s};T.isNative&&api.share(d,function(t){})}}),$(".editor-t").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/detail.html?note_id="+$(this).attr("note-id"))}),""!=dropLoad&&(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),dropLoad="")},errorCallback:function(){""!=dropLoad&&(dropLoad.resetload(),dropLoad.unlock(),dropLoad.noData(!1),dropLoad="")}}),r()},e=function(t,i){return c(i),0==t?a(i):1==t?n(i):2==t?l(i):3==t?d(i):4==t?o(i):void 0},a=function(s){var e='<div class="editor-action" note-type="'+s.note_type+'" note-id="'+s.note_id+'" share-img = "'+s.share_pic+'" share-url="'+s.share_url+'"><ul><li><i class="update-tu"></i><span class="action-name">修改</span></li><li><i class="delete-tu"></i><span class="action-name" >删除</span></li><li><i class="share-tu"></i><span class="action-name">分享</span></li></ul></div>';if(s.note_pics.length){if(1==s.note_pics.length)return'<div class="editor-column">\t\t\t\t\t\t\t\t\t   <div class="editor-t one-pic-wrap" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t  <div class="wz-con">\t\t\t\t\t\t\t\t\t\t \t<div class="wz-title" style="height: 44px;">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t\t\t\t<div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+'评</em></span></div>\t\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t<div class="wz-rimg"><img src="'+s.note_pics[0].replace(reg,"")+'"  onload = "imgFn(this,2)"></div>\t\t\t\t\t\t\t\t\t\t  </div>'+e+"</div>";if(4==s.note_pics.length)return'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t\t<div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t\t\t<div class="wz-con">\t\t\t\t\t\t\t\t\t\t\t\t\t<div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t\t\t\t\t<div class="wz-imgList">\t\t\t\t\t\t\t\t\t\t\t\t \t\t<ul class="itemImg">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li><img src="'+s.note_pics[0].replace(reg,"")+'" onload = "imgFn(this)"/></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li><img src="'+s.note_pics[1].replace(reg,"")+'" onload = "imgFn(this)"/></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li style="visibility: hidden"><img src="" /></li>\t\t\t\t\t\t\t\t\t\t\t\t \t\t</ul>\t\t\t\t\t\t\t\t\t\t\t\t \t\t<ul class="itemImg" style="margin-top:3px">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li><img src="'+s.note_pics[2].replace(reg,"")+'" onload = "imgFn(this)"/></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li><img src="'+s.note_pics[3].replace(reg,"")+'" onload = "imgFn(this)"/></li>\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t <li style="visibility: hidden"><img src="" /></li>\t\t\t\t\t\t\t\t\t\t\t\t \t\t</ul>\t\t\t\t\t\t\t\t\t\t\t\t \t</div>\t\t\t\t\t\t\t\t\t\t\t\t <div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+"评</em></span></div>\t\t\t\t\t\t\t\t\t\t\t</div></div>"+e+"</div>";var a=[];return $.each(s.note_pics,function(t,i){t%3==0&&a.push('<ul class="itemImg" '+(0!=t?'style="margin-top:3px"':"")+">"),s.note_pics[t+2]&&t%3==0?(a.push('<li><img src="'+s.note_pics[t].replace(reg,"")+'" onload = "imgFn(this)"/></li>'),a.push('<li><img src="'+s.note_pics[t+1].replace(reg,"")+'" onload = "imgFn(this)"/></li>'),a.push('<li><img src="'+s.note_pics[t+2].replace(reg,"")+'" onload = "imgFn(this)"/></li>')):t%3==0&&(T.Util.isEmpty(s.note_pics[t+1])?a.push('<li><img src="'+s.note_pics[t].replace(reg,"")+'" onload = "imgFn(this)"/></li> <li style="visibility: hidden"><img src="" /></li><li style="visibility: hidden"><img src="" /></li>'):(a.push('<li><img src="'+s.note_pics[t].replace(reg,"")+'" onload = "imgFn(this)"/></li>'),a.push('<li><img src="'+s.note_pics[t+1].replace(reg,"")+'" onload = "imgFn(this)"/></li>'),a.push('<li style="visibility: hidden"><img src="" /></li>'))),t%3==2&&a.push("</ul>")}),'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t\t <div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t\t \t<div class="wz-con">\t\t\t\t\t\t\t\t\t\t\t \t\t<div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t\t\t\t\t<div class="wz-imgList">'+a.join("")+'</ul></div>\t\t\t\t\t\t\t\t\t\t\t \t\t<div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+"评</em></span></div>\t\t\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t </div>"+e+"</div>"}return'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t <div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t <div class="wz-con">\t\t\t\t\t\t\t\t\t\t <div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t<div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+"评</em></span></div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>"+e+"</div>"},n=function(s){var e=[],a='<div class="editor-action" note-type="'+s.note_type+'" note-id="'+s.note_id+'" share-img = "'+s.share_pic+'" share-url="'+s.share_url+'"><ul><li><i class="update-tu"></i><span class="action-name">修改</span></li><li><i class="delete-tu"></i><span class="action-name">删除</span></li><li><i class="share-tu"></i><span class="action-name">分享</span></li></ul></div>';return e.push('<div class="editor-column"><div class="editor-t" note-id="'+s.note_id+'"><div class="wz-con">\t\t\t\t\t\t\t\t\t\t <div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t\t<div class="vote-list"><ul>'),$.each(s.note_vote.vote_content,function(t,i){e.push('<li><div class="vote-l"><div class="vote-percent" style="width:'+i.vote_proba+'%"></div><div class="vote-txt">'+(t+1)+"."+i.content+'</div></div><div class="vote-r">'+i.vote_proba+"%</div></li>")}),e.push('</ul></div><div class="vote-join">\t\t\t\t\t\t\t\t\t\t \t\t\t   <div class="join-count">已有'+s.note_vote.vote_num+'人参与</div><div class="join-tip">更多选项，请点击查看</div></div>\t\t\t\t\t\t\t\t\t\t \t\t\t   <div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+"评</em></span></div>\t\t\t\t\t\t\t\t\t\t \t\t\t   </div></div>"+a+"</div>"),e.join("")},o=function(s){var e=s.note_pics[0]?s.note_pics[0]:"_";return'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t <div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t <div class="wz-con">\t\t\t\t\t\t\t\t\t\t <div class="wz-title1">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t<div class="wz-imgList">\t\t\t\t\t\t\t\t\t\t <ul>\t\t\t\t\t\t\t\t\t\t <li style="height: 150px"><img src="'+e.replace(reg,"")+'" style="width:100%" onload = "imgFn(this,1)"/></li>\t\t\t\t\t\t\t\t\t\t </ul>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+'评</em></span></div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t<div class="editor-action" note-type="'+s.note_type+'" note-id="'+s.note_id+'" share-img = "'+s.share_pic+'" share-url="'+s.share_url+'">\t\t\t\t\t\t\t\t\t\t <ul>\t\t\t\t\t\t\t\t\t\t <li><i class="update-tu"></i><span class="action-name">修改</span></li>\t\t\t\t\t\t\t\t\t<li><i class="delete-tu"></i><span class="action-name">删除</span></li>\t\t\t\t\t\t\t\t\t<li><i class="share-tu"></i><span class="action-name">分享</span></li>\t\t\t\t\t\t\t\t\t</ul>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>'},l=function(s){var e=s.match_info.match_infos[0],a={1:"竞彩单关",2:"亚盘",3:"大小球"};return'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t <div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t <div class="wz-con">\t\t\t\t\t\t\t\t\t\t <div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t<div class="focus-fight">\t\t\t\t\t\t\t\t\t\t <div class="fight-top clearfix">\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="fight-con">\t\t\t\t\t\t\t\t\t\t <div class="fight-team">\t\t\t\t\t\t\t\t\t\t <div class="team-img"><img src="'+e.h_logo+'" class="team-flag hide" onload="checkImg(this)"></div>\t\t\t\t\t\t\t\t\t\t <div class="team-mc">'+e.h_name+'</div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="fight-sum">\t\t\t\t\t\t\t\t\t\t <div class="fight-vs">'+e.l_name+'</div>\t\t\t\t\t\t\t\t\t\t <div class="fight-gl">'+e.m_time+'</div>\t\t\t\t\t\t\t\t\t<span class="fight-wf" style="color: #2479e2;border:1px solid #2479e2">推荐 : '+a[e.recom_type]+'</span>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t<div class="fight-team">\t\t\t\t\t\t\t\t\t\t <div class="team-img"><img src="'+e.g_logo+'" class="team-flag hide" onload="checkImg(this)"></div>\t\t\t\t\t\t\t\t\t\t <div class="team-mc">'+e.g_name+'</div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+'评</em></span></div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t<div class="editor-action" note-type="'+s.note_type+'" note-id="'+s.note_id+'" share-img = "'+s.share_pic+'" share-url="'+s.share_url+'">\t\t\t\t\t\t\t\t\t\t <ul>\t\t\t\t\t\t\t\t\t\t <li><i class="update-tu"></i><span class="action-name">修改</span></li>\t\t\t\t\t\t\t\t\t<li><i class="delete-tu"></i><span class="action-name">删除</span></li>\t\t\t\t\t\t\t\t\t<li><i class="share-tu"></i><span class="action-name">分享</span></li>\t\t\t\t\t\t\t\t\t</ul>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>'},d=function(s){var e=s.match_info.match_infos[0];return'<div class="editor-column">\t\t\t\t\t\t\t\t\t\t <div class="editor-t" note-id="'+s.note_id+'">\t\t\t\t\t\t\t\t\t\t <div class="wz-con">\t\t\t\t\t\t\t\t\t\t <div class="wz-title">'+s.note_title+'</div>\t\t\t\t\t\t\t\t\t<div class="focus-fight">\t\t\t\t\t\t\t\t\t\t <div class="fight-top clearfix">\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="fight-con">\t\t\t\t\t\t\t\t\t\t <div class="fight-team">\t\t\t\t\t\t\t\t\t\t <div class="team-img"><img src="'+e.h_logo+'" class="team-flag hide" onload="checkImg(this)"></div>\t\t\t\t\t\t\t\t\t\t <div class="team-mc">'+e.h_name+'</div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="fight-sum">\t\t\t\t\t\t\t\t\t\t <div class="fight-vs">'+e.l_name+'</div>\t\t\t\t\t\t\t\t\t\t <div class="fight-gl">'+e.m_time+'</div>\t\t\t\t\t\t\t\t\t<span class="fight-wf">投注 : '+e.order_type+'</span>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t<div class="fight-team">\t\t\t\t\t\t\t\t\t\t <div class="team-img"><img src="'+e.g_logo+'" class="team-flag hide" onload="checkImg(this)"></div>\t\t\t\t\t\t\t\t\t\t <div class="team-mc">'+e.g_name+'</div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t </div>\t\t\t\t\t\t\t\t\t\t <div class="editor-sum"><span class="editor-time">'+s.time_desc+'</span><span class="'+i+'">'+t+'</span><span class="editor-s">'+s.look_up_num+'阅读<em class="editor-ping">'+s.comment_num+'评</em></span></div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t<div class="editor-action" note-type="'+s.note_type+'" note-id="'+s.note_id+'" share-img = "'+s.share_pic+'" share-url="'+s.share_url+'">\t\t\t\t\t\t\t\t\t\t <ul>\t\t\t\t\t\t\t\t\t\t <li><i class="update-tu"></i><span class="action-name">修改</span></li>\t\t\t\t\t\t\t\t\t<li><i class="delete-tu"></i><span class="action-name">删除</span></li>\t\t\t\t\t\t\t\t\t<li><i class="share-tu"></i><span class="action-name">分享</span></li>\t\t\t\t\t\t\t\t\t</ul>\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t</div>'},c=function(s){0==s.note_status?(t="已通过",i="zt-2"):1==s.note_status?(t="审核中",i="zt-3"):2==s.note_status?(t="审核不通过",i="zt-1"):1==s.is_hot&&(t="已推荐",i="zt-2")},r=function(){$(".editor-icon").off().Touch(function(){T.Util.openWindow(T.Util.getRootPath()+"/"+Global.webRoot+"/community/buyinEditor.html")}),$(".sq-return").off().Touch(function(){T.Util.back()})};return{initData:s,addListenr:r}}();$(function(){var t=function(){isUp=!0,page=1,Init.initData()};T.isNative?T.appToH5.init(t):t(),$(".editor-main").off().dropload({scrollArea:window,loadUpFn:function(t){dropLoad=t,page=1,isUp=!0,Init.initData()},threshold:50})})</script>
+	</body>
+</html>

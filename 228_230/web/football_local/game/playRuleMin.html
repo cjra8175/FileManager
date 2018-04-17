@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>玩法介绍min版</title>
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>body{background:0 0}.betHead{position:fixed;width:100%;height:52px;border-bottom:1px solid #ebeef0;background:#fff;top:0;left:0;z-index:1000}.betHead span{font-size:16px;color:#ff5b06;line-height:50px;margin-left:22px}.close{width:40px;height:40px;background-position:-290px -1196px;float:right;margin-right:20px}#betContent{padding:67px 21px 15px 21px;text-align:justify;color:#666}#betContent div{margin-bottom:20px}#betContent div p:first-child{margin-bottom:10px;color:#ff5b06;font-size:14px}.fxd{position:fixed;bottom:0;left:0;width:100%;height:30px;z-index:500;background:#fff}</style>
+</head>
+<body>
+    <p class="betHead">
+        <span>玩法规则</span>
+        <b class="icon gbclose"></b>
+    </p>
+    <div style="width:100%;background:#fff">
+        <div id="betContent">
+            <div style="color:#999">全场竞猜表示竞猜90分钟内两队的最终比赛结果，包含补时，不含加时。半场竞猜表示竞猜上半场45分钟的比赛结果，包含补时。</div>
+            <div>
+                <p>胜平负</p>
+                <p>两队的比赛结果，包含补时，不含加时。</p>
+            </div>
+            <div>
+                <p>进球数大小玩法</p>
+                <p>两队总进球数的多少，高于2.5即，即进球数大于等于3时为赢，其它为输。</p>
+                <p>高于2，即高于2时为赢，等于2时为走，退还投注金币，低于2时为输。</p>
+                <p>高于2/2.5，即进球数大于等于3时为赢，进球数为2时。一半为输，一半为走，退还一半投注金币，低于2时为输。</p>
+            </div>
+            <div>
+                <p>让球盘玩法</p>
+                <p>"-1"即让一球，让球方赢一球以上为赢，赢一球为走，退还投注金，平或者输球则为负。</p>
+                <p>"-0.5"球即为让半球，让球方胜则为赢，平局或输球则为负。</p>
+                <p>"-0/0.5"球，即为让平手/半球，让球方胜则为赢。</p>
+                <p>平局则一半为输，一半为走，退还一半本金，输球则全输。</p>
+                <p>让球盘是基于下注时比分进行的让球。</p>
+            </div>
+            <div>
+                <p>角球数玩法</p>
+                <p>两队总角球数的多少，高于9.5即，即角球数大于等于10时为赢，其它为输。</p>
+                <p>高于9，即高于9时为赢，等于9时为走，退还投注金币，低于9时为输。</p>
+            </div>
+            <div>
+                <p>进球数单双玩法</p>
+                <p>两队总进球数的单双，包含伤停补时，不包含加时。</p>
+                <p>全场总进球数为单数：投注单数全赢，投注双数全输</p>
+                <p>全场总进球数为双数：投注单数全输，投注双数全赢</p>
+            </div>
+            <div>
+                <p>半全场玩法</p>
+                <p>竞猜主队上半场和全场比赛结果，包含伤停补时，不包含加时。</p>
+            </div>
+            <div>
+                <p>算奖</p>
+                <p>单关：返奖=赔率*下注金额。</p>
+                <p>串关：返奖=赔率*赔率*...*下注金额</p>
+                <p>小数点后的金币数额不显示。</p>
+                <p>取消的比赛按1计算赔率。</p>
+                <p>延迟超过一天的比赛按取消处理。</p>
+            </div>
+            <div>
+                <p>下注限制</p>
+                <p>串关最高下注14串1，支持多选串关模式。</p>
+                <p>最小下注金额：10金币。</p>
+                <p>最大下注金额：每笔下注的最大金额将依最高返奖而异。</p>
+                <p>串关每笔最高返奖2000万金币。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fxd"></div>
+
+</body>
+<script src="../js/lib/zeptoPpLoadNativeMap.min.js"></script>
+<script src="../js/main.js"></script>
+<script>var Init=function(){return{init:function(){$(".gbclose").off().Touch(function(){api.closeWindow()})}}}();$(document).ready(function(){function e(){Init.init()}T.isNative?T.appToH5.init(e):T.Util.isEmpty(T.Storage.get("access_token"))?(T.Storage.remove("access_token"),T.Storage.remove("userinfo"),e()):T.User.getUInfo(T.Storage.get("access_token"),e)})</script>
+</html>
